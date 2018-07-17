@@ -1,0 +1,2156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ClrGreen" xml:space="preserve">
+    <value>#FFF000</value>
+  </data>
+  <data name="i1" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="i2" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="i3" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="j1" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="j2" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="j3" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="k2" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="k3" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="l3" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="LblAboutus" xml:space="preserve">
+    <value>About us</value>
+  </data>
+  <data name="LblConservationtips" xml:space="preserve">
+    <value>Conservation tips</value>
+  </data>
+  <data name="LblEnquiries" xml:space="preserve">
+    <value>Enquiries</value>
+  </data>
+  <data name="LblLocateus" xml:space="preserve">
+    <value>Locate us</value>
+  </data>
+  <data name="LblMission" xml:space="preserve">
+    <value>Mission</value>
+  </data>
+  <data name="LblOverview" xml:space="preserve">
+    <value>Overview</value>
+  </data>
+  <data name="LblTariffinformation" xml:space="preserve">
+    <value>Tariff information</value>
+  </data>
+  <data name="LblUnderstandingbill" xml:space="preserve">
+    <value>Understanding your bill</value>
+  </data>
+  <data name="LblValues" xml:space="preserve">
+    <value>Values</value>
+  </data>
+  <data name="LblVision" xml:space="preserve">
+    <value>Vision</value>
+  </data>
+  <data name="StrAllRights" xml:space="preserve">
+    <value>All rights reserved 2017 Abu Dhabi Distribution Company</value>
+    <comment>StrAllRights for Afrell rights reserved 2016 Abu Dhabi Distribution Company</comment>
+  </data>
+  <data name="StrChangeLang" xml:space="preserve">
+    <value>Change language</value>
+    <comment>StrChangeLang for Language change text</comment>
+  </data>
+  <data name="StrEnglish" xml:space="preserve">
+    <value> للتوزيع </value>
+  </data>
+  <data name="StrExistingUser" xml:space="preserve">
+    <value>  Existing user  </value>
+    <comment>StrExistingUser for exsisting text</comment>
+  </data>
+  <data name="StrExplore" xml:space="preserve">
+    <value>Explore the ADDC world</value>
+    <comment>StrExplore for explore</comment>
+  </data>
+  <data name="StrForgotPwd" xml:space="preserve">
+    <value>Forgot your password?</value>
+  </data>
+  <data name="StrLogin" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="StrMassive" xml:space="preserve">
+    <value>From massive buildings to studio apartments!</value>
+    <comment>strMassive for massive text</comment>
+  </data>
+  <data name="StrNewUser" xml:space="preserve">
+    <value>New user</value>
+    <comment>StrNewUser for New user</comment>
+  </data>
+  <data name="StrWaterPoer" xml:space="preserve">
+    <value>Water, power, community and commerce. We keep things flowing.</value>
+    <comment>StrWaterPower for Water, power, community and commerce. We keep things flowing.</comment>
+  </data>
+  <data name="StrWelcomeToAddc" xml:space="preserve">
+    <value>Welcome to ADDC</value>
+    <comment>StrWelcomeToAddc for Welcome to ADDC</comment>
+  </data>
+  <data name="TxtMission" xml:space="preserve">
+    <value>Plan, develop, maintain, and operate a reliable, secure, safe, and cost effective distribution system in Abu Dhabi and deliver services that meet or exceed our customers’ expectations.</value>
+  </data>
+  <data name="TxtOverview" xml:space="preserve">
+    <value>Established in November 1998, Abu Dhabi Distribution Company (ADDC) is responsible for distributing high quality water and electricity services to all customers in the emirate of Abu Dhabi, excluding the Al Ain region. ADDC’s core business is the planning, design, construction, and operation of the Abu Dhabi water and electricity distribution network. 
+
+ 
+        ADDC’s customer base is comprised of 412,540 service agreements for the supply of water and/or electricity, which is distributed to customers at the 33 kV and 11 kV levels throughout three regions: Eastern Region (Mussaffah and Baniyas), Western Region (Liwa, Silla) and Abu Dhabi Island.
+
+
+        ADDC is a Public Joint Stock Company that provides a regulated service, with revenues allowed by the Regulation &amp;amp; Supervision Bureau (RSB), the entity responsible for licensing and monitoring the performance of all sector companies. The RSB’s oversight of ADDC is done in the interest of customers, and limits are placed on the amount of revenue ADDC can earn in a particular year via the application of price controls that provide incentives for ADDC to improve the quality of service to customers while reducing costs. 
+         
+
+ ADDC’s license is subject to price control periods which are established every few years. The RSB has already commenced the consultation process with ADDC to establish new price controls that will take effect January 1st, 2010.</value>
+  </data>
+  <data name="TxtValue" xml:space="preserve">
+    <value>Achieving ADDC vision requires us to permeate our core values throughout the organization in order to enable us to deliver sustainable business results. Our core values include:</value>
+  </data>
+  <data name="TxtVision" xml:space="preserve">
+    <value>ADDC becomes a leading water and electricity distribution and supply company comparable with the top quartile performers worldwide by 2020.</value>
+  </data>
+  <data name="listBGLightGreen" xml:space="preserve">
+    <value>#eff7e8</value>
+  </data>
+  <data name="a8" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="a1" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="b1" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="i6" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="j6" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="k6" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="i12" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="j12" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="PasswordEntryPlaceholder" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="BorderdesignTop" xml:space="preserve">
+    <value>border_design_top.png</value>
+  </data>
+  <data name="b8" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="c8" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="a18" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="b18" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="a28" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="b28" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="str_acc_number" xml:space="preserve">
+    <value>Account number</value>
+  </data>
+  <data name="str_balance" xml:space="preserve">
+    <value>Outstanding balance</value>
+  </data>
+  <data name="str_ost_bal" xml:space="preserve">
+    <value>Account balance</value>
+  </data>
+  <data name="str_select_property" xml:space="preserve">
+    <value>Select the accounts to pay their outstanding bills</value>
+  </data>
+  <data name="TxtMyAccount" xml:space="preserve">
+    <value>My Account</value>
+  </data>
+  <data name="TxtPay" xml:space="preserve">
+    <value>PAY NOW </value>
+  </data>
+  <data name="TxtSubmit" xml:space="preserve">
+    <value>SUBMIT</value>
+  </data>
+  <data name="TxtMakPayment" xml:space="preserve">
+    <value>Pay</value>
+  </data>
+  <data name="TxtSavedCards" xml:space="preserve">
+    <value>Saved Cards</value>
+  </data>
+  <data name="TxtPayAndSave" xml:space="preserve">
+    <value>Pay And Save</value>
+  </data>
+  <data name="TxtPayWithoutSave" xml:space="preserve">
+    <value>Pay Without Save</value>
+  </data>
+  <data name="LblMyAccount" xml:space="preserve">
+    <value>My Account</value>
+  </data>
+  <data name="LblMyProfile" xml:space="preserve">
+    <value>My Profile</value>
+  </data>
+  <data name="LblHistory" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="LblNotification" xml:space="preserve">
+    <value>Notification</value>
+  </data>
+  <data name="str_MyProfile" xml:space="preserve">
+    <value>My profile</value>
+  </data>
+  <data name="str_edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="str_cus_id_header" xml:space="preserve">
+    <value>Keep us updated</value>
+  </data>
+  <data name="str_myprof_data" xml:space="preserve">
+    <value>It is critical that we have your right details to continue providing you with our best possible service. Kindly use this to update us, should you need to make any more changes.</value>
+  </data>
+  <data name="str_cus_id" xml:space="preserve">
+    <value>Customer ID</value>
+  </data>
+  <data name="str_update_acc_fullname" xml:space="preserve">
+    <value>Full name</value>
+  </data>
+  <data name="str_username_prof" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="str_personal_detls" xml:space="preserve">
+    <value>Your personal details : </value>
+  </data>
+  <data name="str_email_forgotpasswd" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="str_bill_language_myprofile" xml:space="preserve">
+    <value>Which language you would prefer us to use?</value>
+  </data>
+  <data name="str_contctnum_desc" xml:space="preserve">
+    <value>If you include more than one number, then we will use the first one to send you SMS alerts and service updates; please make sure it is a local mobile.</value>
+  </data>
+  <data name="change_password" xml:space="preserve">
+    <value>  Change password  </value>
+  </data>
+  <data name="my_profile" xml:space="preserve">
+    <value>My profile</value>
+  </data>
+  <data name="str_saved_card" xml:space="preserve">
+    <value>Saved cards</value>
+  </data>
+  <data name="str_select_pay_mode" xml:space="preserve">
+    <value>Payment method</value>
+  </data>
+  <data name="str_cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="forword_button" xml:space="preserve">
+    <value>forword_button.png</value>
+  </data>
+  <data name="action_pay_now" xml:space="preserve">
+    <value>PAY NOW</value>
+  </data>
+  <data name="payment_secure" xml:space="preserve">
+    <value>All transactions on ADDC are encrypted and 100% secure.If you are having difficulties completing this form, or would like further information, please contact us at 800 – 2332.</value>
+  </data>
+  <data name="min_max_payment" xml:space="preserve">
+    <value>You can pay the amount between AED 5 to AED 1000000</value>
+  </data>
+  <data name="HeaderContent" xml:space="preserve">
+    <value>header.png</value>
+  </data>
+  <data name="str_phone" xml:space="preserve">
+    <value>Contact number</value>
+  </data>
+  <data name="str_try_again" xml:space="preserve">
+    <value>Some error happen please try again later.</value>
+  </data>
+  <data name="str_gps_title" xml:space="preserve">
+    <value>Alert</value>
+  </data>
+  <data name="btn_ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="questionMark" xml:space="preserve">
+    <value>?</value>
+  </data>
+  <data name="HoriExp" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="HoriRevExp" xml:space="preserve">
+    <value>End</value>
+  </data>
+  <data name="str_enter_email" xml:space="preserve">
+    <value>Enter your email ID</value>
+  </data>
+  <data name="L1" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="L2" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="str_update_acc_add" xml:space="preserve">
+    <value>   ADD NEW NUMBER   </value>
+  </data>
+  <data name="str_cont_info" xml:space="preserve">
+    <value>Your contact preferences</value>
+  </data>
+  <data name="str_bill_language" xml:space="preserve">
+    <value>Please select which language you prefer when we communicate with you:</value>
+  </data>
+  <data name="AboutUs" xml:space="preserve">
+    <value>English About Us</value>
+  </data>
+  <data name="aboutUsTitle" xml:space="preserve">
+    <value>English About Us Title</value>
+  </data>
+  <data name="ConservationTips" xml:space="preserve">
+    <value>English Conservation Tips</value>
+  </data>
+  <data name="EImage1" xml:space="preserve">
+    <value>top_en_new.png</value>
+  </data>
+  <data name="EImage2" xml:space="preserve">
+    <value>electricity_top_right_en_new.png</value>
+  </data>
+  <data name="EImage3" xml:space="preserve">
+    <value>electricity_left_en_new.png</value>
+  </data>
+  <data name="EImage4" xml:space="preserve">
+    <value>electricity_middle_top_en_new.png</value>
+  </data>
+  <data name="EImage5" xml:space="preserve">
+    <value>electricity_middle_bottom_en_new.png</value>
+  </data>
+  <data name="EImage6" xml:space="preserve">
+    <value>right_en_new.png</value>
+  </data>
+  <data name="EImage7" xml:space="preserve">
+    <value>electricity_bottom_en_new.png</value>
+  </data>
+  <data name="Enquiries" xml:space="preserve">
+    <value>English Enquiry</value>
+  </data>
+  <data name="LocateUs" xml:space="preserve">
+    <value>English Locate Us</value>
+  </data>
+  <data name="Tariff" xml:space="preserve">
+    <value>English Tariff</value>
+  </data>
+  <data name="UnderStandingYourBill" xml:space="preserve">
+    <value>English Understanding your Bill</value>
+  </data>
+  <data name="str_bill_top_desc" xml:space="preserve">
+    <value>This shows you whose name the bill is in and which property it is for.</value>
+  </data>
+  <data name="str_bill_top_header" xml:space="preserve">
+    <value>Personal details &amp; property details</value>
+  </data>
+  <data name="str_bill_custsupport_desc" xml:space="preserve">
+    <value>This shows you what channels you can use to contact ADDC customer support team.</value>
+  </data>
+  <data name="str_bill_custsupport" xml:space="preserve">
+    <value>Customer support</value>
+  </data>
+  <data name="str_bill_left_header" xml:space="preserve">
+    <value>Meter details</value>
+  </data>
+  <data name="str_meter_title_desc" xml:space="preserve">
+    <value>Here you’ll find everything you need to know about your electricity meter.</value>
+  </data>
+  <data name="str_meter_title1" xml:space="preserve">
+    <value>Meter number:</value>
+  </data>
+  <data name="str_meter_desc1" xml:space="preserve">
+    <value>Every meter has a unique number, which allows us to track the amount of electricity you have used since your last bill and to generate the next one.</value>
+  </data>
+  <data name="str_meter_title2" xml:space="preserve">
+    <value>Meter reading:</value>
+  </data>
+  <data name="str_meter_desc2" xml:space="preserve">
+    <value>This shows you the reading that we have based your bill on. If we haven’t been able to take an actual reading, this may be an estimated figure, based on your typical previous usage, in which case you’ll see an E next to the reading.</value>
+  </data>
+  <data name="str_meter_title3" xml:space="preserve">
+    <value>Total units:</value>
+  </data>
+  <data name="str_meter_desc3" xml:space="preserve">
+    <value>The number you see here shows how many units of electricity you have used since your last bill. We multiply this by the unit rate from your tariff to work how your balance.</value>
+  </data>
+  <data name="str_meter_title4" xml:space="preserve">
+    <value>Date of meter reading:</value>
+  </data>
+  <data name="str_meter_desc4" xml:space="preserve">
+    <value>This is the most recent date that we’re able to get a read from your meter, his can happen automatically or through a technician visit.</value>
+  </data>
+  <data name="str_meter_title5" xml:space="preserve">
+    <value>Days of use:</value>
+  </data>
+  <data name="str_meter_desc5" xml:space="preserve">
+    <value>This corresponds to the number of days within this billing period.</value>
+  </data>
+  <data name="str_bill_custdetails" xml:space="preserve">
+    <value>Customer details</value>
+  </data>
+  <data name="str_bill_middle_top_header" xml:space="preserve">
+    <value>Account activity</value>
+  </data>
+  <data name="str_bill_middle_top_header_desc" xml:space="preserve">
+    <value>This section sets out any payments or charges since your last bill and the amount of electricity you have used since then.</value>
+  </data>
+  <data name="str_sum_title1" xml:space="preserve">
+    <value>Balance from your last bill:</value>
+  </data>
+  <data name="str_sum_desc1" xml:space="preserve">
+    <value>This reminds you of the outstanding amount from your previous bill. It may show as a credit or a debit balance.</value>
+  </data>
+  <data name="str_sum_title2" xml:space="preserve">
+    <value>Payments received since last bill:</value>
+  </data>
+  <data name="str_sum_desc2" xml:space="preserve">
+    <value>Any payments you have made to this account since your previous bill was issued are shown here.</value>
+  </data>
+  <data name="str_sum_title3" xml:space="preserve">
+    <value>Amount in Arrears:</value>
+  </data>
+  <data name="str_sum_desc3" xml:space="preserve">
+    <value>Here you’ll see the credit or debit amount that has been carried over to this bill; it’s simply the previous balance less any.</value>
+  </data>
+  <data name="str_bill_middle_bottom_header" xml:space="preserve">
+    <value>Current charges</value>
+  </data>
+  <data name="str_bill_middle_bottom_desc" xml:space="preserve">
+    <value>Actual cost and subsidy:</value>
+  </data>
+  <data name="str_bill_middle_bottom_cont" xml:space="preserve">
+    <value> Just for your information, this shows the subsidy that has been applied to your account and what the actual cost of the electricity you’ve used would have been without it.</value>
+  </data>
+  <data name="str_btp_title4_bold" xml:space="preserve">
+    <value>Total to pay:</value>
+  </data>
+  <data name="str_btp_title4_desc" xml:space="preserve">
+    <value>Here you’ll see the current balance of your account, which includes any outstanding amount carried over from your previous bill. This is the amount that you are due to pay. </value>
+  </data>
+  <data name="str_bill_right_header" xml:space="preserve">
+    <value>Account details</value>
+  </data>
+  <data name="str_cust_title1" xml:space="preserve">
+    <value>In this section you’ll find all the key reference numbers linked to your account. You might need these to set up an online account or pay a bill. It also shows the date your bill was issued and when it needs to be paid by.</value>
+  </data>
+  <data name="str_cust_desc1" xml:space="preserve">
+    <value>This is your personal reference number linked to your ADDC account. If you have more than one account with us, the same ID number will be used across them all.</value>
+  </data>
+  <data name="str_cust_title2" xml:space="preserve">
+    <value>Account number:</value>
+  </data>
+  <data name="str_cust_desc2" xml:space="preserve">
+    <value>This number is specific to your ADDC electricity account at the property shown. Every different account you have with us will have a different account number.</value>
+  </data>
+  <data name="str_cust_title3" xml:space="preserve">
+    <value>Bill number:</value>
+  </data>
+  <data name="str_cust_desc3" xml:space="preserve">
+    <value>A unique 14 digit number used to identify every bill.</value>
+  </data>
+  <data name="str_cust_title4" xml:space="preserve">
+    <value>Bill date:</value>
+  </data>
+  <data name="str_cust_desc4" xml:space="preserve">
+    <value>The date on which the bill is to be paid.</value>
+  </data>
+  <data name="str_cust_title5" xml:space="preserve">
+    <value>Please pay by:</value>
+  </data>
+  <data name="str_cust_desc5" xml:space="preserve">
+    <value>The maximum permissible date by which the customer needs to be paid.</value>
+  </data>
+  <data name="str_cust_title6" xml:space="preserve">
+    <value>Premises:</value>
+  </data>
+  <data name="str_cust_desc6" xml:space="preserve">
+    <value>This refers to the spatial unit or the enclosed structure to which the utility services have to be rendered. And is identified by a unique premise ID.</value>
+  </data>
+  <data name="str_bill_bottom_header" xml:space="preserve">
+    <value>Balance to be paid</value>
+  </data>
+  <data name="str_btp_title1" xml:space="preserve">
+    <value>Total to pay:Here you’ll see the current balance of your account, which includes any outstanding amount carried over from your previous bill. This is the amount that you are due to pay.</value>
+  </data>
+  <data name="str_btp_desc1" xml:space="preserve">
+    <value>A unique 14 digit number used to identify every bill.</value>
+  </data>
+  <data name="str_btp_title2" xml:space="preserve">
+    <value>Account number:</value>
+  </data>
+  <data name="str_btp_desc2" xml:space="preserve">
+    <value>The account number is 10 digit number registered with ADDC.</value>
+  </data>
+  <data name="str_btp_title3" xml:space="preserve">
+    <value>Bill date:</value>
+  </data>
+  <data name="str_btp_desc3" xml:space="preserve">
+    <value>The date on which the bill is to be paid.</value>
+  </data>
+  <data name="str_btp_title4" xml:space="preserve">
+    <value>Total to pay:</value>
+  </data>
+  <data name="str_btp_desc4" xml:space="preserve">
+    <value>The total that is due for payment for the given account number.</value>
+  </data>
+  <data name="str_bill_num_right_desc" xml:space="preserve">
+    <value>This is a referance number consists of 12 digits which can be used to pay the bills and to identify the account number.</value>
+  </data>
+  <data name="str_bill_latest_middle_bottom_desc" xml:space="preserve">
+    <value>This section shows you what is the actual cost incurred at the defined rate, subsidies if applicable. And finally what customer needs to pay post including other charges, adjustments/corrections.</value>
+  </data>
+  <data name="str_meter_watertitle_desc" xml:space="preserve">
+    <value>Here you’ll find everything you need to know about your water meter.</value>
+  </data>
+  <data name="str_meter_water_desc1" xml:space="preserve">
+    <value>Every meter has a unique number, which allows us to track the amount of water you have used since your last bill and to generate the next one.</value>
+  </data>
+  <data name="str_meter_water_desc3" xml:space="preserve">
+    <value>The number you see here shows how many units of water you have used since your last bill. We multiply this by the unit rate from your tariff to work how your balance.</value>
+  </data>
+  <data name="str_bill_middle_top_header_water_desc" xml:space="preserve">
+    <value>This section sets out any payments or charges since your last bill and the amount of water you have used since then.</value>
+  </data>
+  <data name="str_bill_middle_bottom_water_desc" xml:space="preserve">
+    <value>Actual cost and subsidy:</value>
+  </data>
+  <data name="str_water_bottom_desc1" xml:space="preserve">
+    <value>Just for your information, this shows the subsidy that has been applied to your account and what the actual cost of the water you’ve used would have been without it.</value>
+  </data>
+  <data name="str_bill_water_right" xml:space="preserve">
+    <value>This number is specific to your ADDC water account at the property shown. Every different account you have with us will have a different account number.</value>
+  </data>
+  <data name="EImage4PopUpText" xml:space="preserve">
+    <value>English eb pop up text 4</value>
+  </data>
+  <data name="EImage4PopUpTitle" xml:space="preserve">
+    <value>English eb title 4</value>
+  </data>
+  <data name="EImage5PopUpText" xml:space="preserve">
+    <value>English eb pop up text 5</value>
+  </data>
+  <data name="EImage5PopUpTitle" xml:space="preserve">
+    <value>English eb title 5</value>
+  </data>
+  <data name="EImage6PopUpText" xml:space="preserve">
+    <value>English eb pop up text 6</value>
+  </data>
+  <data name="EImage6PopUpTitle" xml:space="preserve">
+    <value>English eb title 6</value>
+  </data>
+  <data name="EImage7PopUpText" xml:space="preserve">
+    <value>English eb pop up text 7</value>
+  </data>
+  <data name="EImage7PopUpTitle" xml:space="preserve">
+    <value>English eb title 7</value>
+  </data>
+  <data name="ElectricityBillTitle" xml:space="preserve">
+    <value>Electricity English Bill</value>
+  </data>
+  <data name="WaterBillTitle" xml:space="preserve">
+    <value>Water English Bill</value>
+  </data>
+  <data name="WImage1" xml:space="preserve">
+    <value>water_top_left_en_new.png</value>
+  </data>
+  <data name="WImage1PopUpText" xml:space="preserve">
+    <value>English eb pop up text 1</value>
+  </data>
+  <data name="WImage1PopUpTitle" xml:space="preserve">
+    <value>English eb title 1</value>
+  </data>
+  <data name="WImage2" xml:space="preserve">
+    <value>water_top_right_en_new.png</value>
+  </data>
+  <data name="WImage2PopUpText" xml:space="preserve">
+    <value>English eb pop up text 2</value>
+  </data>
+  <data name="WImage2PopUpTitle" xml:space="preserve">
+    <value>English eb title 2</value>
+  </data>
+  <data name="WImage3" xml:space="preserve">
+    <value>water_left_en_new.png</value>
+  </data>
+  <data name="WImage3PopUpText" xml:space="preserve">
+    <value>English eb pop up text 3</value>
+  </data>
+  <data name="WImage3PopUpTitle" xml:space="preserve">
+    <value>English eb title 3</value>
+  </data>
+  <data name="WImage4" xml:space="preserve">
+    <value>water_middle_top_en_new.png</value>
+  </data>
+  <data name="WImage4PopUpText" xml:space="preserve">
+    <value>English eb pop up text 4</value>
+  </data>
+  <data name="WImage4PopUpTitle" xml:space="preserve">
+    <value>English eb title 4</value>
+  </data>
+  <data name="WImage5" xml:space="preserve">
+    <value>water_middle_bottom_en_new.png</value>
+  </data>
+  <data name="WImage5PopUpText" xml:space="preserve">
+    <value>English eb pop up text 5</value>
+  </data>
+  <data name="WImage5PopUpTitle" xml:space="preserve">
+    <value>English eb title 5</value>
+  </data>
+  <data name="WImage6" xml:space="preserve">
+    <value>right_en_new.png</value>
+  </data>
+  <data name="WImage6PopUpText" xml:space="preserve">
+    <value>English eb pop up text 6</value>
+  </data>
+  <data name="WImage6PopUpTitle" xml:space="preserve">
+    <value>English eb title 6</value>
+  </data>
+  <data name="WImage7" xml:space="preserve">
+    <value>water_bottom_en_new.png</value>
+  </data>
+  <data name="WImage7PopUpText" xml:space="preserve">
+    <value>English eb pop up text 7</value>
+  </data>
+  <data name="WImage7PopUpTitle" xml:space="preserve">
+    <value>English eb title 7</value>
+  </data>
+  <data name="gridid0" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="gridid1" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="gridratio0" xml:space="preserve">
+    <value>9*</value>
+  </data>
+  <data name="gridratio1" xml:space="preserve">
+    <value>1*</value>
+  </data>
+  <data name="hor_icon" xml:space="preserve">
+    <value>End</value>
+  </data>
+  <data name="hor_Label" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="str_elec_bill" xml:space="preserve">
+    <value>Electricity bill</value>
+  </data>
+  <data name="str_understanding_bill" xml:space="preserve">
+    <value>Understanding your bill</value>
+  </data>
+  <data name="str_under_bill_desc" xml:space="preserve">
+    <value>We want to make sure you’re completely clear about what you’re paying and why, so we’ve designed our bills to be as straightforward as possible. This page explains the different information we show on your bill and how we’ve worked out what you need to pay us.</value>
+  </data>
+  <data name="str_under_bill_desc_title" xml:space="preserve">
+    <value>Your bill explained</value>
+  </data>
+  <data name="str_water_bill" xml:space="preserve">
+    <value>Water bill</value>
+  </data>
+  <data name="backword_button" xml:space="preserve">
+    <value>forword_button_ar.png</value>
+  </data>
+  <data name="Tab1" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Tab2" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Tab3" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="str_bill_history" xml:space="preserve">
+    <value>Bill history</value>
+  </data>
+  <data name="str_payment_history" xml:space="preserve">
+    <value>Payment History</value>
+  </data>
+  <data name="str_choose_property" xml:space="preserve">
+    <value>Choose account</value>
+  </data>
+  <data name="str_bill_number_bil" xml:space="preserve">
+    <value>Bill number</value>
+  </data>
+  <data name="str_date_bill" xml:space="preserve">
+    <value>Bill date</value>
+  </data>
+  <data name="str_pay_by_date_bill" xml:space="preserve">
+    <value>Pay by date</value>
+  </data>
+  <data name="str_payment_date" xml:space="preserve">
+    <value>Payment date</value>
+  </data>
+  <data name="str_paid_amt" xml:space="preserve">
+    <value>Paid amount</value>
+  </data>
+  <data name="str_transaction" xml:space="preserve">
+    <value>Transaction ID</value>
+  </data>
+  <data name="action_save" xml:space="preserve">
+    <value>SAVE</value>
+  </data>
+  <data name="str_problem_sign_in" xml:space="preserve">
+    <value>Password recovery</value>
+  </data>
+  <data name="str_send_forgot_pass" xml:space="preserve">
+    <value>Please enter your username in the following field and click SUBMIT to receive an email with the new password.</value>
+  </data>
+  <data name="str_customer_enquiry_title" xml:space="preserve">
+    <value>Enquiries</value>
+  </data>
+  <data name="str_send_enquiry" xml:space="preserve">
+    <value>Send enquiry</value>
+  </data>
+  <data name="str_send_suggestions" xml:space="preserve">
+    <value>Send suggestions</value>
+  </data>
+  <data name="str_last_bill_sum" xml:space="preserve">
+    <value>Last bill summary</value>
+  </data>
+  <data name="str_last_pay_sum" xml:space="preserve">
+    <value>Last payment summary</value>
+  </data>
+  <data name="str_bill_cycle" xml:space="preserve">
+    <value>Bill cycle</value>
+  </data>
+  <data name="str_premise_id" xml:space="preserve">
+    <value>Premise id</value>
+  </data>
+  <data name="str_premise_type" xml:space="preserve">
+    <value>Premise type</value>
+  </data>
+  <data name="str_bill_pref" xml:space="preserve">
+    <value>Bill preference</value>
+  </data>
+  <data name="str_tariff_type" xml:space="preserve">
+    <value>Tariff type</value>
+  </data>
+  <data name="str_previous_charges" xml:space="preserve">
+    <value>Previous charges</value>
+  </data>
+  <data name="str_curr_cycle_chrgs" xml:space="preserve">
+    <value>Current cycle charges</value>
+  </data>
+  <data name="str_payment_rcv" xml:space="preserve">
+    <value>Payment received</value>
+  </data>
+  <data name="str_total_amt_due" xml:space="preserve">
+    <value>Total amount due</value>
+  </data>
+  <data name="str_water_consumption" xml:space="preserve">
+    <value>Water consumption</value>
+  </data>
+  <data name="str_units" xml:space="preserve">
+    <value>Units :</value>
+  </data>
+  <data name="str_amount" xml:space="preserve">
+    <value>Amount :</value>
+  </data>
+  <data name="str_tariff" xml:space="preserve">
+    <value>Tariff :</value>
+  </data>
+  <data name="str_bill_address" xml:space="preserve">
+    <value>Billing address</value>
+  </data>
+  <data name="str_post_box" xml:space="preserve">
+    <value>Po box</value>
+  </data>
+  <data name="str_electricity_consumption" xml:space="preserve">
+    <value>Electricity consumption</value>
+  </data>
+  <data name="next_icon" xml:space="preserve">
+    <value>next_icon</value>
+  </data>
+  <data name="landing_header" xml:space="preserve">
+    <value>landing_header</value>
+  </data>
+  <data name="landing" xml:space="preserve">
+    <value>landing</value>
+  </data>
+  <data name="str_all_mandatory" xml:space="preserve">
+    <value>Please enter all the required fields.</value>
+  </data>
+  <data name="str_enter_user" xml:space="preserve">
+    <value>Please enter your username</value>
+  </data>
+  <data name="str_enter_pass" xml:space="preserve">
+    <value>Please enter your password</value>
+  </data>
+  <data name="str_pass_not_match" xml:space="preserve">
+    <value>Password not matching.</value>
+  </data>
+  <data name="str_energy_save" xml:space="preserve">
+    <value>Explore our Energy Saving Campaign</value>
+  </data>
+  <data name="account_bg" xml:space="preserve">
+    <value>account_bg</value>
+  </data>
+  <data name="menu_bg" xml:space="preserve">
+    <value>menu_bg</value>
+  </data>
+  <data name="enter_eid" xml:space="preserve">
+    <value>Please enter your Emirates ID.</value>
+  </data>
+  <data name="img_yes_bg" xml:space="preserve">
+    <value>yes_i_do_dialog_box.png</value>
+  </data>
+  <data name="str_actv_heading" xml:space="preserve">
+    <value>Activate your ADDC account</value>
+  </data>
+  <data name="str_actv_message" xml:space="preserve">
+    <value>     If you have already activated your account for the ADDC eServices website you can use the same details to log in. Otherwise, to activate your account simply enter your Emirates ID number here. we will then send the PIN to the mobile number and email ID.</value>
+  </data>
+  <data name="str_answer" xml:space="preserve">
+    <value>Answer</value>
+  </data>
+  <data name="str_customer_care" xml:space="preserve">
+    <value>For further enquiries, please get in touch with our contact centre at 800-2332. We're happy to help you out.</value>
+  </data>
+  <data name="str_eid" xml:space="preserve">
+    <value>Enter your Emirates ID</value>
+  </data>
+  <data name="str_enter_mobile" xml:space="preserve">
+    <value>Enter your mobile number</value>
+  </data>
+  <data name="str_enter_pin" xml:space="preserve">
+    <value>Please enter your PIN.</value>
+  </data>
+  <data name="str_next" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="str_not_received_pin" xml:space="preserve">
+    <value>In case you haven't received the PIN, then click on Resend PIN</value>
+  </data>
+  <data name="str_receive_pin" xml:space="preserve">
+    <value>Please enter your new PIN and click on SUBMIT:</value>
+  </data>
+  <data name="str_resend_pin" xml:space="preserve">
+    <value>Resend PIN</value>
+  </data>
+  <data name="str_retypepasswd" xml:space="preserve">
+    <value>Retype new password</value>
+  </data>
+  <data name="str_select_secret" xml:space="preserve">
+    <value>Select a secret question</value>
+  </data>
+  <data name="str_typepasswd" xml:space="preserve">
+    <value>New password</value>
+  </data>
+  <data name="str_update_acc_username_lbl" xml:space="preserve">
+    <value>Enter your username</value>
+  </data>
+  <data name="str_validate_pin_text1" xml:space="preserve">
+    <value>We have sent the PIN to your registered mobile</value>
+  </data>
+  <data name="str_validate_pin_text2" xml:space="preserve">
+    <value>and E-mail address</value>
+  </data>
+  <data name="str_wrong_emirates_id" xml:space="preserve">
+    <value>Emirates ID is in a wrong format.</value>
+  </data>
+  <data name="str_contact_number" xml:space="preserve">
+    <value>800-2332</value>
+  </data>
+  <data name="str_support" xml:space="preserve">
+    <value>Contact support</value>
+  </data>
+  <data name="str_pay_friend" xml:space="preserve">
+    <value>Pay for friend</value>
+  </data>
+  <data name="str_continue" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="str_friend_heading" xml:space="preserve">
+    <value>Enter your friend’s account number.</value>
+  </data>
+  <data name="str_payfrnd_note" xml:space="preserve">
+    <value>Dear Customer,</value>
+  </data>
+  <data name="str_payfrnd_note_desc" xml:space="preserve">
+    <value>If you’re Residential, Agricultural or Commercial Account holder, you can pay your bills by credit or debit card. A processing fee will apply as AED 2.25% plus AED 1.50 for each transaction to all Commercial Account payment.</value>
+  </data>
+  <data name="str_aed" xml:space="preserve">
+    <value>AED </value>
+  </data>
+  <data name="str_select_account_details" xml:space="preserve">
+    <value>Click on account number to view details </value>
+  </data>
+  <data name="str_conservation_tips" xml:space="preserve">
+    <value>Conservation tips</value>
+  </data>
+  <data name="str_water_saving" xml:space="preserve">
+    <value>Water saving</value>
+  </data>
+  <data name="str_elec_saving" xml:space="preserve">
+    <value>Electricity saving</value>
+  </data>
+  <data name="str_water_tips" xml:space="preserve">
+    <value>Water saving tips</value>
+  </data>
+  <data name="str_elec_tips" xml:space="preserve">
+    <value>Electricity saving tips</value>
+  </data>
+  <data name="str_water_tips_desc" xml:space="preserve">
+    <value>Water is one of the most essential elements that we need in our everyday lives. United Arab Emirates suffers from a scarce rainfall season, therefore, it is very important for us to monitor the overall consumption of water, whether it was inside or outside our homes, at school or at the workplace.</value>
+  </data>
+  <data name="str_elec_tips_desc" xml:space="preserve">
+    <value>Electricity is one of the most important resources and one of the discoveries that modern civilization relies heavily upon. Just like any other needed resource, it is important that we learn how to conserve usage of electricity.</value>
+  </data>
+  <data name="str_elec_save_steps" xml:space="preserve">
+    <value>Below are some simple steps that each one of us can follow to help save electricity.</value>
+  </data>
+  <data name="str_insd_house" xml:space="preserve">
+    <value>Inside the house</value>
+  </data>
+  <data name="str_osd_house" xml:space="preserve">
+    <value>Outside the house</value>
+  </data>
+  <data name="str_at_school" xml:space="preserve">
+    <value>At school</value>
+  </data>
+  <data name="str_water_saver" xml:space="preserve">
+    <value>Water saver</value>
+  </data>
+  <data name="str_air_cond" xml:space="preserve">
+    <value>The air conditioner</value>
+  </data>
+  <data name="str_save_light" xml:space="preserve">
+    <value>How to save lighting?</value>
+  </data>
+  <data name="str_home_appliance" xml:space="preserve">
+    <value>Home appliances</value>
+  </data>
+  <data name="str_reduce_water" xml:space="preserve">
+    <value>How can we reduce water consumption at home?</value>
+  </data>
+  <data name="str_wash" xml:space="preserve">
+    <value>While washing</value>
+  </data>
+  <data name="str_shower" xml:space="preserve">
+    <value>In the shower</value>
+  </data>
+  <data name="str_kitchen" xml:space="preserve">
+    <value>In the kitchen</value>
+  </data>
+  <data name="str_garden" xml:space="preserve">
+    <value>Garden</value>
+  </data>
+  <data name="str_washing_car" xml:space="preserve">
+    <value>While washing the car</value>
+  </data>
+  <data name="str_swimming_pool" xml:space="preserve">
+    <value>Swimming pools</value>
+  </data>
+  <data name="str_wash_tip1" xml:space="preserve">
+    <value>Turn off the tap while brushing your teeth and use a big glass of water instead of running water.</value>
+  </data>
+  <data name="str_wash_tip2" xml:space="preserve">
+    <value>Turn off the tap while washing your face or while shaving.</value>
+  </data>
+  <data name="str_wash_tip3" xml:space="preserve">
+    <value>Use a water flow regulator to reduce the amount of water consumed.</value>
+  </data>
+  <data name="str_shower_tip1" xml:space="preserve">
+    <value>Use the shower instead of filling the basin with water. If you insist on using it, make sure you do not over fill it.</value>
+  </data>
+  <data name="str_shower_tip2" xml:space="preserve">
+    <value>Use the low flow spray.</value>
+  </data>
+  <data name="str_shower_tip3" xml:space="preserve">
+    <value>Use spray regulator or a bolt to stop water flow while washing.</value>
+  </data>
+  <data name="str_kitchen_tip1" xml:space="preserve">
+    <value>Wash fruits and vegetables in a water filled basin or bowl to reduce water consumption while washing.</value>
+  </data>
+  <data name="str_kitchen_tip2" xml:space="preserve">
+    <value>Leave frozen foods out for a proper amount of time to defrost instead of pouring water over them.</value>
+  </data>
+  <data name="str_kitchen_tip3" xml:space="preserve">
+    <value>Use the exact amount of water needed for drinking purposes or coffee or tea preparation.</value>
+  </data>
+  <data name="str_kitchen_tip4" xml:space="preserve">
+    <value>When washing dishes, it is preferable to wash them in a basin filled with water. As for the dishes that need vigorous cleaning, it is recommended to soak the dishes in water for a short amount of time before washing them.</value>
+  </data>
+  <data name="str_kitchen_tip5" xml:space="preserve">
+    <value>Make sure that the dishwashing machine is fully loaded before turning it on. It is useless turning the machine on for one or two plates.</value>
+  </data>
+  <data name="str_kitchen_tip6" xml:space="preserve">
+    <value>Taps and water pipes should be checked on a regular basis to detect any possible leakage</value>
+  </data>
+  <data name="str_garden_tip" xml:space="preserve">
+    <value>Use the spray or drip irrigation system for irrigation to limit the consumption of water. Both methods are considered modern methods that use the least amount of water.</value>
+  </data>
+  <data name="str_wash_car_tip" xml:space="preserve">
+    <value>It is recommended to use at least two buckets of water to wash your car instead of using a water hose.</value>
+  </data>
+  <data name="str_swimming_pool_tips" xml:space="preserve">
+    <value>Swimming pools consumes large amount of water especially when they are big in size. Therefore it is recommended to follow these useful tips:</value>
+  </data>
+  <data name="str_swimming_pool_tip1" xml:space="preserve">
+    <value>Always make sure that the water level in the swimming pool is low.</value>
+  </data>
+  <data name="str_swimming_pool_tip2" xml:space="preserve">
+    <value>Cover the swimming pool with a suitable shade to decrease evaporation rate.</value>
+  </data>
+  <data name="str_swimming_pool_tip3" xml:space="preserve">
+    <value>Check the walls of the swimming pool and the drainage system constantly to monitor any leakage.</value>
+  </data>
+  <data name="str_school_tip1" xml:space="preserve">
+    <value>Never use water as a playing tool.</value>
+  </data>
+  <data name="str_school_tip2" xml:space="preserve">
+    <value>Inform your teacher in case of leakage.</value>
+  </data>
+  <data name="str_school_tip3" xml:space="preserve">
+    <value>Advise the gardener to use spray irrigation techniques.</value>
+  </data>
+  <data name="str_ac_tip1" xml:space="preserve">
+    <value>Conduct inspection and maintenance activities on a regular basis to ensure the air conditioner is operating efficiently and effectively.</value>
+  </data>
+  <data name="str_ac_tip2" xml:space="preserve">
+    <value>Clean the filter once every two weeks. This helps produce cleaner, cooler air and enables lower consumption of electricity.</value>
+  </data>
+  <data name="str_ac_tip3" xml:space="preserve">
+    <value>Close any holes around the AC unit to prevent any leakage of air, which in turn reduces consumption.</value>
+  </data>
+  <data name="str_ac_tip4" xml:space="preserve">
+    <value>Install curtains around the windows to minimize the entry of external heat and reduce the consumption of light as much as possible.</value>
+  </data>
+  <data name="str_ac_tip5" xml:space="preserve">
+    <value>Set the thermometer in the AC unit at 25 degrees Celsius and not below that level.</value>
+  </data>
+  <data name="str_water_saver1" xml:space="preserve">
+    <value>Water Saver helps in reducing the overall amount of water consumed by the individual. The water saver mixes the water coming out of the tap with air which automatically reduces the amount of water leaving the tap but still feels like you are using the same amount used before.</value>
+  </data>
+  <data name="str_water_saver2" xml:space="preserve">
+    <value>The water saver can be installed behind the showerhead. In addition, you can also install a bolt that is used to control water flow which can either be turned on or off when taking a shower.</value>
+  </data>
+  <data name="str_water_saver3" xml:space="preserve">
+    <value>Method To Calculate Consumption</value>
+  </data>
+  <data name="str_water_saver4" xml:space="preserve">
+    <value>There are Two Sections in the Water Meter</value>
+  </data>
+  <data name="str_water_saver_tip1" xml:space="preserve">
+    <value>One section is white with figures in black.</value>
+  </data>
+  <data name="str_water_saver_tip2" xml:space="preserve">
+    <value>The other section is red with figures in white.</value>
+  </data>
+  <data name="str_water_saver5" xml:space="preserve">
+    <value>Any figure in the white section refers to cubic meter or unit. The units for figures in the red section are liters.</value>
+  </data>
+  <data name="str_water_saver6" xml:space="preserve">
+    <value>How to Calculate Consumption</value>
+  </data>
+  <data name="str_water_saver_tip3" xml:space="preserve">
+    <value>Read the meter for two consecutive days.</value>
+  </data>
+  <data name="str_water_saver_tip4" xml:space="preserve">
+    <value>Subtract the first reading form the second reading.</value>
+  </data>
+  <data name="str_water_saver_tip5" xml:space="preserve">
+    <value>The difference between the two readings indicates the consumption of one day.</value>
+  </data>
+  <data name="str_water_saver_tip6" xml:space="preserve">
+    <value>If the difference between the two readings is  for more that one day, it should be divided by number of days to get the daily consumption and number of persons to get consumption per capita.</value>
+  </data>
+  <data name="str_water_saver7" xml:space="preserve">
+    <value>How to Calculate Consumption for One Day</value>
+  </data>
+  <data name="str_water_saver8" xml:space="preserve">
+    <value>Example: March 1–31</value>
+  </data>
+  <data name="str_water_saver9" xml:space="preserve">
+    <value>Number of days between the two readings = 30 days</value>
+  </data>
+  <data name="str_water_saver10" xml:space="preserve">
+    <value>Number of family members is five</value>
+  </data>
+  <data name="str_water_saver11" xml:space="preserve">
+    <value>Consumption, the difference between the two readings, is 45 cubic meters</value>
+  </data>
+  <data name="str_water_saver12" xml:space="preserve">
+    <value>Daily consumption = 45/30 = 1.5 cubic meter / day support number of the family members is 5</value>
+  </data>
+  <data name="str_water_saver13" xml:space="preserve">
+    <value>Consumption per capita = 1.5/5 = 0.3 cubic meter/ person/day</value>
+  </data>
+  <data name="str_home_app1" xml:space="preserve">
+    <value>Home appliances such as washing machines, driers, irons and others should be used at non-peak hours whenever possible.</value>
+  </data>
+  <data name="str_home_app2" xml:space="preserve">
+    <value>Refrigerator</value>
+  </data>
+  <data name="str_home_app_tip1" xml:space="preserve">
+    <value>Tightly close the refrigerator door.</value>
+  </data>
+  <data name="str_home_app_tip2" xml:space="preserve">
+    <value>Do not open the refrigerator doors repetitively, especially during the summer season. Keep cold water in an insulated thermos outside the refrigerator. This gives kids, in particular, one less reason to open the refrigerator.</value>
+  </data>
+  <data name="str_home_app_tip3" xml:space="preserve">
+    <value>Place the refrigerator in the coolest area of the kitchen. Avoid the warmer spots, especially those that are sunlit or near the oven.</value>
+  </data>
+  <data name="str_home_app_tip4" xml:space="preserve">
+    <value>Avoid operating the refrigerator at maximum temperatures. Adjust the temperature to moderate levels that can keep food just as fresh</value>
+  </data>
+  <data name="str_home_app3" xml:space="preserve">
+    <value>Washing machine</value>
+  </data>
+  <data name="str_home_wash" xml:space="preserve">
+    <value>While washing</value>
+  </data>
+  <data name="str_home_app_tip5" xml:space="preserve">
+    <value>Avoid operating the washing machine on a daily basis, when possible. Operate the washing machine when the load is medium to heavy. This helps save electricity as well as water</value>
+  </data>
+  <data name="str_home_app_tip6" xml:space="preserve">
+    <value>Machines that warm up water use up to six times more electricity compared with normal machines</value>
+  </data>
+  <data name="str_home_app4" xml:space="preserve">
+    <value>Other appliances (T.V, Video, Recorder, Radio)</value>
+  </data>
+  <data name="str_home_app5" xml:space="preserve">
+    <value>Avoid operating all the appliances at once, especially at peak hours (13.00 pm – 16.00pm and 22.00pm – 01.00am). This helps balance electricity load/consumption and prevents potential damage of the machines</value>
+  </data>
+  <data name="str_home_app6" xml:space="preserve">
+    <value>The table below reflects the amount of power consumption for other home appliances:</value>
+  </data>
+  <data name="str_save_light_tip1" xml:space="preserve">
+    <value>Switch off the lights when you exit the room.</value>
+  </data>
+  <data name="str_save_light_tip2" xml:space="preserve">
+    <value>Switch off the lights in rooms that are not occupied.</value>
+  </data>
+  <data name="str_save_light_tip3" xml:space="preserve">
+    <value>Switch off the lights during the day as it is beneficial to rely on sunlight during the day.</value>
+  </data>
+  <data name="str_save_light_tip4" xml:space="preserve">
+    <value>Paint the walls with light colors. Light colors reflect light, thereby intensifying the amount of light present in the room.</value>
+  </data>
+  <data name="str_save_light_tip5" xml:space="preserve">
+    <value>Use specific lamps that require less electric power to operate. These include fluorescent lamps and power saving lamps.</value>
+  </data>
+  <data name="str_save_light_tip6" xml:space="preserve">
+    <value>Use insulating glass for windows. This enables the entry of the largest amount of natural light and in turn reduces the amount of electricity needed.</value>
+  </data>
+  <data name="str_save_light1" xml:space="preserve">
+    <value>Advantages of power saving lamps:</value>
+  </data>
+  <data name="str_save_light_tip7" xml:space="preserve">
+    <value>Power savings lamps use up to 80% less power consumption when compared with ordinary lamps. In addition, they produce less heat, thereby requiring less energy consumption by air conditioning units.</value>
+  </data>
+  <data name="str_save_light_tip8" xml:space="preserve">
+    <value>The life time of power saving lamps is eight times that of the ordinary lamps. For example, if the lifetime of a normal bulb is 1000 hours, then the lifetime of power saving bulb is 8000 hours.</value>
+  </data>
+  <data name="str_save_light2" xml:space="preserve">
+    <value>The table below shows the difference in Watt usage between ordinary lamps and power savings lamps. Lower Watt usage means lower energy consumption and therefore, lower bill payment</value>
+  </data>
+  <data name="str_appliances" xml:space="preserve">
+    <value>APPLIANCES</value>
+  </data>
+  <data name="str_consumption" xml:space="preserve">
+    <value>CONSUMPTION
+		(KW/Hours)</value>
+  </data>
+  <data name="str_split_ac" xml:space="preserve">
+    <value>Split AC Units</value>
+  </data>
+  <data name="str_split_ac_unit" xml:space="preserve">
+    <value>2.5</value>
+  </data>
+  <data name="str_elec_oven" xml:space="preserve">
+    <value>Electric Oven</value>
+  </data>
+  <data name="str_elec_oven_unit" xml:space="preserve">
+    <value>6.0</value>
+  </data>
+  <data name="str_elec_burner" xml:space="preserve">
+    <value>Electric Burner</value>
+  </data>
+  <data name="str_elec_burner_unit" xml:space="preserve">
+    <value>7.5</value>
+  </data>
+  <data name="str_grill" xml:space="preserve">
+    <value>Grill</value>
+  </data>
+  <data name="str_grill_unit" xml:space="preserve">
+    <value>1.3</value>
+  </data>
+  <data name="str_kettle" xml:space="preserve">
+    <value>Kettle</value>
+  </data>
+  <data name="str_kettle_unit" xml:space="preserve">
+    <value>2.0</value>
+  </data>
+  <data name="str_toaster" xml:space="preserve">
+    <value>Toaster</value>
+  </data>
+  <data name="str_toaster_unit" xml:space="preserve">
+    <value>1.0</value>
+  </data>
+  <data name="str_light_bulb" xml:space="preserve">
+    <value>Light bulb</value>
+  </data>
+  <data name="str_light_bulb_unit" xml:space="preserve">
+    <value>0.1</value>
+  </data>
+  <data name="str_washing_machine" xml:space="preserve">
+    <value>A small washing machine</value>
+  </data>
+  <data name="str_wash_machine_unit" xml:space="preserve">
+    <value>0.25</value>
+  </data>
+  <data name="str_dish_washer" xml:space="preserve">
+    <value>Dish Washer</value>
+  </data>
+  <data name="str_dish_washer_unit" xml:space="preserve">
+    <value>4.0</value>
+  </data>
+  <data name="str_elec_vac_cleaner" xml:space="preserve">
+    <value>Electric vacum cleaner</value>
+  </data>
+  <data name="str_elec_vac_clean_unit" xml:space="preserve">
+    <value>0.75</value>
+  </data>
+  <data name="str_refigerator" xml:space="preserve">
+    <value>Refrigerator/Freezer</value>
+  </data>
+  <data name="str_refrigerator_unit" xml:space="preserve">
+    <value>7.5</value>
+  </data>
+  <data name="str_water_heater" xml:space="preserve">
+    <value>Water heater</value>
+  </data>
+  <data name="str_water_heater_unit" xml:space="preserve">
+    <value>1.5</value>
+  </data>
+  <data name="str_water_cooler" xml:space="preserve">
+    <value>Water cooler</value>
+  </data>
+  <data name="str_water_cooler_unit" xml:space="preserve">
+    <value>0.3</value>
+  </data>
+  <data name="str_television" xml:space="preserve">
+    <value>Television</value>
+  </data>
+  <data name="str_television_units" xml:space="preserve">
+    <value>0.25</value>
+  </data>
+  <data name="str_iron" xml:space="preserve">
+    <value>Iron</value>
+  </data>
+  <data name="str_iron_unit" xml:space="preserve">
+    <value>2.0</value>
+  </data>
+  <data name="str_elec_fan" xml:space="preserve">
+    <value>Electric fan</value>
+  </data>
+  <data name="str_elec_fan_unit" xml:space="preserve">
+    <value>0.1</value>
+  </data>
+  <data name="str_hair_dryer" xml:space="preserve">
+    <value>Hair dryer</value>
+  </data>
+  <data name="str_hair_dryer_unit" xml:space="preserve">
+    <value>0.5</value>
+  </data>
+  <data name="str_ord_lamp" xml:space="preserve">
+    <value>Ordinary lamp
+		(Watt) </value>
+  </data>
+  <data name="str_power_save_lamp" xml:space="preserve">
+    <value>Power saving lamp
+		(Watt)</value>
+  </data>
+  <data name="str_ord_unit1" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="str_power_unit1" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="str_ord_unit2" xml:space="preserve">
+    <value>60</value>
+  </data>
+  <data name="str_power_unit2" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="str_ord_unit3" xml:space="preserve">
+    <value>100</value>
+  </data>
+  <data name="str_power_unit3" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="str_ord_unit4" xml:space="preserve">
+    <value>120</value>
+  </data>
+  <data name="str_power_unit4" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="bullet_point" xml:space="preserve">
+    <value>bullet_point</value>
+  </data>
+  <data name="bullet_int0" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="bullet_int1" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="back_button" xml:space="preserve">
+    <value>back_button</value>
+  </data>
+  <data name="str_about_value_content" xml:space="preserve">
+    <value>Achieving ADDC vision requires us to permeate our core values throughout the organization in order to enable us to deliver sustainable business results. Our core values include:</value>
+  </data>
+  <data name="str_about_value_heading1" xml:space="preserve">
+    <value> Commitment to Customers</value>
+  </data>
+  <data name="str_about_value_point1" xml:space="preserve">
+    <value>Ensure provision of water and electricity with the highest levels of quality, safety and excellence.</value>
+  </data>
+  <data name="str_about_value_point2" xml:space="preserve">
+    <value>Demonstrate professionalism in all customer dealings</value>
+  </data>
+  <data name="str_about_value_point3" xml:space="preserve">
+    <value>Ensure that all business actions are driven by customer needs</value>
+  </data>
+  <data name="str_about_value_point4" xml:space="preserve">
+    <value>Operate the business following the highest ethical and moral standards</value>
+  </data>
+  <data name="str_about_value_point5" xml:space="preserve">
+    <value>Honor commitments and treat everyone fairly and with respect</value>
+  </data>
+  <data name="str_about_value_point6" xml:space="preserve">
+    <value>Treat employees with respect</value>
+  </data>
+  <data name="str_about_value_point7" xml:space="preserve">
+    <value>Provide a healthy and safe workplace</value>
+  </data>
+  <data name="str_about_value_point8" xml:space="preserve">
+    <value>Focus on recruiting, developing and retaining a skilled workforce</value>
+  </data>
+  <data name="str_about_value_point9" xml:space="preserve">
+    <value>Recognize and reward achievement</value>
+  </data>
+  <data name="str_about_value_point10" xml:space="preserve">
+    <value>Empower people to maximize their potential and contribution and promote open and honest communication</value>
+  </data>
+  <data name="str_about_value_point11" xml:space="preserve">
+    <value>and promote open and honest communication</value>
+  </data>
+  <data name="str_about_value_heading2" xml:space="preserve">
+    <value> Ethical behavior &amp; integrity</value>
+  </data>
+  <data name="str_about_value_heading3" xml:space="preserve">
+    <value> Commitment to employees</value>
+  </data>
+  <data name="str_about_value_heading4" xml:space="preserve">
+    <value>Excellence</value>
+  </data>
+  <data name="str_about_value_heading5" xml:space="preserve">
+    <value>Teamwork and trust</value>
+  </data>
+  <data name="str_about_value_heading6" xml:space="preserve">
+    <value>Corporate social responsibility</value>
+  </data>
+  <data name="str_about_value_point12" xml:space="preserve">
+    <value>Strive to achieve the highest possible standards in day-to-day work and in the quality of the outcomes produced</value>
+  </data>
+  <data name="str_about_value_point13" xml:space="preserve">
+    <value>Value the skills, strengths, and perspectives of a diverse team and promote cross-division teaming</value>
+  </data>
+  <data name="str_about_value_point14" xml:space="preserve">
+    <value>Promote a participatory workplace that enables people to get involved in making decisions about their work that contributes towards common business objectives</value>
+  </data>
+  <data name="str_about_value_point15" xml:space="preserve">
+    <value>Demonstrate corporate social responsibility by integrating community and social values in the development of corporate business planning</value>
+  </data>
+  <data name="str_about_value_point16" xml:space="preserve">
+    <value>Partner with other organizations and interest groups for the benefit of our society</value>
+  </data>
+  <data name="str_about_value_point17" xml:space="preserve">
+    <value>Participate in social and community awareness programs and campaigns</value>
+  </data>
+  <data name="ariff_consumption_msg_green" xml:space="preserve">
+    <value>A lower rate for using less than your daily allowance.</value>
+  </data>
+  <data name="str_cal_desc" xml:space="preserve">
+    <value>Results of calculations are approximations only.</value>
+  </data>
+  <data name="tariff_calculator_title" xml:space="preserve">
+    <value>Tariff calculator</value>
+  </data>
+  <data name="tariff_consumption_limit" xml:space="preserve">
+    <value>Consumption limits</value>
+  </data>
+  <data name="tariff_consumption_msg" xml:space="preserve">
+    <value>A higher rate for using more than your daily allowance.</value>
+  </data>
+  <data name="tariff_cubic_per_day_com" xml:space="preserve">
+    <value>7 cubic meters per day</value>
+  </data>
+  <data name="tariff_cubic_per_day_res" xml:space="preserve">
+    <value>0.7 cubic meters per day</value>
+  </data>
+  <data name="tariff_expats_com_elec_units" xml:space="preserve">
+    <value>200 kWh per day</value>
+  </data>
+  <data name="tariff_expats_com_elec_units_17" xml:space="preserve">
+    <value>200 kWh per day</value>
+  </data>
+  <data name="tariff_expats_com_water_units" xml:space="preserve">
+    <value>5 cubic meters per day</value>
+  </data>
+  <data name="tariff_expats_com_water_units_17" xml:space="preserve">
+    <value>5 cubic meters per day</value>
+  </data>
+  <data name="tariff_expats_green_elec_units" xml:space="preserve">
+    <value>Fils 21.00</value>
+  </data>
+  <data name="tariff_expats_green_elec_units_17" xml:space="preserve">
+    <value>Fils 26.80</value>
+  </data>
+  <data name="tariff_expats_green_water_units" xml:space="preserve">
+    <value>AED 5.95</value>
+  </data>
+  <data name="tariff_expats_green_water_units_17" xml:space="preserve">
+    <value>AED 7.84</value>
+  </data>
+  <data name="tariff_expats_home_elec_units" xml:space="preserve">
+    <value>20 kWh per day</value>
+  </data>
+  <data name="tariff_expats_home_elec_units_17" xml:space="preserve">
+    <value>20 kWh per day</value>
+  </data>
+  <data name="tariff_expats_home_water_units" xml:space="preserve">
+    <value>0.7 cubic meters per day</value>
+  </data>
+  <data name="tariff_expats_home_water_units_17" xml:space="preserve">
+    <value>0.7 cubic meters per day</value>
+  </data>
+  <data name="tariff_expats_red_elec_units" xml:space="preserve">
+    <value>Fils 31.80</value>
+  </data>
+  <data name="tariff_expats_red_elec_units_17" xml:space="preserve">
+    <value>Fils 30.5</value>
+  </data>
+  <data name="tariff_expats_red_wter_units" xml:space="preserve">
+    <value>AED 10.55</value>
+  </data>
+  <data name="tariff_expats_red_wter_units_17" xml:space="preserve">
+    <value>AED 10.41</value>
+  </data>
+  <data name="tariff_information" xml:space="preserve">
+    <value>Tariff information</value>
+  </data>
+  <data name="tariff_info_body1" xml:space="preserve">
+    <value>There are a number of things that help determine the amount that you pay: how much water and electricity you use, the type of property you live in, and whether you’re a UAE National or an expat. This page explains how it all works.</value>
+  </data>
+  <data name="tariff_one_cubic_meter" xml:space="preserve">
+    <value>For 1 cubic meter</value>
+  </data>
+  <data name="tariff_one_kilo_wats" xml:space="preserve">
+    <value>For 1 kWh</value>
+  </data>
+  <data name="tariff_slab_title" xml:space="preserve">
+    <value>Tariff slab</value>
+  </data>
+  <data name="tariff_uae_com_elec_units" xml:space="preserve">
+    <value>400 kWh per day</value>
+  </data>
+  <data name="tariff_uae_com_elec_units_17" xml:space="preserve">
+    <value>400 kWh per day</value>
+  </data>
+  <data name="tariff_uae_com_water_units" xml:space="preserve">
+    <value>7 cubic meters per day</value>
+  </data>
+  <data name="tariff_uae_com_water_units_17" xml:space="preserve">
+    <value>7 cubic meters per day</value>
+  </data>
+  <data name="tariff_uae_expats" xml:space="preserve">
+    <value>Expats</value>
+  </data>
+  <data name="tariff_uae_green_elec_units" xml:space="preserve">
+    <value>Fils 5.00</value>
+  </data>
+  <data name="tariff_uae_green_elec_units_17" xml:space="preserve">
+    <value>Fils 6.70</value>
+  </data>
+  <data name="tariff_uae_green_water_units" xml:space="preserve">
+    <value>AED 1.70</value>
+  </data>
+  <data name="tariff_uae_green_water_units_17" xml:space="preserve">
+    <value>AED 2.09</value>
+  </data>
+  <data name="tariff_uae_home_elec_units" xml:space="preserve">
+    <value>30 kWh per day</value>
+  </data>
+  <data name="tariff_uae_home_elec_units_17" xml:space="preserve">
+    <value>30 kWh per day</value>
+  </data>
+  <data name="fElec" xml:space="preserve">
+    <value>0.7 cubic meters per day</value>
+  </data>
+  <data name="tariff_uae_home_water_units_17" xml:space="preserve">
+    <value>0.7 cubic meters per day</value>
+  </data>
+  <data name="tariff_uae_nationals" xml:space="preserve">
+    <value>UAE nationals</value>
+  </data>
+  <data name="tariff_uae_red_elec_units" xml:space="preserve">
+    <value>Fils 5.50</value>
+  </data>
+  <data name="tariff_uae_red_elec_units_17" xml:space="preserve">
+    <value>Fils 7.50</value>
+  </data>
+  <data name="tariff_uae_red_wter_units" xml:space="preserve">
+    <value>AED 1.89</value>
+  </data>
+  <data name="tariff_uae_red_wter_units_17" xml:space="preserve">
+    <value>AED 2.6</value>
+  </data>
+  <data name="tariff_wats_per_day_comm" xml:space="preserve">
+    <value>400 kWh per day</value>
+  </data>
+  <data name="tariff_wats_per_day_res" xml:space="preserve">
+    <value>30 kWh per day</value>
+  </data>
+  <data name="tariff_info_body2" xml:space="preserve">
+    <value>Red and Green Rates</value>
+  </data>
+  <data name="tariff_info_body3" xml:space="preserve">
+    <value>Our residential tariffs are designed to encourage sustainable consumption. They’re divided into two different rates that affect your total bill. The Green Band is charged at a lower rate, up to a set daily allowance based on a calculated “ideal average” consumption. If you use more than this limit, you’ll be charged at a higher Red Band rate. So, if you stay in the green, you’ll pay less for each unit.For other tariffs follow these links:</value>
+  </data>
+  <data name="tariff_chart" xml:space="preserve">
+    <value>Tariff Checker</value>
+  </data>
+  <data name="tariff_slab_choose_year" xml:space="preserve">
+    <value>Select year</value>
+  </data>
+  <data name="str_electricity" xml:space="preserve">
+    <value>Electricity</value>
+  </data>
+  <data name="str_water" xml:space="preserve">
+    <value>Water</value>
+  </data>
+  <data name="tariff_calc_calculate" xml:space="preserve">
+    <value>Calculate</value>
+  </data>
+  <data name="tariff_calc_category_type" xml:space="preserve">
+    <value>Tariff</value>
+  </data>
+  <data name="tariff_calc_consum_amout" xml:space="preserve">
+    <value>Consumption Units</value>
+  </data>
+  <data name="tariff_calc_num_days" xml:space="preserve">
+    <value>Number of days</value>
+  </data>
+  <data name="tariff_calc_serv_type" xml:space="preserve">
+    <value>Service type</value>
+  </data>
+  <data name="tariff_calc_social_card" xml:space="preserve">
+    <value>Are you a social card holder.</value>
+  </data>
+  <data name="tariff_calc_unmetered" xml:space="preserve">
+    <value>Do you have unmetered water supply?</value>
+  </data>
+  <data name="tariff_total_title" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="traiff_cate_type_0" xml:space="preserve">
+    <value>Residential-nationals</value>
+  </data>
+  <data name="traiff_cate_type_1" xml:space="preserve">
+    <value>Residential-expats</value>
+  </data>
+  <data name="traiff_cate_type_2" xml:space="preserve">
+    <value>Select Category</value>
+  </data>
+  <data name="traiff_electric_units" xml:space="preserve">
+    <value>kWh</value>
+  </data>
+  <data name="traiff_premise_type_0" xml:space="preserve">
+    <value>Flat</value>
+  </data>
+  <data name="traiff_premise_type_1" xml:space="preserve">
+    <value>Villa</value>
+  </data>
+  <data name="traiff_premise_type_2" xml:space="preserve">
+    <value>Select premise</value>
+  </data>
+  <data name="traiff_water_units" xml:space="preserve">
+    <value>m3</value>
+  </data>
+  <data name="calc_1" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="calc_2" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="calc_3" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="str_locate_us_heading" xml:space="preserve">
+    <value>Find your nearest outlet</value>
+  </data>
+  <data name="str_open_gmap" xml:space="preserve">
+    <value>Are you sure you want to open inbuilt map application?</value>
+  </data>
+  <data name="str_locate_green" xml:space="preserve">
+    <value>Branch</value>
+  </data>
+  <data name="str_locate_grey" xml:space="preserve">
+    <value>Kiosks</value>
+  </data>
+  <data name="str_partner" xml:space="preserve">
+    <value>Partners</value>
+  </data>
+  <data name="str_locate_branch" xml:space="preserve">
+    <value>Branch</value>
+  </data>
+  <data name="str_locate_kiosk" xml:space="preserve">
+    <value>Kiosk</value>
+  </data>
+  <data name="str_locate_partner" xml:space="preserve">
+    <value>PARTNERS</value>
+  </data>
+  <data name="str_all_services" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="str_locate_us_header" xml:space="preserve">
+    <value>We've put all of our branches, kiosks and partners outlets as well as their opening hours at your fingertips.You can filter by the type of outlet you would like to visit.</value>
+  </data>
+  <data name="str_select_service" xml:space="preserve">
+    <value>Please select a service</value>
+  </data>
+  <data name="str_share" xml:space="preserve">
+    <value>Share with a friend </value>
+  </data>
+  <data name="str_enter_username" xml:space="preserve">
+    <value>Enter your username</value>
+  </data>
+  <data name="str_username" xml:space="preserve">
+    <value>UserName</value>
+  </data>
+  <data name="tremsconditions" xml:space="preserve">
+    <value>Terms and conditions will appear shortly.</value>
+  </data>
+  <data name="email_validation" xml:space="preserve">
+    <value>Please enter email ID</value>
+  </data>
+  <data name="LocateUSEng" xml:space="preserve">
+    <value>LocateUSEng</value>
+  </data>
+  <data name="enquery_want_intouch" xml:space="preserve">
+    <value>Do you want to get in touch with us?</value>
+  </data>
+  <data name="enquiry_assistance" xml:space="preserve">
+    <value>Need assistance?</value>
+  </data>
+  <data name="enquiry_assistance_desc" xml:space="preserve">
+    <value>All these information you need to deal with ADDC is readily to available on the website on our FAQ\'s Page. Please use the below option to proceed before get in touch with us.</value>
+  </data>
+  <data name="str_branch_locator" xml:space="preserve">
+    <value>Branch locator</value>
+  </data>
+  <data name="str_call_us" xml:space="preserve">
+    <value>Call us</value>
+  </data>
+  <data name="str_email_us" xml:space="preserve">
+    <value>Email us</value>
+  </data>
+  <data name="str_freq_ask_qustns" xml:space="preserve">
+    <value>Frequently asked questions</value>
+  </data>
+  <data name="str_getintouch_title" xml:space="preserve">
+    <value>Get in touch With ADDC </value>
+  </data>
+  <data name="str_suggestions" xml:space="preserve">
+    <value>Suggestions</value>
+  </data>
+<data name="str_share" xml:space="preserve">
+    <value>Share with a friend</value>
+  </data>
+<data name="str_other_serv" xml:space="preserve">
+    <value>Services</value>
+  </data>
+	 <data name="str_All" xml:space="preserve">
+    <value>Filter by service</value>
+  </data>
+ <data name="str_network" xml:space="preserve">
+    <value>Network connection unavailable. Please try after some time</value>
+  </data>
+  <data name="clmn0" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="clmn1" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="clmn2" xml:space="preserve">
+    <value>5</value>
+  </data>
+      <!-- My Accounts Screen Items -->
+    <data name="str_select_property" xml:space="preserve">
+    <value>Select the accounts to pay their outstanding bills</value>
+  </data>
+    <data name="str_select_account_details" xml:space="preserve">
+    <value>Click on account number to view details</value>
+  </data>
+    <data name="str_ost_bal" xml:space="preserve">
+    <value>Account balance</value>
+  </data>
+    <data name="str_balance" xml:space="preserve">
+    <value>Outstanding balance</value>
+  </data>
+    <data name="str_acc_number" xml:space="preserve">
+    <value>Account number</value>
+  </data>
+    <data name="str_currency" xml:space="preserve">
+    <value>AED</value>
+  </data>
+    <data name="str_currency_zero" xml:space="preserve">
+    <value>0.00</value>
+  </data>
+    <data name="str_water" xml:space="preserve">
+    <value>Water</value>
+  </data>
+    <data name="str_electricity" xml:space="preserve">
+    <value>Electricity</value>
+  </data>
+    <data name="str_previous_due" xml:space="preserve">
+    <value>Previous due</value>
+  </data>
+    <data name="str_total_due" xml:space="preserve">
+    <value>Total due</value>
+  </data>
+    <data name="str_payment_text" xml:space="preserve">
+    <value>How much would you like to pay ?</value>
+  </data>
+    <data name="str_total_text" xml:space="preserve">
+    <value>Total to be paid</value>
+  </data>
+    <data name="str_amount_to_be_paid" xml:space="preserve">
+    <value>Amount To be paid</value>
+  </data>
+    <data name="str_amount_paid" xml:space="preserve">
+    <value>Amount paid</value>
+  </data>
+    <data name="str_thanks_text" xml:space="preserve">
+    <value>Thank you!!</value>
+  </data>
+    <data name="str_paid_on" xml:space="preserve">
+    <value>Paid on</value>
+  </data>
+    <data name="str_total_paid" xml:space="preserve">
+    <value>Total paid</value>
+  </data>
+    <data name="str_email_text" xml:space="preserve">
+    <value>Email receipt</value>
+  </data>
+    <data name="str_transaction" xml:space="preserve">
+    <value> Transaction ID</value>
+  </data>
+    <data name="str_payment_received" xml:space="preserve">
+    <value>We’ve received your payment.</value>
+  </data>
+    <data name="str_choose_property" xml:space="preserve">
+    <value>Choose account</value>
+  </data>
+    <data name="str_property_name" xml:space="preserve">
+    <value>Property name</value>
+  </data>
+    <data name="str_acc_number_bill" xml:space="preserve">
+    <value>Account number</value>
+  </data>
+    <data name="str_bill_number_bil" xml:space="preserve">
+    <value>Bill number</value>
+  </data>
+    <data name="str_date_bill" xml:space="preserve">
+    <value>Bill date</value>
+  </data>
+    <data name="str_pay_by_date_bill" xml:space="preserve">
+    <value>Pay by date</value>
+  </data>
+    <data name="str_bill_history" xml:space="preserve">
+    <value>Bill history</value>
+  </data>
+    <data name="str_payment_history" xml:space="preserve">
+    <value>Payment history</value>
+  </data>
+    <data name="str_payment_date" xml:space="preserve">
+    <value>Payment date</value>
+  </data>
+    <data name="str_trans_id" xml:space="preserve">
+    <value>Transaction ID</value>
+  </data>
+    <data name="str_paid_amt" xml:space="preserve">
+    <value>Paid amount</value>
+  </data>
+    <data name="str_previous_charges" xml:space="preserve">
+    <value>Previous charges</value>
+  </data>
+    <data name="str_curr_cycle_chrgs" xml:space="preserve">
+    <value>Current cycle charges</value>
+  </data>
+    <data name="str_total_amt_due" xml:space="preserve">
+    <value>Total amount due</value>
+  </data>
+    <data name="str_units" xml:space="preserve">
+    <value>Units :</value>
+  </data>
+    <data name="str_amount" xml:space="preserve">
+    <value>Amount :</value>
+  </data>
+    <data name="str_tariff" xml:space="preserve">
+    <value>Tariff :</value>
+  </data>
+    <data name="str_water_tariff_units" xml:space="preserve">
+    <value>AED/m3</value>
+  </data>
+    <data name="str_elec_tariff_units" xml:space="preserve">
+    <value>Fils/kWh</value>
+  </data>
+    <data name="str_water_consumption" xml:space="preserve">
+    <value>Water consumption</value>
+  </data>
+    <data name="str_electricity_consumption" xml:space="preserve">
+    <value>Electricity consumption</value>
+  </data>
+
+    <!-- View Bill Screen Items -->
+    <data name="str_acount_nick_name" xml:space="preserve">
+    <value>Account nick name</value>
+  </data>
+    <data name="str_account_num" xml:space="preserve">
+    <value>Account number</value>
+  </data>
+    <data name="str_bill_cycle" xml:space="preserve">
+    <value>Bill cycle</value>
+  </data>
+    <data name="str_premise_id" xml:space="preserve">
+    <value>Premise id</value>
+  </data>
+    <data name="str_premise_type" xml:space="preserve">
+    <value>Premise type</value>
+  </data>
+    <data name="str_bill_pref" xml:space="preserve">
+    <value>Bill preference</value>
+  </data>
+    <data name="str_bill_address" xml:space="preserve">
+    <value>Billing address</value>
+  </data>
+    <data name="str_select_city" xml:space="preserve">
+    <value>Select city</value>
+  </data>
+    <data name="str_post_box" xml:space="preserve">
+    <value>Po box</value>
+  </data>
+    <data name="str_tariff_type" xml:space="preserve">
+    <value>Tariff type</value>
+  </data>
+    <data name="str_life_sup" xml:space="preserve">
+    <value>Life support</value>
+  </data>
+    <data name="str_payment_date_text" xml:space="preserve">
+    <value>Payment date</value>
+  </data>
+    <data name="str_acc_details" xml:space="preserve">
+    <value>Customer details</value>
+  </data>
+    <data name="str_last_bill_sum" xml:space="preserve">
+    <value>Last bill summary</value>
+  </data>
+    <data name="str_last_pay_sum" xml:space="preserve">
+    <value>Last payment summary</value>
+  </data>
+    <data name="str_city_amp" xml:space="preserve">
+    <value>Through Email &amp; SMS</value>
+  </data>
+    <data name="str_acc_num_bold" xml:space="preserve">
+    <value>Account number</value>
+  </data>
+    <data name="str_payment_rcv" xml:space="preserve">
+    <value>Payment received</value>
+  </data>
+    <data name="str_bill_custdetails" xml:space="preserve">
+    <value>Customer details</value>
+  </data>
+    <!-- My Profile and Update Accont Info -->
+    <data name="str_cus_id_header" xml:space="preserve">
+    <value>Keep us updated</value>
+  </data>
+    <data name="str_myprof_data" xml:space="preserve">
+    <value>It is critical that we have your right details to continue providing you with our best possible service. Kindly use this to update us, should you need to make any more changes.</value>
+  </data>
+    <data name="str_personal_detls" xml:space="preserve">
+    <value>Your personal details : </value>
+  </data>
+    <data name="str_contctnum_desc" xml:space="preserve">
+    <value>If you include more than one number, then we will use the first one to send you SMS alerts and service updates; please make sure it is a local mobile.</value>
+  </data>
+    <data name="str_bill_language_myprofile" xml:space="preserve">
+    <value>Which language you would prefer us to use?</value>
+  </data>
+    <data name="my_profile" xml:space="preserve">
+    <value>My profile</value>
+  </data>
+    <data name="str_update_acc_title" xml:space="preserve">
+    <value>Edit my profile</value>
+  </data>
+    <data name="str_edit" xml:space="preserve">
+    <value>EDIT</value>
+  </data>
+    <data name="str_hello" xml:space="preserve">
+    <value>Hello</value>
+  </data>
+    <data name="str_customer_id" xml:space="preserve">
+    <value>Customer ID</value>
+  </data>
+    <data name="str_phone" xml:space="preserve">
+    <value>Contact number</value>
+  </data>
+    <data name="str_fav" xml:space="preserve">
+    <value>Favourite</value>
+  </data>
+    <data name="str_see_all" xml:space="preserve">
+    <value>See more</value>
+  </data>
+    <data name="str_see_less" xml:space="preserve">
+    <value>See less</value>
+  </data>
+    <data name="str_home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+    <data name="str_work" xml:space="preserve">
+    <value>Work</value>
+  </data>
+    <data name="str_mobile" xml:space="preserve">
+    <value>Mobile</value>
+  </data>
+    <data name="str_others" xml:space="preserve">
+    <value>Others</value>
+  </data>
+    <data name="str_mandatory_feilds" xml:space="preserve">
+    <value>All the feilds below are required.So that you can access your account online.</value>
+  </data>
+    <data name="str_email_info" xml:space="preserve">
+    <value>To access your Account online,fill details below.</value>
+  </data>
+    <data name="str_add_new_number" xml:space="preserve">
+    <value>Add new number</value>
+  </data>
+    <data name="str_type_password" xml:space="preserve">
+    <value>Type password</value>
+  </data>
+    <data name="str_re_typr_password" xml:space="preserve">
+    <value>Re type password</value>
+  </data>
+    <data name="str_lang_sel" xml:space="preserve">
+    <value>Select the language for receiving bills and future correspondence from ADDC.</value>
+  </data>
+    <data name="str_update_post" xml:space="preserve">
+    <value>Select an option below to receive the bill</value>
+  </data>
+    <data name="str_premise_name" xml:space="preserve">
+    <value>Beach house</value>
+  </data>
+    <data name="str_fav_color" xml:space="preserve">
+    <value>What is your favourite colour?</value>
+  </data>
+    <data name="str_fav_color_ans" xml:space="preserve">
+    <value>Green</value>
+  </data>
+    <data name="str_update_acc_lang_query_ans" xml:space="preserve">
+    <value>English</value>
+  </data>
+    <data name="str_update_acc_fullname" xml:space="preserve">
+    <value>Full name</value>
+  </data>
+    <data name="str_requred_head" xml:space="preserve">
+    <value>Create log in information</value>
+  </data>
+    <data name="str_update_acc_username_lbl" xml:space="preserve">
+    <value>Enter your username</value>
+  </data>
+    <data name="str_update_acc_desc" xml:space="preserve">
+    <value>We\'ll use this as a way of contacting you.</value>
+  </data>
+    <data name="str_update_acc_add" xml:space="preserve">
+    <value>ADD NEW NUMBER</value>
+  </data>
+    <data name="str_typepasswd" xml:space="preserve">
+    <value>New password</value>
+  </data>
+    <data name="str_retypepasswd" xml:space="preserve">
+    <value>Retype new password</value>
+  </data>
+    <data name="str_oldpasswd" xml:space="preserve">
+    <value>Old password</value>
+  </data>
+    <data name="str_bill_pref_accoptions" xml:space="preserve">
+    <value>Bill preference</value>
+  </data>
+
+	  <data name="adjustments" xml:space="preserve">
+    <value>Adjustments/Corrections</value>
+  </data>
+
+	  <data name="other_changes" xml:space="preserve">
+    <value>Other charges</value>
+  </data>
+
+	  <data name="municipality_fees" xml:space="preserve">
+    <value>Municipality fees</value>
+  </data>
+  <data name="str_make_payment" xml:space="preserve">
+    <value>Make a payment</value>
+  </data>
+  <data name="str_bank_trans_id" xml:space="preserve">
+    <value>Bank Transaction ID</value>
+  </data>
+  <data name="str_payment_update" xml:space="preserve">
+    <value>Your outstanding balance will reflect on the payment screen in less than 15 minutes.</value>
+  </data>
+
+	  <string name="str_payment_update"> Your outstanding balance will reflect on the payment screen in less than 15 minutes.</string>
+	</root>

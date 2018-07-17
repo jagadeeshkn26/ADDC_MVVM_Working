@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:local="clr-namespace:ADDC_MVVM" 
+		x:Class="ADDC_MVVM.Views.ADDCPage"
+		xmlns:Common="clr-namespace:ADDC_MVVM;assembly=ADDC_MVVM"
+    xmlns:i18n="clr-namespace:ADDC_MVVM;assembly=ADDC_MVVM"
+    xmlns:color ="clr-namespace:ADDC_MVVM:assembly=ADDC_MVVM">
+	<ContentPage.Padding>
+		<OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
+	</ContentPage.Padding>
+ <RelativeLayout>
+		 <Image RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Height}"
+				Source="{x:Static Common:ImagePathResources.BackgroundImagePath}" 
+				 Aspect = "Fill"/>
+  <StackLayout RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Height}" >  
+  
+      <RelativeLayout VerticalOptions="Start" >
+ 
+        <Image x:Name = "menuBg" Source="{i18n:Translate landing_header}" 
+				 Aspect = "Fill"/>
+	        <StackLayout RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToView, Property=Height}" HorizontalOptions = "FillAndExpand">
+					<Grid VerticalOptions ="Center" >
+         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="auto" />
+          </Grid.ColumnDefinitions>
+
+          <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+          </Grid.RowDefinitions>
+           <StackLayout x:Name="Header1" Grid.Row="0" Padding = "10, 0, 10, 0"
+	                       Grid.Column="{i18n:Translate a8}"
+	                       VerticalOptions="Center" >
+	            <Image Source="landing_active_menu_icon.png" >
+	              <Image.GestureRecognizers>
+	                <TapGestureRecognizer
+										Tapped = "OnTapMenu"
+	                        
+	                        NumberOfTapsRequired="1" />
+	              </Image.GestureRecognizers>
+	            </Image>
+	          </StackLayout>
+
+        </Grid>
+        </StackLayout>
+		</RelativeLayout>
+
+      <ScrollView Padding ="0, 0, 0,10" VerticalOptions="StartAndExpand">			
+    		<Grid >
+      			<Grid.RowDefinitions>
+		        <RowDefinition Height="Auto" />
+		        <RowDefinition Height="Auto" />
+		        <RowDefinition Height="Auto" />
+		        <RowDefinition Height="Auto" />
+		        <RowDefinition Height="Auto" />
+		        <RowDefinition Height="Auto" />
+		      </Grid.RowDefinitions>
+						<Grid.RowSpacing>
+								
+		<OnIdiom x:TypeArguments="x:Double">
+
+    
+		       <OnIdiom.Phone>10</OnIdiom.Phone>
+        <OnIdiom.Tablet>25</OnIdiom.Tablet>j
+									</OnIdiom>
+							</Grid.RowSpacing>
+						<Grid.Padding>
+		
+		<OnIdiom x:TypeArguments ="Thickness" Phone = "20, 0, 20, 0" Tablet = "40, 40, 40, 0" />
+	</Grid.Padding>
+					<StackLayout Grid.Row = "0">
+            <Image Grid.Row = "0" 
+									VerticalOptions = "Start"
+								Source="logo.png"
+      RelativeLayout.WidthConstraint=
+	                  	"{ConstraintExpression Type=RelativeToView, Property=Width}"
+              RelativeLayout.HeightConstraint=
+	                  	"{ConstraintExpression Type=RelativeToView, Property=Height}">
+							<Image.HeightRequest>
+								
+		<OnIdiom x:TypeArguments="x:Double">
+
+    
+		       <OnIdiom.Phone>100</OnIdiom.Phone>
+        <OnIdiom.Tablet>130</OnIdiom.Tablet>
+									</OnIdiom>
+							</Image.HeightRequest>
+							</Image>
+						</StackLayout>
+						<Label Grid.Row = "1" XAlign ="Center"
+									TextColor="#5e9622"  
+									
+								Text="{i18n:Translate StrWelcomeToAddc}" VerticalOptions="Center" 
+								HorizontalOptions="Center">
+								<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+					<Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Label.FontFamily>
+					    </Label>
+						<Label  Grid.Row = "2"  XAlign ="Center"
+									VerticalOptions="Center" 
+									HorizontalOptions="Center" 
+								TextColor="#545b66"
+								Text="{i18n:Translate StrWaterPoer}"  >
+
+									<Label.Font>Bold</Label.Font>
+							<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+							<Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Label.FontFamily>
+					    </Label>
+						<Label Grid.Row = "3"  XAlign ="Center"
+									VerticalOptions="Center" 
+									HorizontalOptions="Center" 
+								TextColor="#5e9622" 
+								Text="{i18n:Translate StrExplore}">
+								<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+						<Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Label.FontFamily>	</Label>
+					
+					<StackLayout Grid.Row = "4" Padding="0, 0, 0,0"
+							VerticalOptions = "Start" >
+					
+						<Grid VerticalOptions = "Start" HorizontalOptions = "CenterAndExpand"  >
+
+
+          <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+          </Grid.RowDefinitions>
+      
+						
+			 <StackLayout Grid.Row = "0" VerticalOptions = "Start"
+								Grid.Column="{i18n:Translate a18}">
+            <Image Grid.Row = "0" 
+									VerticalOptions = "Start"
+								Source="landing_pic.png">
+								<Image.HeightRequest>
+								
+		<OnIdiom x:TypeArguments="x:Double">
+
+    
+		       <OnIdiom.Phone>60</OnIdiom.Phone>
+        <OnIdiom.Tablet>100</OnIdiom.Tablet>
+									</OnIdiom>
+							</Image.HeightRequest>
+							</Image>
+						</StackLayout>		
+						<StackLayout Spacing = "10"
+								Grid.Row = "0" 
+								Grid.Column="{i18n:Translate b18}"
+								Grid.ColumnSpan = "3"
+								HorizontalOptions = "{i18n:Translate HoriExp}"
+								Orientation = "Vertical">
+							<Label XAlign ="Start"  
+									VerticalOptions="Center" 
+									HorizontalOptions="{i18n:Translate HoriExp}"
+
+									TextColor="#5e9622"
+									Text="{i18n:Translate str_energy_save}">
+									<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+								<Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Label.FontFamily>
+							</Label>
+									<Label XAlign ="{i18n:Translate HoriExp}"  
+									VerticalOptions="Center" 
+									HorizontalOptions="{i18n:Translate HoriExp}"
+									TextColor="Black"
+									Text="{i18n:Translate StrMassive}">
+									<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+							<Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Label.FontFamily></Label>
+										    
+						</StackLayout>
+            </Grid>
+        
+					</StackLayout>
+					<StackLayout Grid.Row = "5"  HorizontalOptions = "Center">
+              <Button Text="{i18n:Translate StrEnglish}" 
+									BackgroundColor="White" 
+									TextColor="Black"
+								WidthRequest = "150"
+									x:Name="pkrLanguage"
+									Clicked="ChangeLng" 
+									VerticalOptions = "Start">
+								<Button.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Button.FontSize>
+								<Button.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Button.FontFamily>
+ 
+              </Button>			
+	  
+							<Label  XAlign ="Center"  
+									VerticalOptions="Center" 
+									HorizontalOptions="Center" 
+									TextColor="Black" 
+									Text="{i18n:Translate StrChangeLang}">
+										<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+						<Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Label.FontFamily>	</Label>						
+							</StackLayout>
+	       <StackLayout  Grid.Row = "6" Orientation = "Horizontal" 
+									 >
+           <Grid HorizontalOptions = "CenterAndExpand"
+									VerticalOptions = "CenterAndExpand">
+             <StackLayout  Grid.Row="0" Grid.Column="{i18n:Translate i1}" >
+               <Button  Clicked="NewUser" Text="{i18n:Translate StrNewUser}"
+											BackgroundColor = "#5e9622"
+										
+											TextColor = "White">
+<Button.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Button.FontSize>
+						<Button.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Button.FontFamily></Button>
+
+             </StackLayout>
+             <StackLayout  Grid.Row="0" Grid.Column="{i18n:Translate j1}">
+               <Button Clicked="ExistingUser" 
+											HorizontalOptions = "CenterAndExpand"
+											Text="{i18n:Translate StrExistingUser}"
+                   BackgroundColor = "#5e9622"
+                     TextColor = "White" >
+							<Button.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Button.FontSize>
+						<Button.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Button.FontFamily></Button>
+             </StackLayout>
+                             
+             </Grid>
+							</StackLayout>
+				</Grid>
+			 </ScrollView>
+
+    <RelativeLayout VerticalOptions ="End">
+
+      <Image  Source="landing_footer.png" HeightRequest= "80" Aspect = "Fill"/>
+	        <StackLayout RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToView, Property=Height}" 
+					HorizontalOptions = "End">
+	
+        <Grid VerticalOptions ="Center" >
+					<Grid.RowDefinitions>
+						<RowDefinition Height = "80"/>
+						</Grid.RowDefinitions>
+	       
+          <Label  HorizontalOptions = "CenterAndExpand" VerticalOptions = "Center" Text="{i18n:Translate StrAllRights}"
+                    Grid.ColumnSpan="2"
+                 Font="11" TextColor="Black"
+                 LineBreakMode="CharacterWrap">
+					<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+						<Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Label.FontFamily></Label>
+        </Grid>
+      </StackLayout>
+    </RelativeLayout>
+    </StackLayout>
+    </RelativeLayout>
+</ContentPage>

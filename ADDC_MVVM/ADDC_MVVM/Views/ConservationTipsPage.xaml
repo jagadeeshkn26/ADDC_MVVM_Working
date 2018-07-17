@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		x:Class="ADDC_MVVM.ConservationTipsPage"
+		xmlns:i18n="clr-namespace:ADDC_MVVM;assembly=ADDC_MVVM"
+		xmlns:Common="clr-namespace:ADDC_MVVM;assembly=ADDC_MVVM">
+	<ContentPage.Padding>
+		<OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
+	</ContentPage.Padding>	
+		<ContentPage.Content>
+		  <RelativeLayout
+			>
+			<Image Source="{x:Static Common:ImagePathResources.BackgroundImagePath}"
+				HeightRequest= "60" Aspect = "Fill" RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Height}" >  
+   </Image>
+  <StackLayout RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Height}" >  
+   
+
+			   <RelativeLayout VerticalOptions="Start" >
+ 
+        <Image x:Name = "menuBg" Source="{i18n:Translate HeaderContent}" 
+				 Aspect = "Fill"/>
+	        <StackLayout RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToView, Property=Height}" HorizontalOptions = "FillAndExpand">
+					<Grid VerticalOptions ="Center" >
+           <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="auto" />
+          </Grid.ColumnDefinitions>
+
+          <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+          </Grid.RowDefinitions>
+           <StackLayout x:Name="Header1" Grid.Row="0" Padding = "10, 0, 10, 0"
+	                       Grid.Column="{i18n:Translate a8}"
+	                       VerticalOptions="Center">
+	            <Image Source="landing_active_menu_icon.png" >
+	              <Image.GestureRecognizers>
+	                <TapGestureRecognizer
+	                        Command="{Binding OnTapMenu}"
+	                        NumberOfTapsRequired="1" />
+	              </Image.GestureRecognizers>
+	            </Image>
+	          </StackLayout>
+	          <StackLayout Grid.Row="0"
+                       Grid.Column="{i18n:Translate b8}"
+              Grid.ColumnSpan="3"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand">
+           <Label  Text="{i18n:Translate str_conservation_tips}" 
+                       LineBreakMode="NoWrap"
+               TextColor="#545b66" Font = "1, bold" >   
+																	<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+					<Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Label.FontFamily>
+            </Label>
+          </StackLayout>
+        </Grid>
+        </StackLayout>
+		</RelativeLayout>
+		<StackLayout VerticalOptions = "Start" >
+		<StackLayout.IsVisible>
+        <OnPlatform x:TypeArguments="x:Boolean">
+                <OnPlatform.iOS>
+                     false
+                 </OnPlatform.iOS>
+                <OnPlatform.Android>
+                     true
+                </OnPlatform.Android>
+            </OnPlatform>
+    </StackLayout.IsVisible>
+		<Grid BackgroundColor = "#e6f0c1" Padding = " 5, 5, 5, 5">
+				 <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+          </Grid.ColumnDefinitions>
+
+          <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+          </Grid.RowDefinitions>
+				<StackLayout HorizontalOptions = "Center" 
+						Orientation = "Vertical" Grid.Row = "0"
+						Grid.Column = "{i18n:Translate i1}">
+					<Image Source = "{Binding WtrImg}" HeightRequest = "50"></Image>
+					<Label TextColor = "{Binding WtrTxt}" Text = "{i18n:Translate str_water_saving}"
+									 ><Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+					<Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Label.FontFamily></Label>
+						 <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer
+						Command="{Binding Water_Tapped}" 				
+                        NumberOfTapsRequired="1" />
+              </StackLayout.GestureRecognizers>
+				</StackLayout>
+			
+           
+				<StackLayout HorizontalOptions = "Center" 
+						Orientation = "Vertical" Grid.Row = "0"
+						Grid.Column = "{i18n:Translate j1}">
+					<Image Source = "{Binding EleImg}" HeightRequest = "50"></Image>
+					<Label TextColor = "{Binding EleTxt}"  Text = "{i18n:Translate str_elec_saving}"><Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+					<Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Label.FontFamily></Label>
+									 <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer
+                        Command="{Binding Elec_Tapped}" 
+                        NumberOfTapsRequired="1" />
+              </StackLayout.GestureRecognizers>
+				</StackLayout>
+
+           
+			</Grid>
+		</StackLayout>
+		<ScrollView>
+				<StackLayout Padding = "10, 10, 10, 10"
+				VerticalOptions = "StartAndExpand">
+
+					<StackLayout x:Name = "WtrSaving" IsVisible = "{Binding WtrView}">
+
+						<Label HorizontalTextAlignment = "{i18n:Translate HoriExp}"
+									TextColor = "#545b66" Text = "{i18n:Translate str_water_tips}" >			<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+					<Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Label.FontFamily></Label>
+
+						<Label HorizontalTextAlignment = "{i18n:Translate HoriExp}" TextColor = "Black" 
+								Text = "{i18n:Translate str_water_tips_desc}" >			<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+					<Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Label.FontFamily></Label>
+
+						<StackLayout Spacing = "10">
+							<StackLayout Padding = "1" 
+									BackgroundColor = "#D3D3D3">
+								<StackLayout Padding ="10" BackgroundColor = "#eff8e9" >
+									<StackLayout.GestureRecognizers>
+										<TapGestureRecognizer
+												Tapped = "InsideHouse_Tapped"
+											NumberOfTapsRequired="1" />
+									</StackLayout.GestureRecognizers>
+									<Grid>
+										<Label Grid.Row = "0" 
+												Grid.Column = "{i18n:Translate L1}"
+												HorizontalTextAlignment = "{i18n:Translate HoriExp}"
+												Grid.ColumnSpan = "4" 
+												Text = "{i18n:Translate str_insd_house}" 
+												TextColor = "Black" >
+										<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+					<Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Label.FontFamily></Label>
+										<Image HorizontalOptions = "{i18n:Translate HoriRevExp}" Grid.Row = "0" 
+												Grid.Column = "{i18n:Translate L2}"
+												HeightRequest = "20"
+											Aspect = "AspectFit"
+                     Source="{i18n:Translate next_icon}" 
+                          />
+									</Grid>
+								</StackLayout>
+							</StackLayout>
+							<StackLayout Padding = "1" 
+									BackgroundColor = "#D3D3D3">
+								<StackLayout Padding ="10" BackgroundColor = "#eff8e9" >
+									<StackLayout.GestureRecognizers>
+										<TapGestureRecognizer
+												Tapped = "OutSideHouse_Tapped"
+											NumberOfTapsRequired="1" />
+									</StackLayout.GestureRecognizers>
+									<Grid>
+										<Label Grid.Row = "0" 
+												Grid.Column = "{i18n:Translate L1}"
+												HorizontalTextAlignment = "{i18n:Translate HoriExp}"
+												Grid.ColumnSpan = "4" 
+												Text = "{i18n:Translate str_osd_house}" 
+												TextColor = "Black" >
+										<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+					<Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Label.FontFamily></Label>
+										<Image HorizontalOptions = "{i18n:Translate HoriRevExp}" Grid.Row = "0" 
+												Grid.Column = "{i18n:Translate L2}" 
+												HeightRequest = "20"
+											Aspect = "AspectFit"
+                     Source="{i18n:Translate next_icon}" 
+                          />
+									</Grid>
+								</StackLayout>
+							</StackLayout>
+							<StackLayout Padding = "1" 
+									BackgroundColor = "#D3D3D3">
+								<StackLayout Padding ="10" BackgroundColor = "#eff8e9" >
+									<StackLayout.GestureRecognizers>
+										<TapGestureRecognizer
+												Tapped = "AtSchool_Tapped"
+											NumberOfTapsRequired="1" />
+									</StackLayout.GestureRecognizers>
+									<Grid>
+										<Label Grid.Row = "0" 
+												Grid.Column = "{i18n:Translate L1}"
+												HorizontalTextAlignment = "{i18n:Translate HoriExp}"
+												Grid.ColumnSpan = "4" 
+												Text = "{i18n:Translate str_at_school}" 
+												TextColor = "Black" >
+										<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+					<Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Label.FontFamily></Label>
+										<Image HorizontalOptions = "{i18n:Translate HoriRevExp}" Grid.Row = "0" 
+												Grid.Column = "{i18n:Translate L2}" 
+												HeightRequest = "20"
+											Aspect = "AspectFit"
+                     Source="{i18n:Translate next_icon}" 
+                          />
+									</Grid>
+								</StackLayout>
+							</StackLayout>
+							<StackLayout Padding = "1" 
+									BackgroundColor = "#D3D3D3">
+								<StackLayout Padding ="10" BackgroundColor = "#eff8e9" >
+									<StackLayout.GestureRecognizers>
+										<TapGestureRecognizer
+												Tapped = "WaterSaver_Tapped"
+											NumberOfTapsRequired="1" />
+									</StackLayout.GestureRecognizers>
+									<Grid>
+										<Label Grid.Row = "0" 
+												Grid.Column = "{i18n:Translate L1}"
+												HorizontalTextAlignment = "{i18n:Translate HoriExp}"
+												Grid.ColumnSpan = "4" 
+												Text = "{i18n:Translate str_water_saver}" 
+												TextColor = "Black" >
+										<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+					<Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Label.FontFamily></Label>
+										<Image HorizontalOptions = "{i18n:Translate HoriRevExp}" Grid.Row = "0" 
+												Grid.Column = "{i18n:Translate L2}" 
+												HeightRequest = "20"
+											Aspect = "AspectFit"
+                     Source="{i18n:Translate next_icon}" 
+                          />
+									</Grid>
+								</StackLayout>
+							</StackLayout>
+						</StackLayout>
+					</StackLayout>
+					
+                    <StackLayout x:Name = "EleSaving" IsVisible = "{Binding EleView}">
+												<Label HorizontalTextAlignment = "{i18n:Translate HoriExp}" 
+								TextColor = "#545b66" Text = "{i18n:Translate str_elec_tips}" >	
+							<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+					<Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Label.FontFamily></Label>
+
+						<Label HorizontalTextAlignment = "{i18n:Translate HoriExp}" TextColor = "Black" 
+								Text = "{i18n:Translate str_elec_tips_desc}" >			<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+					<Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Label.FontFamily></Label>
+						<Label HorizontalTextAlignment = "{i18n:Translate HoriExp}" TextColor = "Black" 
+								Text = "{i18n:Translate str_elec_save_steps}" >			<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+					<Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Label.FontFamily></Label>
+
+						<StackLayout Spacing = "10">
+							<StackLayout Padding = "1" 
+									BackgroundColor = "#D3D3D3">
+								<StackLayout Padding ="10" BackgroundColor = "#eff8e9" >
+									<StackLayout.GestureRecognizers>
+										<TapGestureRecognizer
+												Tapped = "AirCond_Tapped"
+											NumberOfTapsRequired="1" />
+									</StackLayout.GestureRecognizers>
+									<Grid>
+										<Label Grid.Row = "0" 
+												Grid.Column = "{i18n:Translate L1}"
+												HorizontalTextAlignment = "{i18n:Translate HoriExp}"
+												Grid.ColumnSpan = "4" 
+												Text = "{i18n:Translate str_air_cond}" 
+												TextColor = "Black" >
+										<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+					<Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Label.FontFamily></Label>
+										<Image HorizontalOptions = "{i18n:Translate HoriRevExp}" Grid.Row = "0" 
+												Grid.Column = "{i18n:Translate L2}"
+												HeightRequest = "20"
+											Aspect = "AspectFit"
+                     Source="{i18n:Translate next_icon}" 
+                          />
+									</Grid>
+								</StackLayout>
+							</StackLayout>
+							<StackLayout Padding = "1" 
+									BackgroundColor = "#D3D3D3">
+								<StackLayout Padding ="10" BackgroundColor = "#eff8e9" >
+									<StackLayout.GestureRecognizers>
+										<TapGestureRecognizer
+												Tapped = "HowToSave_Tapped"
+											NumberOfTapsRequired="1" />
+									</StackLayout.GestureRecognizers>
+									<Grid>
+										<Label Grid.Row = "0" 
+												Grid.Column = "{i18n:Translate L1}"
+												HorizontalTextAlignment = "{i18n:Translate HoriExp}"
+												Grid.ColumnSpan = "4" 
+												Text = "{i18n:Translate str_save_light}" 
+												TextColor = "Black" >
+										<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+					<Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Label.FontFamily></Label>
+										<Image HorizontalOptions = "{i18n:Translate HoriRevExp}" Grid.Row = "0" 
+												Grid.Column = "{i18n:Translate L2}" 
+												HeightRequest = "20"
+											Aspect = "AspectFit"
+                     Source="{i18n:Translate next_icon}" 
+                          />
+									</Grid>
+								</StackLayout>
+							</StackLayout>
+							<StackLayout Padding = "1" 
+									BackgroundColor = "#D3D3D3">
+								<StackLayout Padding ="10" BackgroundColor = "#eff8e9" >
+									<StackLayout.GestureRecognizers>
+										<TapGestureRecognizer
+												Tapped = "HomeApp_Tapped"
+											NumberOfTapsRequired="1" />
+									</StackLayout.GestureRecognizers>
+									<Grid>
+										<Label Grid.Row = "0" 
+												Grid.Column = "{i18n:Translate L1}"
+												HorizontalTextAlignment = "{i18n:Translate HoriExp}"
+												Grid.ColumnSpan = "4" 
+												Text = "{i18n:Translate str_home_appliance}" 
+												TextColor = "Black" >
+										<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+					<Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Label.FontFamily></Label>
+										<Image HorizontalOptions = "{i18n:Translate HoriRevExp}" Grid.Row = "0" 
+												Grid.Column = "{i18n:Translate L2}" 
+												HeightRequest = "20"
+											Aspect = "AspectFit"
+                     Source="{i18n:Translate next_icon}" 
+                          />
+									</Grid>
+								</StackLayout>
+							</StackLayout>
+					
+						</StackLayout>
+					</StackLayout>
+                    </StackLayout>
+                    </ScrollView>
+					<StackLayout VerticalOptions = "EndAndExpand" >
+		<StackLayout.IsVisible>
+        <OnPlatform x:TypeArguments="x:Boolean">
+                <OnPlatform.iOS>
+                     true
+                 </OnPlatform.iOS>
+                <OnPlatform.Android>
+                     false
+                </OnPlatform.Android>
+            </OnPlatform>
+    </StackLayout.IsVisible>
+			<Grid BackgroundColor = "#e6f0c1" Padding = " 5, 5, 5, 5">
+				 <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+          </Grid.ColumnDefinitions>
+
+          <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+          </Grid.RowDefinitions>
+				<StackLayout HorizontalOptions = "Center" 
+						Orientation = "Vertical" Grid.Row = "0"
+						Grid.Column = "{i18n:Translate i1}">
+					<Image Source = "{Binding WtrImg}" HeightRequest = "50"></Image>
+					<Label TextColor = "{Binding WtrTxt}" Text = "{i18n:Translate str_water_saving}"
+									 ><Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+					<Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Label.FontFamily></Label>
+						 <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer
+						Command="{Binding Water_Tapped}" 				
+                        NumberOfTapsRequired="1" />
+              </StackLayout.GestureRecognizers>
+				</StackLayout>
+			
+           
+				<StackLayout HorizontalOptions = "Center" 
+						Orientation = "Vertical" Grid.Row = "0"
+						Grid.Column = "{i18n:Translate j1}">
+					<Image Source = "{Binding EleImg}" HeightRequest = "50"></Image>
+					<Label TextColor = "{Binding EleTxt}"  Text = "{i18n:Translate str_elec_saving}"><Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+					<Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Label.FontFamily></Label>
+									 <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer
+                        Command="{Binding Elec_Tapped}" 
+                        NumberOfTapsRequired="1" />
+              </StackLayout.GestureRecognizers>
+				</StackLayout>
+
+           
+			</Grid>
+		</StackLayout>
+		
+			</StackLayout>
+			</RelativeLayout>
+	</ContentPage.Content>
+</ContentPage>

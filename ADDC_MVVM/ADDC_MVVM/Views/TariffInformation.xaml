@@ -1,0 +1,1210 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ADDC_MVVM.Views.TariffInformation"
+             xmlns:i18n="clr-namespace:ADDC_MVVM;assembly=ADDC_MVVM"
+             xmlns:Common="clr-namespace:ADDC_MVVM;assembly=ADDC_MVVM"
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+             xmlns:vm="clr-namespace:ADDC_MVVM.ViewModels;assembly=ADDC_MVVM"
+            >
+	 <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
+  </ContentPage.Padding>
+  <ContentPage.BindingContext>
+    <vm:TariffInformationViewModel/>
+  </ContentPage.BindingContext>
+<RelativeLayout>
+		 <Image RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Height}"
+				Source="{x:Static Common:ImagePathResources.BackgroundImagePath}" 
+				 Aspect = "Fill"/>
+
+  <StackLayout  RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Height}" >
+    
+         <RelativeLayout VerticalOptions="Start" >
+ 
+        <Image x:Name = "menuBg" Source="{i18n:Translate HeaderContent}" 
+				HeightRequest= "{Binding menuHeight}" Aspect = "Fill"/>
+	        <StackLayout RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToView, Property=Height}" HorizontalOptions = "FillAndExpand">
+					<Grid VerticalOptions ="Center" >
+         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="auto" />
+          </Grid.ColumnDefinitions>
+
+          <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+          </Grid.RowDefinitions>
+           <StackLayout x:Name="Header1" Grid.Row="0" Padding = "10, 0, 10, 0"
+	                       Grid.Column="{i18n:Translate a8}"
+	                       VerticalOptions="Center">
+	            <Image Source="landing_active_menu_icon.png" >
+	              <Image.GestureRecognizers>
+	                <TapGestureRecognizer
+										Command = "{Binding OnTapMenu}"
+	                        
+	                        NumberOfTapsRequired="1" />
+	              </Image.GestureRecognizers>
+	            </Image>
+	          </StackLayout>
+	           <StackLayout Grid.Row="0"
+                       Grid.Column="{i18n:Translate b8}"
+              Grid.ColumnSpan="3"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand">
+           <Label  Text="{i18n:Translate LblTariffinformation}" 
+                       LineBreakMode="NoWrap"
+               TextColor="#545b66" Font = "1, bold" >   
+																	<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+					<Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Label.FontFamily>
+            </Label>
+          </StackLayout>
+        </Grid>
+        </StackLayout>
+		</RelativeLayout>
+
+    <StackLayout VerticalOptions = "Start">
+      <StackLayout.IsVisible>
+        <OnPlatform x:TypeArguments="x:Boolean">
+          <OnPlatform.iOS>
+            false
+          </OnPlatform.iOS>
+          <OnPlatform.Android>
+            true
+          </OnPlatform.Android>
+        </OnPlatform>
+      </StackLayout.IsVisible>
+      <Grid VerticalOptions = "Start" BackgroundColor = "#e6f0c1" Padding = " 5, 5, 5, 5">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="1*" />
+          <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+          <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <StackLayout HorizontalOptions = "Center"
+						Orientation = "Vertical" Grid.Row = "0" 
+						Grid.Column = "{i18n:Translate a28}">
+          <Image Source = "{Binding TSlabImg}" HeightRequest = "50" ></Image>
+          <Label Text = "{i18n:Translate tariff_slab_title}" HorizontalTextAlignment = "Center" TextColor="{Binding TSlabColor}">
+            <!-- Font changes ... -->
+            <Label.FontSize>
+              <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+            </Label.FontSize>
+            <Label.FontFamily>
+              <OnPlatform x:TypeArguments="x:String">
+                <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+              </OnPlatform>
+            </Label.FontFamily>
+            <!-- Font changes ... -->
+          </Label>
+           
+          <StackLayout.GestureRecognizers>
+            <TapGestureRecognizer
+                    Command="{Binding OnTapTariffSlab}"
+                    NumberOfTapsRequired="1" />
+          </StackLayout.GestureRecognizers>
+        </StackLayout>
+
+        <StackLayout HorizontalOptions = "Center"
+          Orientation = "Vertical" Grid.Row = "0"
+          Grid.Column = "{i18n:Translate b18}">
+          <Image Source = "{Binding TCalcImg}" HeightRequest = "50"></Image>
+          <Label Text = "{i18n:Translate tariff_calculator_title}" HorizontalTextAlignment = "Center" TextColor="{Binding TCalcColor}">
+            <!-- Font changes ... -->
+            <Label.FontSize>
+              <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+            </Label.FontSize>
+            <Label.FontFamily>
+              <OnPlatform x:TypeArguments="x:String">
+                <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+              </OnPlatform>
+            </Label.FontFamily>
+            <!-- Font changes ... --> 
+          </Label>
+          <StackLayout.GestureRecognizers>
+            <TapGestureRecognizer
+                    Command="{Binding OnTapTariffCalc}"
+                    NumberOfTapsRequired="1" />
+          </StackLayout.GestureRecognizers>
+        </StackLayout>
+     
+      </Grid>
+      </StackLayout>
+      <!--  -->  
+       	<ScrollView VerticalOptions = "StartAndExpand">
+        <StackLayout VerticalOptions="StartAndExpand">
+      <StackLayout IsVisible="{Binding TariffSlab}">
+        
+        <StackLayout Padding = "15" Orientation="Vertical">
+        <Label Text = "{i18n:Translate tariff_info_body1}" HorizontalTextAlignment = "{i18n:Translate hor_Label}" TextColor="#545b66">
+          <!-- Font changes ... -->
+          <Label.FontSize>
+            <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+          </Label.FontSize>
+          <Label.FontFamily>
+            <OnPlatform x:TypeArguments="x:String">
+              <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+              <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+            </OnPlatform>
+          </Label.FontFamily>
+          <!-- Font changes ... -->
+        </Label>
+        <Label Text = "{i18n:Translate tariff_info_body2}" HorizontalTextAlignment = "{i18n:Translate hor_Label}" TextColor="#545b66" FontAttributes="Bold">
+          <!-- Font changes ... -->
+          <Label.FontSize>
+            <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+          </Label.FontSize>
+          <Label.FontFamily>
+            <OnPlatform x:TypeArguments="x:String">
+              <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+              <OnPlatform.Android>bliss_bold.ttf#bliss_bold</OnPlatform.Android>
+            </OnPlatform>
+          </Label.FontFamily>
+          <!-- Font changes ... -->
+        </Label>
+          <Label Text = "{i18n:Translate tariff_info_body3}" HorizontalTextAlignment = "{i18n:Translate hor_Label}" TextColor="#545b66">
+          <!-- Font changes ... -->
+          <Label.FontSize>
+            <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+          </Label.FontSize>
+          <Label.FontFamily>
+            <OnPlatform x:TypeArguments="x:String">
+              <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+              <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+            </OnPlatform>
+          </Label.FontFamily>
+          <!-- Font changes ... -->
+        </Label>
+         
+          <Label Text = "{i18n:Translate tariff_chart}" HorizontalTextAlignment = "Center" TextColor="#5e9622">
+            <!-- Font changes ... -->
+            <Label.FontSize>
+              <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+            </Label.FontSize>
+            <Label.FontFamily>
+              <OnPlatform x:TypeArguments="x:String">
+                <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+              </OnPlatform>
+            </Label.FontFamily>
+            <Label.GestureRecognizers>
+              <TapGestureRecognizer
+                Command="{Binding onTariffChart}"
+                 NumberOfTapsRequired="1" />
+            </Label.GestureRecognizers>
+            <!-- Font changes ... -->
+          </Label>
+            
+           <Label Text = "{i18n:Translate tariff_slab_choose_year}" HorizontalTextAlignment = "{i18n:Translate hor_Label}" TextColor="#545b66">
+            <!-- Font changes ... -->
+            <Label.FontSize>
+              <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+            </Label.FontSize>
+            <Label.FontFamily> 
+              <OnPlatform x:TypeArguments="x:String">
+                <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+              </OnPlatform>
+            </Label.FontFamily>
+            <!-- Font changes ... -->
+          </Label>
+          
+       <StackLayout Orientation="Horizontal">
+         <!--<Image Source="left_button_dark.png"  />
+         <Image Source="right_button_light.png" />
+         <controls:ImageButton Text="Twitter" TextColor="#ffffff" HeightRequest="75" WidthRequest="175" Image="left_button_dark" Orientation="ImageOnBottom"  ImageHeightRequest="50" ImageWidthRequest="50" /> -->
+         <!--<Common:ToggleButton CheckedImage="left_button_dark.png" BackgroundColor="Transparent"
+                                   UnCheckedImage="right_button_light.png" Enabled="True"
+                                     ImageLabel="2016"
+                                   Animate</="True" Checked="2017"
+                                   VerticalOptions="CenterAndExpand" HorizontalOptions="Center"/>
+       <Button Text="2016" BackgroundColor="{Binding TSlab2016}"   Command="{Binding OnTap2016}"/>
+       <Button Text="2017" BackgroundColor="{Binding TSlab2017}"   Command="{Binding OnTap2017}" />
+-->
+         <StackLayout BackgroundColor = "Gray" Padding="1"
+          Orientation = "Horizontal" HorizontalOptions = "{i18n:Translate HoriExp}">
+           <Grid HorizontalOptions = "Center" ColumnSpacing = "2" VerticalOptions = "Center">
+             <Grid.RowDefinitions>
+               <RowDefinition Height="auto"/>
+             </Grid.RowDefinitions>
+             <StackLayout Grid.Row ="0" Grid.Column = "{i18n:Translate i1}" BackgroundColor = "Gray" >
+               <Label  TextColor = "Black" Text="2016" BackgroundColor="{Binding TSlab2016}" WidthRequest="75" VerticalTextAlignment="Center" HeightRequest= "35" HorizontalTextAlignment="Center">
+                 <!-- Font changes ... -->
+                 <Label.FontSize>
+                   <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+                 </Label.FontSize>
+                 <Label.FontFamily>
+                   <OnPlatform x:TypeArguments="x:String">
+                     <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                     <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                   </OnPlatform>
+                 </Label.FontFamily>
+                 <Label.GestureRecognizers>
+                   <TapGestureRecognizer
+                           Command="{Binding OnTap2016}"
+                           NumberOfTapsRequired="1" />
+                 </Label.GestureRecognizers>
+                 <!-- Font changes ... -->
+               </Label>
+             </StackLayout>
+             <StackLayout Grid.Row = "0" Grid.Column = "{i18n:Translate j1}" BackgroundColor = "Gray" >
+
+               <Label  TextColor = "Black" Text="2017" BackgroundColor="{Binding TSlab2017}" WidthRequest="75" VerticalTextAlignment="Center" HeightRequest= "35" HorizontalTextAlignment="Center">
+                 <!-- Font changes ... -->
+                 <Label.FontSize>
+                   <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+                 </Label.FontSize>
+                 <Label.FontFamily>
+                   <OnPlatform x:TypeArguments="x:String">
+                     <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                     <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                   </OnPlatform>
+                 </Label.FontFamily>
+                 <Label.GestureRecognizers>
+                   <TapGestureRecognizer
+                           Command="{Binding OnTap2017}"
+                           NumberOfTapsRequired="1" />
+                 </Label.GestureRecognizers>
+
+                 <!-- Font changes ... -->
+               </Label>
+             </StackLayout>
+           </Grid>
+         </StackLayout>
+         
+         
+       </StackLayout>
+        
+        <StackLayout Orientation="Horizontal" HorizontalOptions = "FillAndExpand">
+        <Grid HorizontalOptions = "FillAndExpand">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+             </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+          <!--<RowDefinition />-->
+        </Grid.RowDefinitions>
+        
+          <StackLayout HorizontalOptions = "FillAndExpand" 
+						Orientation = "Vertical" Grid.Row = "0" 
+						Grid.Column = "{i18n:Translate a28}" Padding = " 5, 5, 5, 5">
+            
+            <StackLayout.GestureRecognizers>
+             <TapGestureRecognizer
+                    Command="{Binding OnTapNationals}"
+                    NumberOfTapsRequired="1" />
+           </StackLayout.GestureRecognizers>
+            
+            <Label Text="{i18n:Translate tariff_uae_nationals}" HorizontalOptions = "Center">	<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+             </Label.FontSize>
+					      <Label.FontFamily>
+                   <OnPlatform x:TypeArguments="x:String">
+                       <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                           <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                   </OnPlatform>
+                  </Label.FontFamily></Label>
+            <Image Source="{Binding TabImgUAE}" HorizontalOptions="Start" ></Image>
+          
+         </StackLayout>
+          
+          <StackLayout HorizontalOptions = "FillAndExpand" 
+						Orientation = "Vertical" Grid.Row = "0" 
+						Grid.Column = "{i18n:Translate b18}" Padding = " 5, 5, 5, 5">
+            
+             <StackLayout.GestureRecognizers>
+             <TapGestureRecognizer
+                    Command="{Binding OnTapExpats}"
+                    NumberOfTapsRequired="1" />
+           </StackLayout.GestureRecognizers>
+           
+            <Label Text="{i18n:Translate tariff_uae_expats}" HorizontalOptions = "Center">	<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+             </Label.FontSize>
+					      <Label.FontFamily>
+                   <OnPlatform x:TypeArguments="x:String">
+                       <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                           <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                   </OnPlatform>
+                  </Label.FontFamily></Label>
+            <Image Source="{Binding TabImgEx}" HorizontalOptions="Start"></Image>
+          
+          
+          </StackLayout>
+          
+          
+          
+        </Grid>
+         </StackLayout>
+     
+         
+         <StackLayout Orientation="Horizontal" HorizontalOptions = "FillAndExpand">
+        <Grid HorizontalOptions = "FillAndExpand">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+             </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+          <!--<RowDefinition />-->
+        </Grid.RowDefinitions>
+        <StackLayout HorizontalOptions = "FillAndExpand" 
+						Orientation = "Vertical" Grid.Row = "0" 
+						Grid.Column = "{i18n:Translate a28}" BackgroundColor = "#e6f0c1" Padding = " 5, 5, 5, 5">
+            
+            <Image Source="ic_action_water_consumption_icon.png" HorizontalOptions="Center" ></Image>
+            <Label Text="{i18n:Translate str_water}" HorizontalOptions = "Center">	<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+             </Label.FontSize>
+					      <Label.FontFamily>
+                   <OnPlatform x:TypeArguments="x:String">
+                       <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                           <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                   </OnPlatform>
+                  </Label.FontFamily></Label>
+              <Label Text="{Binding Tariff_uae_green_water_units}" HorizontalOptions = "Center"  TextColor="#acd286">	<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+             </Label.FontSize>
+					      <Label.FontFamily>
+                   <OnPlatform x:TypeArguments="x:String">
+                       <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                           <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                   </OnPlatform>
+                  </Label.FontFamily></Label>
+          <Label Text="{i18n:Translate tariff_one_cubic_meter}" HorizontalOptions = "Center" TextColor="#acd286">	<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+             </Label.FontSize>
+					      <Label.FontFamily>
+                   <OnPlatform x:TypeArguments="x:String">
+                       <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                           <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                   </OnPlatform>
+                  </Label.FontFamily></Label>
+          
+           <Label Text = "{i18n:Translate ariff_consumption_msg_green}" HorizontalTextAlignment = "Center" TextColor="#545b66">
+            <!-- Font changes ... -->
+            <Label.FontSize>
+              <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+            </Label.FontSize>
+            <Label.FontFamily>
+              <OnPlatform x:TypeArguments="x:String">
+                <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+              </OnPlatform>
+            </Label.FontFamily>
+            <!-- Font changes ... -->
+          </Label>
+            
+        <Label Text="{Binding Tariff_uae_red_water_units}" HorizontalOptions = "Center" x:Name="tariff_uae_red_water_units" TextColor="#d26445">	<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+             </Label.FontSize>
+					      <Label.FontFamily>
+                   <OnPlatform x:TypeArguments="x:String">
+                       <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                           <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                   </OnPlatform>
+                  </Label.FontFamily></Label>
+        
+          <Label Text="{i18n:Translate tariff_one_cubic_meter}" HorizontalOptions = "Center" TextColor="#d26445">	<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+             </Label.FontSize>
+					      <Label.FontFamily>
+                   <OnPlatform x:TypeArguments="x:String">
+                       <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                           <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                   </OnPlatform>
+                  </Label.FontFamily></Label>
+          <Label Text = "{i18n:Translate tariff_consumption_msg}" HorizontalTextAlignment = "Center" TextColor="#545b66">
+            <!-- Font changes ... -->
+            <Label.FontSize>
+              <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+            </Label.FontSize>
+            <Label.FontFamily>
+              <OnPlatform x:TypeArguments="x:String">
+                <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+              </OnPlatform>
+            </Label.FontFamily>
+            <!-- Font changes ... -->
+          </Label>
+          <Label Text = "{i18n:Translate tariff_consumption_limit}" HorizontalTextAlignment = "Center" TextColor="#545b66">
+            <!-- Font changes ... -->
+            <Label.FontSize>
+              <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+            </Label.FontSize>
+            <Label.FontFamily>
+              <OnPlatform x:TypeArguments="x:String">
+                <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+              </OnPlatform>
+            </Label.FontFamily>
+            <!-- Font changes ... -->
+          </Label>
+        <StackLayout Orientation="Horizontal">
+          <Image Source="building_icon.png" HorizontalOptions="Center" ></Image>
+            <Label Text="{Binding Tariff_cubic_per_day_res}" x:Name="tariff_cubic_per_day_res" >	<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+             </Label.FontSize>
+					      <Label.FontFamily>
+                   <OnPlatform x:TypeArguments="x:String">
+                       <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                           <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                   </OnPlatform>
+                  </Label.FontFamily></Label>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+          <Image Source="house_icon.png" HorizontalOptions="Center" ></Image>
+            <Label Text="{Binding Tariff_cubic_per_day_com}" x:Name="tariff_cubic_per_day_com">	<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+             </Label.FontSize>
+					      <Label.FontFamily>
+                   <OnPlatform x:TypeArguments="x:String">
+                       <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                           <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                   </OnPlatform>
+                  </Label.FontFamily></Label>
+        </StackLayout>
+          </StackLayout>
+           <StackLayout HorizontalOptions = "FillAndExpand"
+						Orientation = "Vertical" Grid.Row = "0" 
+						Grid.Column = "{i18n:Translate b18}" BackgroundColor = "#e6f0c1" Padding = " 5, 5, 5, 5">
+             
+             <Image Source="ic_action_electricity_consumption.png" HorizontalOptions="Center" ></Image>
+            <Label Text="{i18n:Translate str_electricity}" HorizontalOptions = "Center">	<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+             </Label.FontSize>
+					      <Label.FontFamily>
+                   <OnPlatform x:TypeArguments="x:String">
+                       <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                           <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                   </OnPlatform>
+                  </Label.FontFamily></Label>
+              <Label Text="{Binding Tariff_uae_green_elec_units}" x:Name="tariff_uae_green_elec_units" HorizontalOptions = "Center" TextColor="#acd286">	<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+             </Label.FontSize>
+					      <Label.FontFamily>
+                   <OnPlatform x:TypeArguments="x:String">
+                       <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                           <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                   </OnPlatform>
+                  </Label.FontFamily></Label>
+          <Label Text="{i18n:Translate tariff_one_kilo_wats}" HorizontalOptions = "Center" TextColor="#acd286">	<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+             </Label.FontSize>
+					      <Label.FontFamily>
+                   <OnPlatform x:TypeArguments="x:String">
+                       <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                           <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                   </OnPlatform>
+                  </Label.FontFamily></Label>
+          
+           <Label Text = "{i18n:Translate ariff_consumption_msg_green}" HorizontalTextAlignment = "Center" TextColor="#545b66">
+            <!-- Font changes ... -->
+            <Label.FontSize>
+              <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+            </Label.FontSize>
+            <Label.FontFamily>
+              <OnPlatform x:TypeArguments="x:String">
+                <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+              </OnPlatform>
+            </Label.FontFamily>
+            <!-- Font changes ... -->
+          </Label>
+            
+        <Label Text="{Binding Tariff_uae_red_elec_units}" x:Name="tariff_uae_red_elec_units" HorizontalOptions = "Center" TextColor="#d26445">	<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+             </Label.FontSize>
+					      <Label.FontFamily>
+                   <OnPlatform x:TypeArguments="x:String">
+                       <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                           <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                   </OnPlatform>
+                  </Label.FontFamily></Label>
+        
+          <Label Text="{i18n:Translate tariff_one_kilo_wats}" HorizontalOptions = "Center" TextColor="#d26445">	<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+             </Label.FontSize>
+					      <Label.FontFamily>
+                   <OnPlatform x:TypeArguments="x:String">
+                       <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                           <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                   </OnPlatform>
+                  </Label.FontFamily></Label>
+             <StackLayout Padding = "0, 5, 0, 0" Orientation="Vertical"></StackLayout>
+             <Label Text = "{i18n:Translate tariff_consumption_msg}" HorizontalTextAlignment = "Center" TextColor="#545b66">
+            <!-- Font changes ... -->
+            <Label.FontSize>
+              <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+            </Label.FontSize>
+            <Label.FontFamily>
+              <OnPlatform x:TypeArguments="x:String">
+                <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+              </OnPlatform>
+            </Label.FontFamily>
+            <!-- Font changes ... -->
+          </Label>
+             
+          <Label Text = "{i18n:Translate tariff_consumption_limit}" HorizontalTextAlignment = "Center" TextColor="#545b66">
+            <!-- Font changes ... -->
+            <Label.FontSize>
+              <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+            </Label.FontSize>
+            <Label.FontFamily>
+              <OnPlatform x:TypeArguments="x:String">
+                <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+              </OnPlatform>
+            </Label.FontFamily>
+            <!-- Font changes ... -->
+          </Label>
+        <StackLayout Orientation="Horizontal">
+          <Image Source="building_icon.png" HorizontalOptions="Center" ></Image>
+            <Label Text="{Binding Tariff_uae_home_elec_units}" x:Name="tariff_uae_home_elec_units">	<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+             </Label.FontSize>
+					      <Label.FontFamily>
+                   <OnPlatform x:TypeArguments="x:String">
+                       <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                           <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                   </OnPlatform>
+                  </Label.FontFamily></Label>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+          <Image Source="house_icon.png" HorizontalOptions="Center" ></Image>
+            <Label Text="{Binding Tariff_uae_com_elec_units}" x:Name="tariff_uae_com_elec_units">	<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+             </Label.FontSize>
+					      <Label.FontFamily>
+                   <OnPlatform x:TypeArguments="x:String">
+                       <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                           <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                   </OnPlatform>
+                  </Label.FontFamily></Label>
+        </StackLayout>
+           
+          </StackLayout>  
+          </Grid>
+    </StackLayout>
+        	
+    </StackLayout>
+      </StackLayout>
+      <StackLayout Orientation="Vertical" Padding="10,0,10,0" IsVisible="{Binding TariffCalculator}">
+    <Label Text="{i18n:Translate str_cal_desc}"  TextColor="#545b66" HorizontalTextAlignment = "{i18n:Translate hor_Label}">	<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+             </Label.FontSize>
+					      <Label.FontFamily>
+                   <OnPlatform x:TypeArguments="x:String">
+                       <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                           <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                   </OnPlatform>
+                  </Label.FontFamily></Label>
+  <Label Text="{i18n:Translate tariff_slab_choose_year}"  TextColor="#545b66" HorizontalTextAlignment = "{i18n:Translate hor_Label}">	<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+             </Label.FontSize>
+					      <Label.FontFamily>
+                   <OnPlatform x:TypeArguments="x:String">
+                       <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                           <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                   </OnPlatform>
+                  </Label.FontFamily></Label>
+
+       <!--<StackLayout Orientation="Horizontal">
+         <Grid VerticalOptions = "Start" ColumnSpacing="0" Padding="0" RowSpacing="0">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="1*" />
+          <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+          <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+             					
+       <Button Text="2016" BackgroundColor="{Binding TCalc2016}"   Command="{Binding OnTapCalc2016}"  Grid.Row = "0" 
+						Grid.Column = "0"  BorderWidth="0" />
+       <Button Text="2017" BackgroundColor="{Binding TCalc2017}"   Command="{Binding OnTapCalc2017}"  Grid.Row = "0" 
+						Grid.Column = "1" BorderWidth="0"  />   
+     
+        
+       </Grid>
+       </StackLayout>-->
+  <StackLayout BackgroundColor = "Gray" Padding="1"
+          Orientation = "Horizontal" HorizontalOptions = "{i18n:Translate HoriExp}">
+        <Grid HorizontalOptions = "Center" ColumnSpacing = "2" VerticalOptions = "Center">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+          </Grid.RowDefinitions>
+          <StackLayout Grid.Row ="0" Grid.Column = "{i18n:Translate i1}" BackgroundColor = "Gray" >
+            <Label  TextColor = "Black" Text="2016" BackgroundColor="{Binding TCalc2016}" WidthRequest="75" VerticalTextAlignment="Center" HeightRequest= "35" HorizontalTextAlignment="Center">
+              <!-- Font changes ... -->
+              <Label.FontSize>
+                <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+              </Label.FontSize>
+              <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                  <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                  <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                </OnPlatform>
+              </Label.FontFamily>
+              <Label.GestureRecognizers>
+                <TapGestureRecognizer
+                        Command="{Binding OnTapCalc2016}"
+                        NumberOfTapsRequired="1" />
+              </Label.GestureRecognizers>
+              <!-- Font changes ... -->
+            </Label>
+          </StackLayout>
+          <StackLayout Grid.Row = "0" Grid.Column = "{i18n:Translate j1}" BackgroundColor = "Gray" >
+
+            <Label  TextColor = "Black" Text="2017" BackgroundColor="{Binding TCalc2017}" WidthRequest="75" VerticalTextAlignment="Center" HeightRequest= "35" HorizontalTextAlignment="Center">
+              <!-- Font changes ... -->
+              <Label.FontSize>
+                <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+              </Label.FontSize>
+              <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                  <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                  <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                </OnPlatform>
+              </Label.FontFamily>
+               <Label.GestureRecognizers>
+                <TapGestureRecognizer
+                        Command="{Binding OnTapCalc2017}"
+                        NumberOfTapsRequired="1" />
+              </Label.GestureRecognizers>
+            
+              <!-- Font changes ... -->
+            </Label>
+          </StackLayout>
+        </Grid>
+      </StackLayout>
+     <StackLayout>
+          <Grid >
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width = "1*"/>
+              <ColumnDefinition Width = "1*"/>
+              <ColumnDefinition Width = "1*"/>
+              <ColumnDefinition Width = "1*"/>
+              <ColumnDefinition Width = "1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row = "0"
+								VerticalOptions = "Center" Grid.Column ="{i18n:Translate L1}"
+									Grid.ColumnSpan = "4">
+              <Label  Text="{i18n:Translate tariff_calc_social_card}"
+                          HorizontalOptions = "FillAndExpand"
+                    VerticalOptions = "Center"
+                   HorizontalTextAlignment = "{i18n:Translate HoriExp}">
+              <Label.FontSize>
+                <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+              </Label.FontSize>
+              <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                  <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                  <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                </OnPlatform>
+              </Label.FontFamily>
+            </Label>
+            </StackLayout>
+            <StackLayout Grid.Row = "0"  Grid.Column ="{i18n:Translate L2}"
+                 Orientation ="Horizontal"
+                     HorizontalOptions="End"
+                      VerticalOptions="CenterAndExpand">
+              <!--<Button  Text = "{i18n:Translate questionMark}"
+									TextColor= "Black"
+									HorizontalOptions="End"
+								HeightRequest="50" WidthRequest="50"/>-->
+             <Switch HorizontalOptions="End" IsToggled="{Binding IsSocialSelected, Mode=TwoWay}" />
+              
+            </StackLayout>
+          </Grid>
+        </StackLayout>
+     <StackLayout IsVisible = "{Binding CUnits}">
+          <Grid >
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width = "1*"/>
+              <ColumnDefinition Width = "1*"/>
+              <ColumnDefinition Width = "1*"/>
+              <ColumnDefinition Width = "1*"/>
+              <ColumnDefinition Width = "1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row = "0"
+								VerticalOptions = "Center" Grid.Column ="{i18n:Translate L1}"
+									Grid.ColumnSpan = "4">
+              <Label  Text="{i18n:Translate tariff_calc_unmetered}"
+                          HorizontalOptions = "FillAndExpand"
+                    VerticalOptions = "Center"
+                   HorizontalTextAlignment = "{i18n:Translate HoriExp}">
+              <Label.FontSize>
+                <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+              </Label.FontSize>
+              <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                  <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                  <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                </OnPlatform>
+              </Label.FontFamily>
+            </Label>
+            </StackLayout>
+            <StackLayout Grid.Row = "0"  Grid.Column ="{i18n:Translate L2}"
+                 Orientation ="Horizontal"
+                     HorizontalOptions="End"
+                      VerticalOptions="CenterAndExpand">
+              <!--<Button  Text = "{i18n:Translate questionMark}"
+									TextColor= "Black"
+									HorizontalOptions="End"
+								HeightRequest="50" WidthRequest="50"/>-->
+             <Switch HorizontalOptions="End" IsToggled="{Binding IsUnmeterSelected, Mode=TwoWay}" Toggled ="Handle_Toggled" >
+						</Switch><StackLayout.GestureRecognizers>
+                <TapGestureRecognizer
+                        Command="{Binding OnSwitchClicked}"
+                        NumberOfTapsRequired="1" />
+              </StackLayout.GestureRecognizers>
+            </StackLayout>
+          </Grid>
+        </StackLayout>
+    <Label Text="{i18n:Translate tariff_calc_serv_type}"  TextColor="#545b66" HorizontalTextAlignment = "{i18n:Translate hor_Label}">	<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+             </Label.FontSize>
+					      <Label.FontFamily>
+                   <OnPlatform x:TypeArguments="x:String">
+                       <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                           <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                   </OnPlatform>
+                  </Label.FontFamily></Label>
+     
+  <StackLayout BackgroundColor = "Gray" Padding="1"
+          Orientation = "Horizontal" HorizontalOptions = "{i18n:Translate HoriExp}">
+        <Grid HorizontalOptions = "Center" ColumnSpacing = "2" VerticalOptions = "Center">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+          </Grid.RowDefinitions>
+          <StackLayout Grid.Row ="0" Grid.Column = "{i18n:Translate i1}" BackgroundColor = "Gray" >
+            <Label  TextColor = "Black" Text="{i18n:Translate str_water}"  BackgroundColor="{Binding TCalcWater}"  VerticalTextAlignment="Center" HeightRequest= "35" HorizontalTextAlignment="Center">
+              <!-- Font changes ... -->
+              <Label.FontSize>
+                <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+              </Label.FontSize>
+              <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                  <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                  <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                </OnPlatform>
+              </Label.FontFamily>
+              <Label.GestureRecognizers>
+                <TapGestureRecognizer
+                        Command="{Binding OnTapTCalcWater}"
+                        NumberOfTapsRequired="1" />
+              </Label.GestureRecognizers>
+              <!-- Font changes ... -->
+            </Label>
+          </StackLayout>
+          <StackLayout Grid.Row = "0" Grid.Column = "{i18n:Translate j1}" Padding = "10 ,0, 10, 0" BackgroundColor = "{Binding TCalcElec}" >
+
+            <Label  TextColor = "Black" Text="{i18n:Translate str_electricity}" BackgroundColor="{Binding TCalcElec}"  VerticalTextAlignment="Center" HeightRequest= "35" HorizontalTextAlignment="Center">
+              <!-- Font changes ... -->
+              <Label.FontSize>
+                <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />     
+              </Label.FontSize>
+              <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                  <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                  <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                </OnPlatform>
+              </Label.FontFamily>
+               <Label.GestureRecognizers>
+                <TapGestureRecognizer
+                        Command="{Binding OnTapTCalcElec}"
+                        NumberOfTapsRequired="1" />
+              </Label.GestureRecognizers>
+            
+              <!-- Font changes ... -->
+            </Label>
+          </StackLayout>
+        </Grid>
+      </StackLayout>
+        
+      
+        
+        
+      <StackLayout>
+          <Grid >
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width = "1*"/>
+              <ColumnDefinition Width = "1*"/>
+              <ColumnDefinition Width = "1*"/>
+              <ColumnDefinition Width = "1*"/>
+              <ColumnDefinition Width = "1*"/>
+              <ColumnDefinition Width = "1*"/>
+              <ColumnDefinition Width = "1*"/>
+              <ColumnDefinition Width = "1*"/>
+              <ColumnDefinition Width = "1*"/>
+              <ColumnDefinition Width = "1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0"
+                       Grid.Column="{i18n:Translate calc_1}"
+                       Grid.ColumnSpan="5"
+                       VerticalOptions="Center"
+                       HorizontalOptions="FillAndExpand"
+                       Orientation="Vertical">
+               <Label  Text="{i18n:Translate tariff_calc_num_days}" TextColor="#545b66"
+                           HorizontalTextAlignment = "{i18n:Translate hor_Label}">
+              <Label.FontSize>
+                <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+              </Label.FontSize>
+              <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                  <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                  <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                </OnPlatform>
+              </Label.FontFamily>
+            </Label>
+              <Entry  
+                 HorizontalOptions="FillAndExpand"
+					        HorizontalTextAlignment = "{i18n:Translate hor_Label}"
+										BackgroundColor = "#DCDDE0" Keyboard = "Numeric"
+                    TextColor = "Black"
+                           Text="{Binding Numdays}"></Entry>
+             
+            </StackLayout>
+            <StackLayout x:Name = "CunitFld" Grid.Row="0"
+                                Grid.Column="{i18n:Translate calc_2}"
+                       Grid.ColumnSpan="4" VerticalOptions = "Center"
+                                HorizontalOptions="FillAndExpand"    
+                    >
+              <Label  Text="{i18n:Translate tariff_calc_consum_amout}" TextColor="#545b66"
+                           HorizontalTextAlignment = "{i18n:Translate hor_Label}">
+              <Label.FontSize>
+                <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+              </Label.FontSize>
+              <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                  <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                  <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                </OnPlatform>
+              </Label.FontFamily>
+            </Label>
+              <Entry  
+                 HorizontalOptions="FillAndExpand"
+					        HorizontalTextAlignment = "{i18n:Translate hor_Label}"
+										BackgroundColor = "#DCDDE0" Keyboard = "Numeric"
+                    TextColor = "Black"
+                           Text="{Binding ConsumptionUnits}"></Entry>
+            </StackLayout>
+          <StackLayout  x:Name = "CunitTxt" Grid.Row="0"
+                                Grid.Column="{i18n:Translate calc_3}"
+                         VerticalOptions = "Center" 
+                         HorizontalOptions="FillAndExpand"
+                    >
+              <Label  Text="{Binding Units}" TextColor="#545b66"
+                           HorizontalTextAlignment = "{i18n:Translate hor_Label}">
+              <Label.FontSize>
+                <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+              </Label.FontSize>
+              <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                  <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                  <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                </OnPlatform>
+              </Label.FontFamily>
+            </Label>
+            </StackLayout>
+          </Grid>
+        </StackLayout>
+       <StackLayout>
+          <Grid >
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width = "1*"/>
+              <ColumnDefinition Width = "1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0"
+                       Grid.Column="{i18n:Translate i1}"
+                       VerticalOptions="Center"
+                       HorizontalOptions="FillAndExpand"
+              Orientation="Vertical">
+              <Label  Text="{i18n:Translate str_premise_type}"
+                           HorizontalTextAlignment = "{i18n:Translate hor_Label}">
+              <Label.FontSize>
+                <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+              </Label.FontSize>
+              <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                  <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                  <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                </OnPlatform>
+              </Label.FontFamily>
+            </Label>
+            <Common:BindablePicker x:Name = "primisePic" ItemsSource="{Binding primiseType}"
+						 SelectedItem="{Binding PrimiseName}" TextColor="#545b66" 
+						> 
+         
+       </Common:BindablePicker>
+            </StackLayout>
+            <StackLayout Grid.Row="0"
+                                Grid.Column="{i18n:Translate j1}"
+                      VerticalOptions = "Center"
+                                HorizontalOptions="FillAndExpand">
+             <Label  Text="{i18n:Translate tariff_calc_category_type}"
+                           HorizontalTextAlignment = "{i18n:Translate hor_Label}">
+              <Label.FontSize>
+                <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+              </Label.FontSize>
+              <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                  <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                  <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                </OnPlatform>
+              </Label.FontFamily>
+            </Label>
+              <Common:BindablePicker x:Name = "tarifPic" ItemsSource="{Binding categoryType}" SelectedItem="{Binding CategoryName}"
+                                       TextColor="#545b66" >
+          
+       </Common:BindablePicker>
+           
+            </StackLayout>
+           
+           
+        <!--<StackLayout Grid.Row="0"
+                                Grid.Column="{i18n:Translate calc_3}"
+                         VerticalOptions = "Center" 
+                         HorizontalOptions="FillAndExpand"
+                    >
+              <Button  Text = "M3"
+									TextColor= "Black"
+									
+								HeightRequest="50" WidthRequest="50"/>
+            </StackLayout>-->
+          </Grid>
+        </StackLayout>
+       <StackLayout Padding="10,5,10,5">
+       <Button  Text = "{i18n:Translate tariff_calc_calculate}"
+							BackgroundColor = "#5e9622" 
+							TextColor= "White" 
+							HorizontalOptions="FillAndExpand"  
+							Command="{Binding OnCalculate}"/>
+       </StackLayout> 
+       <StackLayout IsVisible="{Binding PaymentsVisible}">
+       <Grid VerticalOptions = "Start" Padding = " 5, 0, 5, 5">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="1*" />
+          <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+          <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <StackLayout HorizontalOptions = "FillAndExpand" VerticalOptions ="FillAndExpand"
+						Orientation = "Vertical" Grid.Row = "0" 
+						Grid.Column = "{i18n:Translate a28}" Padding = " 5, 10, 5, 10"  BackgroundColor = "#acd286">
+          
+           <Label x:Name = "GreenUnitslbl" Text = "{Binding GreenUnits}" VerticalOptions = "CenterAndExpand" HorizontalTextAlignment ="Center"  VerticalTextAlignment="Center" TextColor="White">
+          <!-- Font changes ... -->
+          <Label.FontSize>
+            <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+          </Label.FontSize>
+          <Label.FontFamily>
+            <OnPlatform x:TypeArguments="x:String">
+              <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+              <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+            </OnPlatform>
+          </Label.FontFamily>
+          <!-- Font changes ... --> 
+        </Label>
+                     
+          
+        </StackLayout>
+
+        <StackLayout HorizontalOptions = "FillAndExpand" VerticalOptions ="FillAndExpand"
+          Orientation = "Vertical" Grid.Row = "0"
+          Grid.Column = "{i18n:Translate b18}" Padding = " 5, 10, 5, 10" BackgroundColor = "#d26445">
+          
+           <Label Text = "{Binding RedUnits}" VerticalOptions = "CenterAndExpand" HorizontalTextAlignment ="Center"  VerticalTextAlignment="Center" TextColor="White">
+          <!-- Font changes ... -->
+          <Label.FontSize>
+            <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+          </Label.FontSize>
+          <Label.FontFamily>
+            <OnPlatform x:TypeArguments="x:String">
+              <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+              <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+            </OnPlatform>
+          </Label.FontFamily>
+          <!-- Font changes ... --> 
+        </Label>
+        
+          </StackLayout>
+     
+      </Grid>
+</StackLayout>
+        
+        <StackLayout IsVisible="{Binding TotalVisible}">
+       <Grid VerticalOptions = "Start" Padding = " 5, 0, 5, 0">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="1*" />
+          <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+          <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <StackLayout
+						Orientation = "Horizontal" Grid.Row = "0" 
+						Grid.Column = "{i18n:Translate a28}">
+           <Label Text = "{i18n:Translate tariff_total_title}" VerticalOptions = "CenterAndExpand" HorizontalTextAlignment = "{i18n:Translate hor_Label}" TextColor="#545b66">
+          <!-- Font changes ... -->
+          <Label.FontSize>
+            <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+          </Label.FontSize>
+          <Label.FontFamily>
+            <OnPlatform x:TypeArguments="x:String">
+              <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+              <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+            </OnPlatform>
+          </Label.FontFamily>
+          <!-- Font changes ... --> 
+        </Label>
+                     
+          
+        </StackLayout>
+
+        <StackLayout HorizontalOptions = "FillAndExpand"
+          Orientation = "Vertical" Grid.Row = "0" HeightRequest ="60"
+          Grid.Column = "{i18n:Translate b18}" BackgroundColor="#eff8e9">
+          <Label Text = "{Binding Total}" VerticalOptions = "CenterAndExpand" HorizontalOptions="Center" TextColor="#545b66">
+          <!-- Font changes ... -->
+          <Label.FontSize>
+            <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+          </Label.FontSize>
+          <Label.FontFamily>
+            <OnPlatform x:TypeArguments="x:String">
+              <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+              <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+            </OnPlatform>
+          </Label.FontFamily>
+          <!-- Font changes ... --> 
+        </Label>
+          </StackLayout>
+     
+      </Grid>
+</StackLayout>
+      
+  </StackLayout>  
+          </StackLayout>
+          </ScrollView >
+    <!--  -->
+     <StackLayout VerticalOptions = "EndAndExpand">
+      <StackLayout.IsVisible>
+        <OnPlatform x:TypeArguments="x:Boolean">
+          <OnPlatform.iOS>
+            true
+          </OnPlatform.iOS>
+          <OnPlatform.Android>
+            false
+          </OnPlatform.Android>
+        </OnPlatform>
+      </StackLayout.IsVisible>
+      <Grid VerticalOptions = "Start" BackgroundColor = "#e6f0c1" Padding = " 5, 0, 5, 0">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="1*" />
+          <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+          <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <StackLayout HorizontalOptions = "Center"
+						Orientation = "Vertical" Grid.Row = "0" 
+						Grid.Column = "{i18n:Translate a28}">
+          <Image Source = "{Binding TSlabImg}" HeightRequest = "50" ></Image>
+          <Label Text = "{i18n:Translate tariff_slab_title}" HorizontalTextAlignment = "Center" TextColor="{Binding TSlabColor}">
+            <!-- Font changes ... -->
+            <Label.FontSize>
+              <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+            </Label.FontSize>
+            <Label.FontFamily>
+              <OnPlatform x:TypeArguments="x:String">
+                <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+              </OnPlatform>
+            </Label.FontFamily>
+            <!-- Font changes ... -->
+          </Label>
+           
+          <StackLayout.GestureRecognizers>
+            <TapGestureRecognizer
+                    Command="{Binding OnTapTariffSlab}"
+                    NumberOfTapsRequired="1" />
+          </StackLayout.GestureRecognizers>
+        </StackLayout>
+
+        <StackLayout HorizontalOptions = "Center"
+          Orientation = "Vertical" Grid.Row = "0"
+          Grid.Column = "{i18n:Translate b18}">
+          <Image Source = "{Binding TCalcImg}" HeightRequest = "50"></Image>
+          <Label Text = "{i18n:Translate tariff_calculator_title}" HorizontalTextAlignment = "Center" TextColor="{Binding TCalcColor}">
+            <!-- Font changes ... -->
+            <Label.FontSize>
+              <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+            </Label.FontSize>
+            <Label.FontFamily>
+              <OnPlatform x:TypeArguments="x:String">
+                <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+              </OnPlatform>
+            </Label.FontFamily>
+            <!-- Font changes ... --> 
+          </Label>
+          <StackLayout.GestureRecognizers>
+            <TapGestureRecognizer
+                    Command="{Binding OnTapTariffCalc}"
+                    NumberOfTapsRequired="1" />
+          </StackLayout.GestureRecognizers>
+        </StackLayout>
+     
+      </Grid>
+      </StackLayout>
+     
+		</StackLayout>
+    
+  </RelativeLayout>
+
+</ContentPage> 

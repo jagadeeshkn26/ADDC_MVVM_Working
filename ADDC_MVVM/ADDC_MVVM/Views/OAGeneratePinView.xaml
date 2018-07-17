@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ADDC_MVVM.Views.OAGeneratePinView"
+             xmlns:vm="clr-namespace:ADDC_MVVM.ViewModels;assembly=ADDC_MVVM">
+  <ContenPage.ToolbarOptions>
+
+  </ContenPage.ToolbarOptions>
+  
+
+  <Label Text="" x:Name="pkrPersonID" VerticalOptions="Center" HorizontalOptions="Center" />
+  <Label Text="dfdfgdfhdgdgdf" x:Name="pkrUserID" VerticalOptions="Center" HorizontalOptions="Center" />
+  <Label Text="dfdfgdfgdg" x:Name="pkrProfile" VerticalOptions="Center" HorizontalOptions="Center" />
+  <Label Text="{Binding pkrEmiratesId}" VerticalOptions="Center" HorizontalOptions="Center" />
+  <Label Text="{Binding pkrPrimaryName}" VerticalOptions="Center" HorizontalOptions="Center" />
+  <Label Text="{Binding pkrName1}" VerticalOptions="Center" HorizontalOptions="Center" />
+  <Label Text="{Binding pkrEmailID}" VerticalOptions="Center" HorizontalOptions="Center" />
+  <Label Text="{Binding pkrPHNumber}" VerticalOptions="Center" HorizontalOptions="Center" />
+</ContentPage>

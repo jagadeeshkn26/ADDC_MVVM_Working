@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ADDC_MVVM.Views.CustomerSuggession"
+             xmlns:i18n="clr-namespace:ADDC_MVVM;assembly=ADDC_MVVM"
+			 xmlns:Common="clr-namespace:ADDC_MVVM;assembly=ADDC_MVVM"
+             xmlns:vm="clr-namespace:ADDC_MVVM.ViewModels;assembly=ADDC_MVVM">
+  
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Text="SubmitSuggession" Command="{Binding SubmitSuggession}" />
+  </ContentPage.ToolbarItems>
+
+
+<ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
+  </ContentPage.Padding>
+	<ContentPage.Content>
+	    <StackLayout VerticalOptions = "FillAndExpand"    
+        AbsoluteLayout.LayoutFlags="All"
+        AbsoluteLayout.LayoutBounds="0,0,1,1">
+ <RelativeLayout VerticalOptions="Start" >
+ 
+        <Image Source="{i18n:Translate HeaderContent}" 
+					VerticalOptions = "Start"
+					HorizontalOptions="FillAndExpand" />
+        <StackLayout HorizontalOptions = "FillAndExpand"  Padding="5,0,5,0">
+				<Grid>
+  
+          <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+          </Grid.RowDefinitions>
+          <StackLayout x:Name="Header1" Grid.Row="0"
+                       Grid.Column="{i18n:Translate a8}"
+                       HorizontalOptions="End"
+                       VerticalOptions="Center">
+            <Image HorizontalOptions="Fill" Source="landing_active_menu_icon.png" >
+              <Image.GestureRecognizers>
+                <TapGestureRecognizer
+											Command = "{Binding OnTapMenu}"
+                 
+                        NumberOfTapsRequired="1" />
+              </Image.GestureRecognizers>
+            </Image>
+          </StackLayout>
+ <StackLayout x:Name="Header2" Grid.Row="0"
+                       Grid.Column="{i18n:Translate b8}"
+              Grid.ColumnSpan="3"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand">
+           <Label  Text="{i18n:Translate str_customer_enquiry_title}" 
+                       LineBreakMode="NoWrap"
+               TextColor="Gray" Font ="Bold,14">           
+            </Label>
+          </StackLayout>
+ <StackLayout x:Name="Header3" Grid.Row="0"
+                       Grid.Column="{i18n:Translate c8}"
+                       HorizontalOptions="End"
+							
+                       VerticalOptions="Start"
+							Grid.ColumnSpan="2">
+						<!--	<Button Text = "{i18n:Translate TxtSubmit}" 
+									Font ="Bold,14"
+								TextColor="Gray"
+								Command="{Binding SubmitCommand}" />-->
+            <Label  Text="{i18n:Translate TxtSubmit}"
+									HorizontalTextAlignment = "{i18n:Translate HoriRevExp}"
+               TextColor="Gray" Font ="Bold,14" >
+              <Label.GestureRecognizers>
+                <TapGestureRecognizer
+                        Command="{Binding SubmitSuggession}"
+                        NumberOfTapsRequired="1" />
+              </Label.GestureRecognizers>
+            </Label>
+          </StackLayout>
+
+        </Grid>
+					</StackLayout>
+      </RelativeLayout>
+
+    <Label Text="Whats your name?" TextColor="Black" FontSize="16" HorizontalOptions="Start"></Label>
+
+    <Entry Placeholder="Username" Keyboard="Text" Text="{Binding userNameForSuggs}" />
+
+    <Label Text="Whats your email?" TextColor="Black" FontSize="16" HorizontalOptions="Start"></Label>
+   
+    <Entry Placeholder="Enter email id" Keyboard="Text" Text="{Binding emailForSuggs}" />
+
+    <Label Text="Please enter your message" TextColor="Black" FontSize="16" HorizontalOptions="Start"></Label>
+   
+    <Entry Placeholder="Message" Keyboard="Text" Text="{Binding msgForSuggs}" />
+
+  </StackLayout>
+  </ContentPage.Content>
+
+</ContentPage>
+  

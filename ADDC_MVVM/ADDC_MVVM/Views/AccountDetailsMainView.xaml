@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ADDC_MVVM.Views.AccountDetailsMainView"
+             xmlns:tb="clr-namespace:ADDC_MVVM.Views;assembly=ADDC_MVVM">
+  <TabbedPage.ToolbarItems>
+    <ToolbarItem Text="Edit" Clicked="EditCommand" />
+
+  </TabbedPage.ToolbarItems>
+
+</TabbedPage>

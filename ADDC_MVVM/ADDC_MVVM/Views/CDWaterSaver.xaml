@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="ADDC_MVVM.CDWaterSaver"
+		xmlns:i18n="clr-namespace:ADDC_MVVM;assembly=ADDC_MVVM"
+		xmlns:Common="clr-namespace:ADDC_MVVM;assembly=ADDC_MVVM">
+	<ContentPage.Padding>
+		<OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
+	</ContentPage.Padding>	
+	<ContentPage.Content>
+		<RelativeLayout>
+			<Image Source="{x:Static Common:ImagePathResources.BackgroundImagePath}"
+				HeightRequest= "60" Aspect = "Fill" RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Height}" >  
+   </Image>
+  <StackLayout RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Height}" >  
+   
+
+				<RelativeLayout VerticalOptions="Start" >
+ 
+        <Image Source="{i18n:Translate HeaderContent}"
+				HeightRequest= "{Binding menuHeight}" Aspect = "Fill"/>
+	        <StackLayout RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToView, Property=Height}" HorizontalOptions = "FillAndExpand">
+					<Grid VerticalOptions ="Center" >
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="auto" />
+          </Grid.ColumnDefinitions>
+
+          <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+          </Grid.RowDefinitions>
+           <StackLayout x:Name="Header1" Grid.Row="0" Padding = "10, 0, 10, 0"
+	                       Grid.Column="{i18n:Translate a8}"
+	                       VerticalOptions="Center">
+	            <Image Source="{i18n:Translate back_button}" >
+	              <Image.GestureRecognizers>
+	                <TapGestureRecognizer
+	                        Tapped = "OnTapMenu"
+	                        NumberOfTapsRequired="1" />
+	              </Image.GestureRecognizers>
+	            </Image>
+	          </StackLayout>
+	          <StackLayout Grid.Row="0"
+                       Grid.Column="{i18n:Translate b8}"
+              Grid.ColumnSpan="3"
+                       HorizontalOptions="{i18n:Translate HoriExp}"
+                       VerticalOptions="CenterAndExpand">
+           <Label x:Name = "ConsHeader" Text="{i18n:Translate str_conservation_tips}" 
+                       LineBreakMode="NoWrap" HorizontalTextAlignment = "{i18n:Translate HoriExp}"
+               TextColor="#545b66" Font = "1, bold" >   
+																	<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+					<Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Label.FontFamily>
+            </Label>
+          </StackLayout>
+        </Grid>
+        </StackLayout>
+		</RelativeLayout>
+
+		<ScrollView>
+				<StackLayout Padding = "10, 10, 10, 10"
+				VerticalOptions = "StartAndExpand">
+
+						<StackLayout x:Name = "WaterSaver">
+
+						<Label HorizontalTextAlignment = "{i18n:Translate HoriExp}" 
+									FontAttributes = "Bold"
+									TextColor = "Black" 
+									Text = "{i18n:Translate str_water_saver1}" >			
+								<Label.FontSize>
+									<OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+								</Label.FontSize>
+								<Label.FontFamily>
+									<OnPlatform x:TypeArguments="x:String">
+										<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+										<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+									</OnPlatform>
+							</Label.FontFamily></Label>
+							<Label HorizontalTextAlignment = "{i18n:Translate HoriExp}" 
+									FontAttributes = "Bold"
+									TextColor = "Black" 
+									Text = "{i18n:Translate str_water_saver2}" >			
+								<Label.FontSize>
+									<OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+								</Label.FontSize>
+								<Label.FontFamily>
+									<OnPlatform x:TypeArguments="x:String">
+										<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+										<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+									</OnPlatform>
+							</Label.FontFamily></Label>
+
+							<Label HorizontalTextAlignment = "{i18n:Translate HoriExp}" 
+									FontAttributes = "Bold"
+									TextColor = "Black" 
+									Text = "{i18n:Translate str_water_saver3}" >			
+								<Label.FontSize>
+									<OnIdiom x:TypeArguments ="x:Double" Phone = "18" Tablet = "28" />
+								</Label.FontSize>
+								<Label.FontFamily>
+									<OnPlatform x:TypeArguments="x:String">
+										<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+										<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+									</OnPlatform>
+							</Label.FontFamily></Label>
+							<StackLayout>
+								<Label HorizontalTextAlignment = "{i18n:Translate HoriExp}" 
+									FontAttributes = "Bold"
+									TextColor = "Black" 
+									Text = "{i18n:Translate str_water_saver4}" >			
+								<Label.FontSize>
+									<OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+								</Label.FontSize>
+								<Label.FontFamily>
+									<OnPlatform x:TypeArguments="x:String">
+										<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+										<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+									</OnPlatform>
+							</Label.FontFamily></Label>
+							<Grid>
+									<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="auto" />  
+          </Grid.ColumnDefinitions>
+									<Image Grid.Row = "0" 
+											Grid.Column = "{i18n:Translate bullet_int0}" 
+											HeightRequest = "{Binding pointerHeight}"
+											VerticalOptions = "Start" 
+											HorizontalOptions ="{i18n:Translate HoriExp}" 
+											Source = "{i18n:Translate bullet_point}"></Image>
+									<Label  Grid.Row = "0" 
+											HorizontalOptions = "FillAndExpand"
+											Grid.Column = "{i18n:Translate bullet_int1}" 
+											Grid.ColumnSpan = "10" 
+											HorizontalTextAlignment = "{i18n:Translate HoriExp}" 
+											FontAttributes = "Bold"
+											TextColor = "Black" 
+											Text = "{i18n:Translate str_water_saver_tip1}" >			
+								<Label.FontSize>
+									<OnIdiom x:TypeArguments ="x:Double"
+												Phone = "15"
+												Tablet = "25" />
+								</Label.FontSize>
+								<Label.FontFamily>
+									<OnPlatform x:TypeArguments="x:String">
+										<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+										<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+									</OnPlatform>
+							</Label.FontFamily></Label>
+							</Grid>
+							</StackLayout>
+
+							
+							<StackLayout>
+							<Grid>
+									<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="auto" />  
+          </Grid.ColumnDefinitions>
+									<Image Grid.Row = "0" 
+											Grid.Column = "{i18n:Translate bullet_int0}" 
+											HeightRequest = "{Binding pointerHeight}"
+											VerticalOptions = "Start" 
+											HorizontalOptions ="{i18n:Translate HoriExp}" 
+											Source = "{i18n:Translate bullet_point}"></Image>
+									<Label  Grid.Row = "0" 
+											HorizontalOptions = "FillAndExpand"
+											Grid.Column = "{i18n:Translate bullet_int1}" 
+											Grid.ColumnSpan = "10" 
+											HorizontalTextAlignment = "{i18n:Translate HoriExp}" 
+											FontAttributes = "Bold"
+											TextColor = "Black" 
+											Text = "{i18n:Translate str_water_saver_tip2}" >			
+								<Label.FontSize>
+									<OnIdiom x:TypeArguments ="x:Double"
+												Phone = "15"
+												Tablet = "25" />
+								</Label.FontSize>
+								<Label.FontFamily>
+									<OnPlatform x:TypeArguments="x:String">
+										<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+										<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+									</OnPlatform>
+							</Label.FontFamily></Label>
+							</Grid>
+							</StackLayout>
+							<Label HorizontalTextAlignment = "{i18n:Translate HoriExp}" 
+									FontAttributes = "Bold"
+									TextColor = "Black" 
+									Text = "{i18n:Translate str_water_saver5}" >			
+								<Label.FontSize>
+									<OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+								</Label.FontSize>
+								<Label.FontFamily>
+									<OnPlatform x:TypeArguments="x:String">
+										<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+										<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+									</OnPlatform>
+							</Label.FontFamily></Label>
+
+
+							<Label HorizontalTextAlignment = "{i18n:Translate HoriExp}" 
+									FontAttributes = "Bold"
+									TextColor = "Black" 
+									Text = "{i18n:Translate str_water_saver6}" >			
+								<Label.FontSize>
+									<OnIdiom x:TypeArguments ="x:Double" Phone = "18" Tablet = "28" />
+								</Label.FontSize>
+								<Label.FontFamily>
+									<OnPlatform x:TypeArguments="x:String">
+										<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+										<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+									</OnPlatform>
+							</Label.FontFamily></Label>
+							<StackLayout>
+							<Grid>
+									<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="auto" />  
+          </Grid.ColumnDefinitions>
+									<Image Grid.Row = "0" 
+											Grid.Column = "{i18n:Translate bullet_int0}" 
+											HeightRequest = "{Binding pointerHeight}"
+											VerticalOptions = "Start" 
+											HorizontalOptions ="{i18n:Translate HoriExp}" 
+											Source = "{i18n:Translate bullet_point}"></Image>
+									<Label  Grid.Row = "0" 
+											HorizontalOptions = "FillAndExpand"
+											Grid.Column = "{i18n:Translate bullet_int1}" 
+											Grid.ColumnSpan = "10" 
+											HorizontalTextAlignment = "{i18n:Translate HoriExp}" 
+											FontAttributes = "Bold"
+											TextColor = "Black" 
+											Text = "{i18n:Translate str_water_saver_tip3}" >			
+								<Label.FontSize>
+									<OnIdiom x:TypeArguments ="x:Double"
+												Phone = "15"
+												Tablet = "25" />
+								</Label.FontSize>
+								<Label.FontFamily>
+									<OnPlatform x:TypeArguments="x:String">
+										<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+										<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+									</OnPlatform>
+							</Label.FontFamily></Label>
+							</Grid>
+							</StackLayout>
+
+							<StackLayout>
+							<Grid>
+									<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="auto" />  
+          </Grid.ColumnDefinitions>
+									<Image Grid.Row = "0" 
+											Grid.Column = "{i18n:Translate bullet_int0}" 
+											HeightRequest = "{Binding pointerHeight}"
+											VerticalOptions = "Start" 
+											HorizontalOptions ="{i18n:Translate HoriExp}" 
+											Source = "{i18n:Translate bullet_point}"></Image>
+									<Label  Grid.Row = "0" 
+											HorizontalOptions = "FillAndExpand"
+											Grid.Column = "{i18n:Translate bullet_int1}" 
+											Grid.ColumnSpan = "10" 
+											HorizontalTextAlignment = "{i18n:Translate HoriExp}" 
+											FontAttributes = "Bold"
+											TextColor = "Black" 
+											Text = "{i18n:Translate str_water_saver_tip4}" >			
+								<Label.FontSize>
+									<OnIdiom x:TypeArguments ="x:Double"
+												Phone = "15"
+												Tablet = "25" />
+								</Label.FontSize>
+								<Label.FontFamily>
+									<OnPlatform x:TypeArguments="x:String">
+										<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+										<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+									</OnPlatform>
+							</Label.FontFamily></Label>
+							</Grid>
+							</StackLayout>
+							<StackLayout>
+							<Grid>
+									<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="auto" />  
+          </Grid.ColumnDefinitions>
+									<Image Grid.Row = "0" 
+											Grid.Column = "{i18n:Translate bullet_int0}" 
+											HeightRequest = "{Binding pointerHeight}"
+											VerticalOptions = "Start" 
+											HorizontalOptions ="{i18n:Translate HoriExp}" 
+											Source = "{i18n:Translate bullet_point}"></Image>
+									<Label  Grid.Row = "0" 
+											HorizontalOptions = "FillAndExpand"
+											Grid.Column = "{i18n:Translate bullet_int1}" 
+											Grid.ColumnSpan = "10" 
+											HorizontalTextAlignment = "{i18n:Translate HoriExp}" 
+											FontAttributes = "Bold"
+											TextColor = "Black" 
+											Text = "{i18n:Translate str_water_saver_tip5}" >			
+								<Label.FontSize>
+									<OnIdiom x:TypeArguments ="x:Double"
+												Phone = "15"
+												Tablet = "25" />
+								</Label.FontSize>
+								<Label.FontFamily>
+									<OnPlatform x:TypeArguments="x:String">
+										<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+										<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+									</OnPlatform>
+							</Label.FontFamily></Label>
+							</Grid>
+							</StackLayout>
+							<StackLayout>
+							<Grid>
+									<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="auto" />  
+          </Grid.ColumnDefinitions>
+									<Image Grid.Row = "0" 
+											Grid.Column = "{i18n:Translate bullet_int0}" 
+											HeightRequest = "{Binding pointerHeight}"
+											VerticalOptions = "Start" 
+											HorizontalOptions ="{i18n:Translate HoriExp}" 
+											Source = "{i18n:Translate bullet_point}"></Image>
+									<Label  Grid.Row = "0" 
+											HorizontalOptions = "FillAndExpand"
+											Grid.Column = "{i18n:Translate bullet_int1}" 
+											Grid.ColumnSpan = "10" 
+											HorizontalTextAlignment = "{i18n:Translate HoriExp}" 
+											FontAttributes = "Bold"
+											TextColor = "Black" 
+											Text = "{i18n:Translate str_water_saver_tip6}" >			
+								<Label.FontSize>
+									<OnIdiom x:TypeArguments ="x:Double"
+												Phone = "15"
+												Tablet = "25" />
+								</Label.FontSize>
+								<Label.FontFamily>
+									<OnPlatform x:TypeArguments="x:String">
+										<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+										<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+									</OnPlatform>
+							</Label.FontFamily></Label>
+							</Grid>
+							</StackLayout>
+
+							<Label HorizontalTextAlignment = "{i18n:Translate HoriExp}" 
+									FontAttributes = "Bold"
+									TextColor = "Black" 
+									Text = "{i18n:Translate str_water_saver7}" >			
+								<Label.FontSize>
+									<OnIdiom x:TypeArguments ="x:Double" Phone = "18" Tablet = "28" />
+								</Label.FontSize>
+								<Label.FontFamily>
+									<OnPlatform x:TypeArguments="x:String">
+										<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+										<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+									</OnPlatform>
+							</Label.FontFamily></Label>
+							<StackLayout>
+							<Grid>
+									<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="auto" />  
+          </Grid.ColumnDefinitions>
+									<Image Grid.Row = "0" 
+											Grid.Column = "{i18n:Translate bullet_int0}" 
+											HeightRequest = "{Binding pointerHeight}"
+											VerticalOptions = "Start" 
+											HorizontalOptions ="{i18n:Translate HoriExp}" 
+											Source = "{i18n:Translate bullet_point}"></Image>
+									<Label  Grid.Row = "0" 
+											HorizontalOptions = "FillAndExpand"
+											Grid.Column = "{i18n:Translate bullet_int1}" 
+											Grid.ColumnSpan = "10" 
+											HorizontalTextAlignment = "{i18n:Translate HoriExp}" 
+											FontAttributes = "Bold"
+											TextColor = "Black" 
+											Text = "{i18n:Translate str_water_saver8}" >			
+								<Label.FontSize>
+									<OnIdiom x:TypeArguments ="x:Double"
+												Phone = "15"
+												Tablet = "25" />
+								</Label.FontSize>
+								<Label.FontFamily>
+									<OnPlatform x:TypeArguments="x:String">
+										<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+										<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+									</OnPlatform>
+							</Label.FontFamily></Label>
+							</Grid>
+							</StackLayout>
+
+							<StackLayout>
+							<Grid>
+									<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="auto" />  
+          </Grid.ColumnDefinitions>
+									<Image Grid.Row = "0" 
+											Grid.Column = "{i18n:Translate bullet_int0}" 
+											HeightRequest = "{Binding pointerHeight}"
+											VerticalOptions = "Start" 
+											HorizontalOptions ="{i18n:Translate HoriExp}" 
+											Source = "{i18n:Translate bullet_point}"></Image>
+									<Label  Grid.Row = "0" 
+											HorizontalOptions = "FillAndExpand"
+											Grid.Column = "{i18n:Translate bullet_int1}" 
+											Grid.ColumnSpan = "10" 
+											HorizontalTextAlignment = "{i18n:Translate HoriExp}" 
+											FontAttributes = "Bold"
+											TextColor = "Black" 
+											Text = "{i18n:Translate str_water_saver9}" >			
+								<Label.FontSize>
+									<OnIdiom x:TypeArguments ="x:Double"
+												Phone = "15"
+												Tablet = "25" />
+								</Label.FontSize>
+								<Label.FontFamily>
+									<OnPlatform x:TypeArguments="x:String">
+										<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+										<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+									</OnPlatform>
+							</Label.FontFamily></Label>
+							</Grid>
+							</StackLayout>
+							<StackLayout>
+							<Grid>
+									<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="auto" />  
+          </Grid.ColumnDefinitions>
+									<Image Grid.Row = "0" 
+											Grid.Column = "{i18n:Translate bullet_int0}" 
+											HeightRequest = "{Binding pointerHeight}"
+											VerticalOptions = "Start" 
+											HorizontalOptions ="{i18n:Translate HoriExp}" 
+											Source = "{i18n:Translate bullet_point}"></Image>
+									<Label  Grid.Row = "0" 
+											HorizontalOptions = "FillAndExpand"
+											Grid.Column = "{i18n:Translate bullet_int1}" 
+											Grid.ColumnSpan = "10" 
+											HorizontalTextAlignment = "{i18n:Translate HoriExp}" 
+											FontAttributes = "Bold"
+											TextColor = "Black" 
+											Text = "{i18n:Translate str_water_saver10}" >			
+								<Label.FontSize>
+									<OnIdiom x:TypeArguments ="x:Double"
+												Phone = "15"
+												Tablet = "25" />
+								</Label.FontSize>
+								<Label.FontFamily>
+									<OnPlatform x:TypeArguments="x:String">
+										<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+										<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+									</OnPlatform>
+							</Label.FontFamily></Label>
+							</Grid>
+							</StackLayout>
+							<StackLayout>
+							<Grid>
+									<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="auto" />  
+          </Grid.ColumnDefinitions>
+									<Image Grid.Row = "0" 
+											Grid.Column = "{i18n:Translate bullet_int0}" 
+											HeightRequest = "{Binding pointerHeight}"
+											VerticalOptions = "Start" 
+											HorizontalOptions ="{i18n:Translate HoriExp}" 
+											Source = "{i18n:Translate bullet_point}"></Image>
+									<Label  Grid.Row = "0" 
+											HorizontalOptions = "FillAndExpand"
+											Grid.Column = "{i18n:Translate bullet_int1}" 
+											Grid.ColumnSpan = "10" 
+											HorizontalTextAlignment = "{i18n:Translate HoriExp}" 
+											FontAttributes = "Bold"
+											TextColor = "Black" 
+											Text = "{i18n:Translate str_water_saver11}" >			
+								<Label.FontSize>
+									<OnIdiom x:TypeArguments ="x:Double"
+												Phone = "15"
+												Tablet = "25" />
+								</Label.FontSize>
+								<Label.FontFamily>
+									<OnPlatform x:TypeArguments="x:String">
+										<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+										<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+									</OnPlatform>
+							</Label.FontFamily></Label>
+							</Grid>
+							</StackLayout>
+							<StackLayout>
+							<Grid>
+									<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="auto" />  
+          </Grid.ColumnDefinitions>
+									<Image Grid.Row = "0" 
+											Grid.Column = "{i18n:Translate bullet_int0}" 
+											HeightRequest = "{Binding pointerHeight}"
+											VerticalOptions = "Start" 
+											HorizontalOptions ="{i18n:Translate HoriExp}" 
+											Source = "{i18n:Translate bullet_point}"></Image>
+									<Label  Grid.Row = "0" 
+											HorizontalOptions = "FillAndExpand"
+											Grid.Column = "{i18n:Translate bullet_int1}" 
+											Grid.ColumnSpan = "10" 
+											HorizontalTextAlignment = "{i18n:Translate HoriExp}" 
+											FontAttributes = "Bold"
+											TextColor = "Black" 
+											Text = "{i18n:Translate str_water_saver12}" >			
+								<Label.FontSize>
+									<OnIdiom x:TypeArguments ="x:Double"
+												Phone = "15"
+												Tablet = "25" />
+								</Label.FontSize>
+								<Label.FontFamily>
+									<OnPlatform x:TypeArguments="x:String">
+										<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+										<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+									</OnPlatform>
+							</Label.FontFamily></Label>
+							</Grid>
+							</StackLayout>
+							<StackLayout>
+							<Grid>
+									<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="auto" />  
+          </Grid.ColumnDefinitions>
+									<Image Grid.Row = "0" 
+											Grid.Column = "{i18n:Translate bullet_int0}" 
+											HeightRequest = "{Binding pointerHeight}"
+											VerticalOptions = "Start" 
+											HorizontalOptions ="{i18n:Translate HoriExp}" 
+											Source = "{i18n:Translate bullet_point}"></Image>
+									<Label  Grid.Row = "0" 
+											HorizontalOptions = "FillAndExpand"
+											Grid.Column = "{i18n:Translate bullet_int1}" 
+											Grid.ColumnSpan = "10" 
+											HorizontalTextAlignment = "{i18n:Translate HoriExp}" 
+											FontAttributes = "Bold"
+											TextColor = "Black" 
+											Text = "{i18n:Translate str_water_saver13}" >			
+								<Label.FontSize>
+									<OnIdiom x:TypeArguments ="x:Double"
+												Phone = "15"
+												Tablet = "25" />
+								</Label.FontSize>
+								<Label.FontFamily>
+									<OnPlatform x:TypeArguments="x:String">
+										<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+										<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+									</OnPlatform>
+							</Label.FontFamily></Label>
+							</Grid>
+							</StackLayout>
+
+						
+					</StackLayout>
+
+
+						</StackLayout>
+				</ScrollView>
+					
+			</StackLayout>
+			</RelativeLayout>
+	</ContentPage.Content>
+</ContentPage>

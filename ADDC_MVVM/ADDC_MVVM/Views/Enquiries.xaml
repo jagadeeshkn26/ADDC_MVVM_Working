@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		xmlns:i18n="clr-namespace:ADDC_MVVM;assembly=ADDC_MVVM"
+		x:Class="ADDC_MVVM.Views.Enquiries"
+	xmlns:Common="clr-namespace:ADDC_MVVM;assembly=ADDC_MVVM">
+<ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
+  </ContentPage.Padding>
+	<ContentPage.Content>
+		<RelativeLayout
+			>
+
+  <StackLayout RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Height}" >  
+   
+
+				<RelativeLayout VerticalOptions="Start" >
+ 
+        <Image Source="{i18n:Translate HeaderContent}"
+				HeightRequest= "60" Aspect = "Fill"/>
+	        <StackLayout RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToView, Property=Height}" HorizontalOptions = "FillAndExpand">
+					<Grid VerticalOptions ="Center" >
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="auto" />
+          </Grid.ColumnDefinitions>
+
+          <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+          </Grid.RowDefinitions>
+           <StackLayout x:Name="Header1" Grid.Row="0" Padding = "10, 0, 10, 0"
+	                       Grid.Column="{i18n:Translate a8}"
+	                       VerticalOptions="Center">
+	            <Image Source="landing_active_menu_icon" HeightRequest = "20">
+	              <Image.GestureRecognizers>
+	                <TapGestureRecognizer
+	                        Command = "{Binding OnTapMenu}"
+	                        NumberOfTapsRequired="1" />
+	              </Image.GestureRecognizers>
+	            </Image>
+	          </StackLayout>
+	          <StackLayout Grid.Row="0"
+                       Grid.Column="{i18n:Translate b8}"
+              Grid.ColumnSpan="3"
+                       HorizontalOptions="{i18n:Translate HoriExp}"
+                       VerticalOptions="CenterAndExpand">
+           <Label x:Name = "ConsHeader" Text="{i18n:Translate str_getintouch_title}" 
+                       LineBreakMode="NoWrap" HorizontalTextAlignment = "{i18n:Translate HoriExp}"
+               TextColor="#545b66" Font = "1, bold" >   
+																	<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+					<Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Label.FontFamily>
+            </Label>
+          </StackLayout>
+        </Grid>
+        </StackLayout>
+		</RelativeLayout>
+
+        <StackLayout Orientation = "Vertical" >
+          <StackLayout Padding="10,0,10,0">
+          <Label Text="{i18n:Translate enquiry_assistance}" HorizontalTextAlignment = "{i18n:Translate HoriExp}" TextColor="#545b66">
+            <!-- Font changes ... -->
+            <Label.FontSize>
+              <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+            </Label.FontSize>
+            <Label.FontFamily>
+              <OnPlatform x:TypeArguments="x:String">
+                <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+              </OnPlatform>
+            </Label.FontFamily>
+            <!-- Font changes ... -->
+          </Label>
+          </StackLayout>
+          <StackLayout Padding="10,0,10,0">
+            <Label Text="{i18n:Translate enquiry_assistance_desc}" HorizontalTextAlignment = "{i18n:Translate HoriExp}" TextColor="#545b66">
+            <!-- Font changes ... -->
+            <Label.FontSize>
+              <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+            </Label.FontSize>
+            <Label.FontFamily>
+              <OnPlatform x:TypeArguments="x:String">
+                <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+              </OnPlatform>
+            </Label.FontFamily>
+            <!-- Font changes ... -->
+          </Label>
+          </StackLayout>
+          <StackLayout Padding="20,0,20,0">
+          <Button HorizontalOptions = "FillAndExpand"
+									VerticalOptions ="Start"
+            Command="{Binding FaqCommand}" Text="{i18n:Translate str_freq_ask_qustns}" BackgroundColor = "##5e9622"
+               TextColor = "White"/>
+          </StackLayout>
+          <StackLayout Padding="10,0,10,0">
+          <Label Text="{i18n:Translate enquery_want_intouch}" HorizontalTextAlignment = "{i18n:Translate HoriExp}" TextColor="#545b66">
+            <!-- Font changes ... -->
+            <Label.FontSize>
+              <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+            </Label.FontSize>
+            <Label.FontFamily>
+              <OnPlatform x:TypeArguments="x:String">
+                <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+              </OnPlatform>
+            </Label.FontFamily>
+            <!-- Font changes ... -->
+          </Label>
+          </StackLayout>  
+          <StackLayout Grid.Row = "5" Orientation = "Horizontal" Padding="10,0,10,0"
+									 >
+           <Grid HorizontalOptions = "FillAndExpand"
+									VerticalOptions ="Start">
+             <StackLayout Grid.Row="0" Grid.Column="0" >
+               <Button  Command="{Binding CallusCommand}" Text="{i18n:Translate str_call_us}" BackgroundColor = "#696969"
+								TextColor = "White"/>
+             </StackLayout>
+             
+             <StackLayout Grid.Row="1" Grid.Column="0">
+               <Button  Command="{Binding EmailUsCommand}" Text="{i18n:Translate str_email_us}"
+                   BackgroundColor = "#696969"
+                     TextColor = "White" />
+             </StackLayout>
+
+             <StackLayout Grid.Row="2" Grid.Column="0">
+               <Button  Command="{Binding SendEnquiryCommand}" Text="{i18n:Translate str_send_enquiry}"
+                   BackgroundColor = "#696969"
+                     TextColor = "White" />
+             </StackLayout>
+             <StackLayout Grid.Row="3" Grid.Column="0">
+               <Button  Command="{Binding SendSuggestionCommand}" Text="{i18n:Translate str_send_suggestions}"
+                   BackgroundColor = "#696969"
+                     TextColor = "White" />
+             </StackLayout>
+             <StackLayout Grid.Row="4" Grid.Column="0">
+               <Button  Command="{Binding BranchLocatorCommand}" Text="{i18n:Translate str_branch_locator}"
+                   BackgroundColor = "#696969"
+                     TextColor = "White" />
+             </StackLayout>
+             </Grid>
+							</StackLayout>
+        </StackLayout>
+		</StackLayout>
+		</RelativeLayout>
+	</ContentPage.Content>
+</ContentPage>

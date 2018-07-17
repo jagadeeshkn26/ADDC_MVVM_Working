@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ADDC_MVVM.Views.OAGeneratePin"
+             Title="Activate your ADDC account"
+             xmlns:vm="clr-namespace:ADDC_MVVM.ViewModels;assembly=ADDC_MVVM">
+   
+  <ContenPage.ToolbarOptions>
+
+  </ContenPage.ToolbarOptions>
+  <ContentPage.BindingContext>
+    <vm:OAGeneratePinViewModel/>
+  </ContentPage.BindingContext>
+  <StackLayout>
+    <Label Text="We have sent the PIN to your registered mobile xxxxxxxxx8785 and E-mail address: xxxsish.ghosal1@wipro.com 
+           Please enter your new PIN and click on SUBMIT:" />
+    <Entry Placeholder="Enter 4 digit PIN" Keyboard="Numeric" TextChanged="OnTextChanged"
+           IsPassword="True"/>
+
+    <Label Text="In case you haven't received please click Resend PIN "/>
+    
+    <Label Text="" x:Name="pkrLanguage"/>
+    <Label x:Name="BtnStackLayout2" Text="{Binding ResponseStatus}"/>
+    <Label x:Name="BtnStackLayout3" Text="{Binding ResponseStatus}"/>
+    <Label x:Name="BtnStackLayout4" Text="{Binding ResponseStatus}"/>
+    <StackLayout Orientation="Horizontal">
+    <Button x:Name="submit" Text="SUBMIT"  HorizontalOptions="Start" IsEnabled="False"  />
+    <Button Text="Resend PIN" HorizontalOptions="End"/>
+    </StackLayout>
+    <Button Text="Account Details Page" HorizontalOptions="Center" Clicked="OnSubmitClicked"/>
+  </StackLayout>
+  
+</ContentPage>

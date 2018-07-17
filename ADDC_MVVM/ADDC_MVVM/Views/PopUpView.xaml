@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		x:Class="ADDC_MVVM.PopUpView"
+		xmlns:i18n="clr-namespace:ADDC_MVVM;assembly=ADDC_MVVM"
+		BackgroundColor = "Transparent"
+             xmlns:Common="clr-namespace:ADDC_MVVM;assembly=ADDC_MVVM">
+	 <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
+  </ContentPage.Padding>
+	<ContentPage.Content>
+
+ 
+
+ <RelativeLayout BackgroundColor = "Transparent" Opacity = "0.3">
+		
+  <StackLayout  Padding = "20, 40, 20, 40"
+					BackgroundColor = "Transparent"
+					RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Height}" >  
+				  <StackLayout.GestureRecognizers>
+	                <TapGestureRecognizer
+										Tapped = "OnTapMenu"
+	                        
+	                        NumberOfTapsRequired="1" />
+	              </StackLayout.GestureRecognizers>
+  
+    <StackLayout x:Name = "pageContent" VerticalOptions = "CenterAndExpand" Padding="5,5,5,5" BackgroundColor = "Gray" >
+      <ScrollView>
+					<StackLayout BackgroundColor = "White">
+       
+					<StackLayout Padding = "10, 0, 10, 0" 
+								IsVisible = "{Binding ValueView}"
+								x:Name = "ValueTxt">
+
+						<Label HorizontalTextAlignment = "{i18n:Translate HoriExp}" 
+									FontAttributes = "Bold"
+									TextColor = "Black" 
+									Text = "{i18n:Translate str_about_value_content}" >			
+								<Label.FontSize>
+									<OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+								</Label.FontSize>
+								<Label.FontFamily>
+									<OnPlatform x:TypeArguments="x:String">
+										<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+										<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+									</OnPlatform>
+							</Label.FontFamily></Label>
+
+						<Label HorizontalTextAlignment = "{i18n:Translate HoriExp}" 
+									FontAttributes = "Bold"
+									TextColor = "Black" 
+									Text = "{i18n:Translate str_about_value_heading1}" >			
+								<Label.FontSize>
+									<OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+								</Label.FontSize>
+								<Label.FontFamily>
+									<OnPlatform x:TypeArguments="x:String">
+										<OnPlatform.iOS>BlissBold</OnPlatform.iOS>
+										<OnPlatform.Android>bliss_bold.ttf#bliss_bold</OnPlatform.Android>
+									</OnPlatform>
+							</Label.FontFamily></Label>
+							<StackLayout>
+							<Grid>
+									<Image Grid.Row = "0" 
+											Grid.Column = "{i18n:Translate bullet_int0}" 
+											HeightRequest = "{Binding pointerHeight}"
+											VerticalOptions = "Start" 
+											HorizontalOptions ="{i18n:Translate hor_icon}" 
+											Source = "{i18n:Translate bullet_point}"></Image>
+									<Label  Grid.Row = "0" 
+											HorizontalOptions = "FillAndExpand"
+											Grid.Column = "{i18n:Translate bullet_int1}" 
+											Grid.ColumnSpan = "10" 
+											HorizontalTextAlignment = "{i18n:Translate HoriExp}" 
+											FontAttributes = "Bold"
+											TextColor = "Black" 
+											Text = "{i18n:Translate str_about_value_point1}" >			
+								<Label.FontSize>
+									<OnIdiom x:TypeArguments ="x:Double"
+												Phone = "15"
+												Tablet = "25" />
+								</Label.FontSize>
+								<Label.FontFamily>
+									<OnPlatform x:TypeArguments="x:String">
+										<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+										<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+									</OnPlatform>
+							</Label.FontFamily></Label>
+							</Grid>
+							</StackLayout>
+
+							<StackLayout>
+							<Grid>
+									<Image Grid.Row = "0" 
+											Grid.Column = "{i18n:Translate bullet_int0}" 
+											HeightRequest = "{Binding pointerHeight}"
+											VerticalOptions = "Start" 
+											HorizontalOptions ="{i18n:Translate hor_icon}" 
+											Source = "{i18n:Translate bullet_point}"></Image>
+									<Label  Grid.Row = "0" 
+											HorizontalOptions = "FillAndExpand"
+											Grid.Column = "{i18n:Translate bullet_int1}" 
+											Grid.ColumnSpan = "10" 
+											HorizontalTextAlignment = "{i18n:Translate HoriExp}" 
+											FontAttributes = "Bold"
+											TextColor = "Black" 
+											Text = "{i18n:Translate str_about_value_point2}" >			
+								<Label.FontSize>
+									<OnIdiom x:TypeArguments ="x:Double"
+												Phone = "15"
+												Tablet = "25" />
+								</Label.FontSize>
+								<Label.FontFamily>
+									<OnPlatform x:TypeArguments="x:String">
+										<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+										<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+									</OnPlatform>
+							</Label.FontFamily></Label>
+							</Grid>
+							</StackLayout>
+							<StackLayout>
+							<Grid>
+									<Image Grid.Row = "0" 
+											Grid.Column = "{i18n:Translate bullet_int0}" 
+											HeightRequest = "{Binding pointerHeight}"
+											VerticalOptions = "Start" 
+											HorizontalOptions ="{i18n:Translate hor_icon}" 
+											Source = "{i18n:Translate bullet_point}"></Image>
+									<Label  Grid.Row = "0" 
+											HorizontalOptions = "FillAndExpand"
+											Grid.Column = "{i18n:Translate bullet_int1}" 
+											Grid.ColumnSpan = "10" 
+											HorizontalTextAlignment = "{i18n:Translate HoriExp}" 
+											FontAttributes = "Bold"
+											TextColor = "Black" 
+											Text = "{i18n:Translate str_about_value_point3}" >			
+								<Label.FontSize>
+									<OnIdiom x:TypeArguments ="x:Double"
+												Phone = "15"
+												Tablet = "25" />
+								</Label.FontSize>
+								<Label.FontFamily>
+									<OnPlatform x:TypeArguments="x:String">
+										<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+										<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+									</OnPlatform>
+							</Label.FontFamily></Label>
+							</Grid>
+							</StackLayout>
+
+					</StackLayout>
+
+				</StackLayout>
+				</ScrollView>
+     
+    </StackLayout>
+
+   
+		</StackLayout>
+		</RelativeLayout>
+
+	</ContentPage.Content>
+</ContentPage>

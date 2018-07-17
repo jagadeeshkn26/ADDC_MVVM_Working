@@ -1,0 +1,2111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="i1" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="i2" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="i3" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="j1" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="j2" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="j3" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="k2" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="k3" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="l3" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="LblAboutus" xml:space="preserve">
+    <value>نبذة عن الشركة</value>
+  </data>
+  <data name="LblConservationtips" xml:space="preserve">
+    <value>نصائح لترشيد الإستهلاك</value>
+  </data>
+  <data name="LblEnquiries" xml:space="preserve">
+    <value>استفسارات</value>
+  </data>
+  <data name="LblLocateus" xml:space="preserve">
+    <value>حدد موقعنا</value>
+  </data>
+  <data name="LblMission" xml:space="preserve">
+    <value>المهمـة</value>
+  </data>
+  <data name="LblOverview" xml:space="preserve">
+    <value>نظرة عامة</value>
+  </data>
+  <data name="LblTariffinformation" xml:space="preserve">
+    <value>معلومات حول التعرفة</value>
+  </data>
+  <data name="LblUnderstandingbill" xml:space="preserve">
+    <value>شرح مكونات الفاتورة</value>
+  </data>
+  <data name="LblValues" xml:space="preserve">
+    <value>القيم</value>
+  </data>
+  <data name="LblVision" xml:space="preserve">
+    <value>الرؤية</value>
+  </data>
+  <data name="StrAllRights" xml:space="preserve">
+    <value>جميع الحقوق محفوظة 2017 شركة أبوظبي للتوزيع</value>
+    <comment>All rights reserved 2016 Abu Dhabi Distribution Company</comment>
+  </data>
+  <data name="StrChangeLang" xml:space="preserve">
+    <value>تغيير اللغة</value>
+    <comment>StrExplore for explore</comment>
+  </data>
+  <data name="StrEnglish" xml:space="preserve">
+    <value> English </value>
+  </data>
+  <data name="StrExistingUser" xml:space="preserve">
+    <value>  مستخدم حالي   </value>
+    <comment>StrChangeLang for Language change text</comment>
+  </data>
+  <data name="StrExplore" xml:space="preserve">
+    <value>استكشف عالم شركة أبوظبي للتوزيع</value>
+    <comment>StrNewUser for New user</comment>
+  </data>
+  <data name="StrLogin" xml:space="preserve">
+    <value>تسجيل الدخول</value>
+  </data>
+  <data name="StrMassive" xml:space="preserve">
+    <value>بدءًا من المباني الكبيرة وحتى الشقق الصغيرة</value>
+    <comment>strMassive for massive text</comment>
+  </data>
+  <data name="StrNewUser" xml:space="preserve">
+    <value>مستخدم جديد</value>
+    <comment>StrExistingUser for exsisting text</comment>
+  </data>
+  <data name="StrWaterPoer" xml:space="preserve">
+    <value>مياه، طاقة، مجتمع وصناعة .نحن نحافظ على الاستمرارية. سدد فواتيرك وتحقق من إستهلاكك وتعرف على المزيد عن خدمات شركة أبوظبي للتوزيع عن طريق  تطبيق الهاتف الجوال الذي نقدمه لك.</value>
+    <comment>StrWaterPower for Water, power, community and commerce. We keep things flowing.</comment>
+  </data>
+  <data name="StrWelcomeToAddc" xml:space="preserve">
+    <value>مرحبًا بك في شركة أبوظبي للتوزيع</value>
+    <comment>StrWelcomeToAddc for Welcome to ADDC</comment>
+  </data>
+	 <data name="str_elec_save_steps" xml:space="preserve">
+    <value>نعرض في ما يلي بعض الخطوات البسيطة التي يمكن لكل واحد منا إتباعها للمساعدة في توفير إستهلاكها.</value>
+  </data>
+  
+  <data name="TxtMission" xml:space="preserve">
+    <value>تخطيط وتطوير وصيانة وتشغيل شبكات آمنة ويعتمد عليها وفعالة واقتصادية لتوزيع المياه والكهرباء في أبوظبي وتقديم خدمات ترقى لتطلعات عملاء الشركة بل وتتجاوزها.</value>
+  </data>
+  <data name="TxtOverview" xml:space="preserve">
+    <value>تتحمل شركة أبوظبي للتوزيع ومنذ تأسيسها في نوفمبر 1998 مسؤولية توزيع خدمات المياه والكهرباء عالية الجودة إلى كافة العملاء في إمارة أبوظبي باستثناء منطقة العين. تتمثل الأعمال الرئيسية التي تقوم بها  شركة أبوظبي للتوزيع في تخطيط وتصميم وبناء وتشغيل الشبكة الخاصة بتوزيع المياه والكهرباء في أبوظبي.
+ 
+
+       تضم قاعدة عملاء شركة أبوظبي للتوزيع 412.540 إتفاقية خدمة لتوريد المياه و/أو الكهرباء والتي يتم توفيرها للعملاء على مستوى 33 كيلو فولت ومستوى 11 كيلو فولت في كافة ارجاء المناطق الثلاثة التي تضم المنطقة الشرقية (المصفح وبني ياس) والمنطقة الغربية (ليوا والسلع) وجزيرة أبوظبي.
+
+
+        تصنف شركة أبوظبي للتوزيع على أنها شركة مساهمة عامة توفر خدمة منظمة مقابل إيرادات مصرح بها من قبل مكتب التنظيم والرقابة(RSB) ، وهو الجهة المسئولة عن ترخيص ومراقبة أداء كافة شركات القطاع. الغرض من إخضاع  شركة أبوظبي للتوزيع لمراقبة مكتب التنظيم هو خدمة مصالح العملاء ووضع ضوابط على قيمة الإيرادات التي يمكن لشركة أبوظبي للتوزيع تحصيلها في سنة معينة عن طريق تطبيق نظام رقابة الأسعار والذي يوفر في نفس الوقت الحافز لشركة أبوظبي للتوزيع للارتقاء بجودة خدماتها للعملاء المصحوبة وخفض التكاليف.
+
+
+
+      يرتبط ترخيص شركة أبوظبي للتوزيع مع سريان تطبيق نظام رقابة الأسعار الذي يتم تحديده كل بضع سنوات وقد باشر مكتب التنظيم والرقابة فعلياً في إجراءات التشاور مع شركة أبوظبي للتوزيع لوضع وسائل جديدة لرقابة الاسعار سيبدأ العمل بها إعتباراً من الأول من يناير لسنة 2010.
+
+
+</value>
+  </data>
+  <data name="TxtValue" xml:space="preserve">
+    <value>إن تحقيق وتجسيد رؤية شركة أبوظبي للتوزيع يحتم علينا النفاذ إلى قيمنا الاساسية في كل جوانب التنظيم ليتسنى الحصول على نتائج عملية دائمة  ، وتشتمل قيمنا الأساسية:</value>
+  </data>
+  <data name="TxtVision" xml:space="preserve">
+    <value>أن تصبح شركة أبوظبي للتوزيع شركة رائدة في مجال خدمات توزيع وتوريد المياه والكهرباء وأن يكون ترتيبها ضمن الربع الأول لقائمة أفضل شركات عالمية عاملة في هذا المجال بحلول عام 2020.</value>
+  </data>
+  <data name="a8" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="a1" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="b1" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="i6" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="j6" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="k6" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="i12" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="j12" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="PasswordEntryPlaceholder" xml:space="preserve">
+    <value>كلمه السر</value>
+  </data>
+  <data name="BorderdesignTop" xml:space="preserve">
+    <value>border_design_top_ar.png</value>
+  </data>
+  <data name="b8" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="c8" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="a18" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="b18" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="a28" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="b28" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="str_acc_number" xml:space="preserve">
+    <value>رقم الحساب</value>
+  </data>
+  <data name="str_balance" xml:space="preserve">
+    <value>الرصيد المُستحقّ</value>
+  </data>
+  <data name="str_ost_bal" xml:space="preserve">
+    <value>رصيد الحساب</value>
+  </data>
+  <data name="str_select_property" xml:space="preserve">
+    <value>حدد الحسابات التي تريد سداد فواتيرها</value>
+  </data>
+  <data name="TxtMyAccount" xml:space="preserve">
+    <value>حساب</value>
+  </data>
+  <data name="TxtPay" xml:space="preserve">
+    <value> دفع </value>
+  </data>
+  <data name="TxtSubmit" xml:space="preserve">
+    <value>متابعة</value>
+  </data>
+  <data name="TxtMakPayment" xml:space="preserve">
+    <value>أتم عملية الدفع</value>
+  </data>
+  <data name="TxtSavedCards" xml:space="preserve">
+    <value>SavedCards</value>
+  </data>
+  <data name="TxtPayAndSave" xml:space="preserve">
+    <value>PayAndSave</value>
+  </data>
+  <data name="TxtPayWithoutSave" xml:space="preserve">
+    <value>PayWithoutSave</value>
+  </data>
+  <data name="LblMyAccount" xml:space="preserve">
+    <value>حسابي</value>
+  </data>
+  <data name="LblMyProfile" xml:space="preserve">
+    <value>الملف الشخصي</value>
+  </data>
+  <data name="LblHistory" xml:space="preserve">
+    <value>السجل</value>
+  </data>
+  <data name="LblNotification" xml:space="preserve">
+    <value>الإشعارات</value>
+  </data>
+  <data name="str_MyProfile" xml:space="preserve">
+    <value>الملف الشخصي</value>
+  </data>
+  <data name="str_edit" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
+  <data name="str_cus_id_header" xml:space="preserve">
+    <value>حدث بياناتك بإستمرار</value>
+  </data>
+  <data name="str_myprof_data" xml:space="preserve">
+    <value>من الضروري حصولنا على البيانات الصحيحة للاستمرار في تقديم أفضل خدمة ممكنة. يُرجى استخدام هذا الخيار لإبقاء بياناتك محدثة .</value>
+  </data>
+  <data name="str_cus_id" xml:space="preserve">
+    <value>معرف العميل</value>
+  </data>
+  <data name="str_update_acc_fullname" xml:space="preserve">
+    <value>الاسم بالكامل</value>
+  </data>
+  <data name="str_username_prof" xml:space="preserve">
+    <value>اسم المستخدم</value>
+  </data>
+  <data name="str_personal_detls" xml:space="preserve">
+    <value>بياناتك الشخصية:</value>
+  </data>
+  <data name="str_email_forgotpasswd" xml:space="preserve">
+    <value>Email </value>
+  </data>
+  <data name="str_bill_language_myprofile" xml:space="preserve">
+    <value>ما اللغة التي تفضل استخدامها؟</value>
+  </data>
+  <data name="str_contctnum_desc" xml:space="preserve">
+    <value>إذا أدخلت أكثر من رقم واحد، فسنستخدم الرقم الأول لنرسل إليه رسائل نصية قصيرة بالتنبيهات وتحديثات الخدمة؛ فيُرجى التأكد من أنه هاتف محمول محلي.</value>
+  </data>
+  <data name="change_password" xml:space="preserve">
+    <value>  تغيير كلمة المرور  </value>
+  </data>
+  <data name="my_profile" xml:space="preserve">
+    <value>الملف الشخصي</value>
+  </data>
+  <data name="str_saved_card" xml:space="preserve">
+    <value>البطاقات المحفوظة</value>
+  </data>
+  <data name="str_select_pay_mode" xml:space="preserve">
+    <value>طريقة الدفع</value>
+  </data>
+  <data name="str_cancel" xml:space="preserve">
+    <value>إلغاء</value>
+  </data>
+  <data name="forword_button" xml:space="preserve">
+    <value>forword_button_ar.png</value>
+  </data>
+  <data name="action_pay_now" xml:space="preserve">
+    <value>إدفع الآن</value>
+  </data>
+  <data name="payment_secure" xml:space="preserve">
+    <value> في شركة أبوظبي للتوزيع مشفرة وآمنة بموجب بروتوكول  %100 .إذا كنت تواجه مشاكل في إكمال هذا النموذج، أو كنت ترغب في معرفة المزيد من المعلومات، فيرجى الاتصال بنا على الرقم .2332 – 800</value>
+  </data>
+  <data name="min_max_payment" xml:space="preserve">
+    <value>أقل مبلغ يمكنك دفعه هو 5 دراهم و أعلى مبلغ هو 1000000 درهم</value>
+  </data>
+  <data name="HeaderContent" xml:space="preserve">
+    <value>header_ar.png</value>
+  </data>
+  <data name="StrForgotPwd" xml:space="preserve">
+    <value>هل نسيت كلمة المرور؟</value>
+  </data>
+  <data name="str_phone" xml:space="preserve">
+    <value>رقم الإتصال</value>
+  </data>
+  <data name="str_try_again" xml:space="preserve">
+    <value>بعض الخطأ يحدث يرجى المحاولة مرة أخرى في وقت لاحق.</value>
+  </data>
+  <data name="str_gps_title" xml:space="preserve">
+    <value>تحذير</value>
+  </data>
+  <data name="btn_ok" xml:space="preserve">
+    <value>تحذير</value>
+  </data>
+  <data name="questionMark" xml:space="preserve">
+    <value>؟</value>
+  </data>
+  <data name="HoriExp" xml:space="preserve">
+    <value>End</value>
+  </data>
+  <data name="HoriRevExp" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="str_enter_email" xml:space="preserve">
+    <value>أدخل عنوان البريد الإلكتروني</value>
+  </data>
+  <data name="L1" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="L2" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="str_update_acc_add" xml:space="preserve">
+    <value>   أضف رقم هاتف جديد   </value>
+  </data>
+  <data name="str_cont_info" xml:space="preserve">
+    <value>وسائل الاتصال المفضلة</value>
+  </data>
+  <data name="str_bill_language" xml:space="preserve">
+    <value>الرجاء تحديد اللغة التي تفضلها في التواصل:</value>
+  </data>
+  <data name="AboutUs" xml:space="preserve">
+    <value>Arabic About Us</value>
+  </data>
+  <data name="aboutUsTitle" xml:space="preserve">
+    <value>Arabic About Us Title</value>
+  </data>
+  <data name="ConservationTips" xml:space="preserve">
+    <value>Arabic Conservation Tips</value>
+  </data>
+  <data name="EImage1" xml:space="preserve">
+    <value>electricity_top_left_arb_new.png</value>
+  </data>
+  <data name="EImage2" xml:space="preserve">
+    <value>electricity_top_right_arb_new.png</value>
+  </data>
+  <data name="EImage3" xml:space="preserve">
+    <value>electricity_left_arb_new.png</value>
+  </data>
+  <data name="EImage4" xml:space="preserve">
+    <value>electricity_middle_top_arb_new.png</value>
+  </data>
+  <data name="EImage5" xml:space="preserve">
+    <value>electricity_middle_bottom_arb_new.png</value>
+  </data>
+  <data name="EImage6" xml:space="preserve">
+    <value>right_arb_new.png</value>
+  </data>
+  <data name="EImage7" xml:space="preserve">
+    <value>electricity_bottom_arb_new.png</value>
+  </data>
+  <data name="Enquiries" xml:space="preserve">
+    <value>Arabic Enquiries</value>
+  </data>
+  <data name="LocateUs" xml:space="preserve">
+    <value>Arabic Locate Us</value>
+  </data>
+  <data name="Tariff" xml:space="preserve">
+    <value>Arabic Tariff</value>
+  </data>
+  <data name="UnderStandingYourBill" xml:space="preserve">
+    <value>Arabic Understanding your bill</value>
+  </data>
+  <data name="str_bill_top_header" xml:space="preserve">
+    <value>البيانات الشخصية وبيانات العقار</value>
+  </data>
+  <data name="str_bill_top_desc" xml:space="preserve">
+    <value>يُوضح هذا القسم  اسم صاحب الفاتورة والعقار الخاص بالفاتورة.</value>
+  </data>
+  <data name="str_bill_left_header" xml:space="preserve">
+    <value>رقم العداد</value>
+  </data>
+  <data name="str_meter_title_desc" xml:space="preserve">
+    <value>ستجد كل شيء تحتاج معرفته عن عداد الكهرباء الخاص بك.</value>
+  </data>
+  <data name="str_meter_title1" xml:space="preserve"><value>رقم العداد: </value>
+  </data>
+  <data name="str_meter_desc1" xml:space="preserve">
+    <value> لكل عداد رقم مميز، مما يتيح لنا متابعة  كمية المياه التي استخدمتها منذ آخر فاتورة لك ولإصدار الفاتورة التالية.</value>
+  </data>
+  <data name="str_meter_title2" xml:space="preserve">
+    <value> قراءة العداد:</value>
+  </data>
+  <data name="str_meter_desc2" xml:space="preserve">
+    <value>قراءة العداد: يُوضح لك هذا القراءة التي تم إصدار الفاتورة بناءً عليها. وإن لم نتمكن من أخذ القراءة الفعلية، فقد تكون القراءة عبارة عن رقم تقديري، بناءً على استخدامك السابق المعتاد، وفي هذه الحالة سترى حرف E بجوار القراءة.</value>
+  </data>
+	
+  <data name="str_meter_title3" xml:space="preserve">
+    <value>إجمالي الوحدات: </value>
+  </data>
+  <data name="str_meter_desc3" xml:space="preserve">
+    <value>يوضح الرقم الذي تراه هنا عدد الوحدات الكهربائية التي استخدمتها منذ فاتورتك الأخيرة. ويتم ضرب هذا الرقم بمعدل الوحدة من تعرفتك لحساب رصيدك.</value>
+  </data>
+  <data name="str_meter_title4" xml:space="preserve">
+    <value>Date of meter reading:</value>
+  </data>
+  <data name="str_meter_desc4" xml:space="preserve">
+    <value>This is the most recent date that we’re able to get a read from your meter, his can happen automatically or through a technician visit.</value>
+  </data>
+  <data name="str_meter_title5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="str_meter_desc5" xml:space="preserve">
+    <value>This corresponds to the number of days within this billing period.</value>
+  </data>
+  <data name="str_bill_custdetails" xml:space="preserve">
+    <value>معلومات العميل</value>
+  </data>
+  <data name="str_bill_middle_top_header" xml:space="preserve">
+    <value>نشاط الحساب - </value>
+  </data>
+  <data name="str_bill_middle_top_header_desc" xml:space="preserve">
+    <value> يعرض هذا القسم أي دفعات سداد أو رسوم منذ آخر فاتورة لك وكمية الكهرباء التي استخدمتها منذ ذلك الحين.</value>
+  </data>
+     <data name="str_sum_title1" xml:space="preserve"><value>الرصيد من آخر فاتورة: </value>
+  </data>
+    <data name="str_sum_desc1" xml:space="preserve"><value>يذكرك هذا القسم بالمبلغ المُستحق من فاتورتك السابقة. وقد يظهر كرصيد دائن أو مدين.</value>
+  </data>
+    <data name="str_sum_title2" xml:space="preserve"><value>الدفعات المُستلَمة منذ آخر فاتورة: </value>
+  </data>
+    <data name="str_sum_desc2" xml:space="preserve"><value> يتم هنا توضيح أي دفعات سداد قمت بها لهذا الحساب منذ إصدار فاتورتك السابقة.</value>
+  </data>
+    <data name="str_sum_title3" xml:space="preserve"><value>مبلغ المتأخرات:</value>
+  </data>
+    <data name="str_sum_desc3" xml:space="preserve"><value> سترى هنا مبلغ الدائن أو مبلغ المدين الذي تم ترحيله إلى هذه الفاتورة؛ وهو ببساطة الرصيد السابق مخصومًا منه</value>
+  </data>
+    <data name="str_bill_middle_bottom_header" xml:space="preserve"><value>الرسوم الحالية -</value>
+  </data>
+    <data name="str_bill_middle_bottom_desc" xml:space="preserve"><value>التكلفة الفعلية والدعم الحكومي:</value>
+  </data>
+    <data name="str_bill_middle_bottom_cont" xml:space="preserve"><value>فقط لمعلوماتك، يُوضح هذا البند الدعم الحكومي الذي تم تطبيقه على حسابك وما هي التكلفة الفعلية للكهرباء التي قمت باستخدامها</value>
+  </data>
+    <data name="str_btp_title4_bold" xml:space="preserve"><value>الإجمالي الواجب دفعه</value>
+  </data>
+  <data name="str_btp_title4_desc" xml:space="preserve">
+    <value> سترى هنا رصيدك الحالي في حسابك، والذي يتضمن أي مبالغ مُستحقّة مرحلة من فاتورتك السابقة. وسيكون هذا هو المبلغ المُستحق الواجب عليك دفعه.   </value>
+  </data>
+      <data name="str_bill_right_header" xml:space="preserve"><value>تفاصيل الحساب</value>
+  </data>
+    <data name="str_cust_title1" xml:space="preserve"><value>ستجد في هذا القسم جميع الأرقام المرجعية الرئيسية المتصلة بحسابك. وقد تحتاج لهذه الأرقام لإنشاء حساب على الإنترنت أو لسداد فاتورة. كما يُظهر كذلك تاريخ إصدار فاتورتك ومتى يلزم دفعها.</value>
+  </data> <!--  معرف العميل:  -->
+    <data name="str_cust_desc1" xml:space="preserve"><value>هذا هو رقمك المرجعي الشخصي المرتبط بحسابك لدى شركة أبوظبي للتوزيع. وإذا كان لديك أكثر من حساب واحد لدينا، فسيتم استخدام نفس رقم الهوية في جميع هذه الحسابات.</value>
+  </data>
+    <data name="str_cust_title2" xml:space="preserve"><value>رقم الحساب:</value>
+  </data>
+    <data name="str_cust_desc2" xml:space="preserve"><value>رقم الحساب: تم تعيين هذا الرقم لحساب شركة أبوظبي للتوزيع المخصص للكهرباء لديك في العقار الموضح. وسيكون لكل حساب مختلف لك لدينا رقم حساب مختلف.  
+</value>
+  </data>
+    <data name="str_cust_title3" xml:space="preserve"><value>رقم الفاتورة</value>
+  </data>
+    <data name="str_cust_desc3" xml:space="preserve"><value>A unique 14 digit number used to identify every bill.</value>
+  </data>
+    <data name="str_cust_title4" xml:space="preserve"><value>تاريخ الفاتورة:</value>
+  </data>
+    <data name="str_cust_desc4" xml:space="preserve"><value>تاريخ استحقاق دفع الفاتورة.</value>
+  </data>
+    <data name="str_cust_title5" xml:space="preserve"><value>Please pay by:</value>
+  </data>
+    <data name="str_cust_desc5" xml:space="preserve"><value>The maximum permissible date by which the customer needs to be paid.</value>
+  </data>
+    <data name="str_cust_title6" xml:space="preserve"><value>Premises:</value>
+  </data>
+    <data name="str_cust_desc6" xml:space="preserve"><value>This refers to the spatial unit or the enclosed structure to which the utility services have to be rendered. And is identified by a unique premise ID.</value>
+  </data>
+    <data name="str_bill_bottom_header" xml:space="preserve"><value>الرصيد الواجب دفعه</value>
+  </data>
+    <data name="str_btp_title1" xml:space="preserve"><value>الإجمالي الواجب دفعه: سترى هنا رصيدك الحالي في حسابك، والذي يتضمن أي مبالغ مُستحقّة مرحلة من فاتورتك السابقة. وسيكون هذا هو المبلغ المُستحق الواجب عليك دفعه.</value>
+  </data> <!-- Bill Number: -->
+    <data name="str_btp_desc1" xml:space="preserve"><value>A unique 14 digit number used to identify every bill.</value>
+  </data>
+    <data name="str_btp_title2" xml:space="preserve"><value>رقم الحساب:</value>
+  </data>
+    <data name="str_btp_desc2" xml:space="preserve"><value>The account number is 10 digit number registered with ADDC.</value>
+  </data>
+    <data name="str_btp_title3" xml:space="preserve"><value>تاريخ الفاتورة:</value>
+  </data>
+    <data name="str_btp_desc3" xml:space="preserve"><value>The date on which the bill is to be paid.</value>
+  </data>
+    <data name="str_btp_title4" xml:space="preserve"><value>الإجمالي الواجب دفعه:</value>
+  </data>
+    <data name="str_btp_desc4" xml:space="preserve"><value>The total that is due for payment for the given account number.</value>
+  </data>
+<data name="str_bill_custsupport" xml:space="preserve"><value>خدمة العملاء</value>
+  </data>
+    <data name="str_bill_custsupport_desc" xml:space="preserve"><value>يوضح هذا القسم قنوات التواصل مع شركة أبوظبي للتوزيع.</value>
+  </data>
+    <data name="str_bill_latest_middle_bottom_desc" xml:space="preserve"><value>يوضح لك هذا القسم ما هي التكلفة الفعلية المتكبدة بسعر محدد، والإعانات إن وجدت. وأخيرا ما احتياجات العملاء لدفع آخر بما في ذلك رسوم أخرى، والتعديلات / تصحيحات.</value>
+  </data>
+    <data name="str_bill_num_right_desc" xml:space="preserve"><value>هو رقم مرجعي يتكون من 12 رقم يمكن استخدامه لدفع الفواتير وللإستدلال على رقم حساب.</value>
+  </data>
+    <!-- Water Bill -->
+    <data name="str_meter_watertitle_desc" xml:space="preserve"><value>ستجد هنا كل شيء تحتاج معرفته عن عداد المياه الخاص بك.</value>
+  </data>
+    <data name="str_meter_water_desc1" xml:space="preserve"><value>رقم العداد: لكل عداد رقم مميز، مما يتيح لنا متابعة  كمية المياه التي استخدمتها منذ آخر فاتورة لك ولإصدار الفاتورة التالية. </value>
+  </data>
+    <data name="str_meter_water_desc3" xml:space="preserve"><value>يوضح الرقم الذي تراه هناعدد وحدات المياه التي استخدمتها منذ فاتورتك الأخيرة. ويتم ضرب هذا الرقم بقيمة تعرفتك لحساب رصيدك. </value>
+  </data>
+    <data name="str_bill_middle_top_header_water_desc" xml:space="preserve"><value>يعرض هذا القسم أي دفعات سداد أو رسوم منذ آخر فاتورة لك وكمية المياه التي استخدمتها منذ ذلك الحين.</value>
+  </data>
+    <data name="str_bill_middle_bottom_water_desc" xml:space="preserve"><value>التكلفة الفعلية والدعم الحكومي:</value>
+  </data>
+    <data name="str_water_bottom_desc1" xml:space="preserve"><value>فقط لمعلوماتك، يُوضح هذا البند الدعم الحكومي الذي تم تطبيقه على حسابك وما هي التكلفة  الفعلية للمياه التي قمت باستخدامها</value>
+  </data>
+    <data name="str_bill_water_right" xml:space="preserve"><value>رقم الحساب: تم تعيين هذا الرقم لحساب شركة أبوظبي للتوزيع المخصص للكهرباء لديك في العقار الموضح. وسيكون لكل حساب مختلف لك لدينا رقم حساب مختلف.  </value>
+		</data>
+  <data name="EImage4PopUpText" xml:space="preserve">
+    <value>Arabic eb pop up text 4</value>
+  </data>
+  <data name="EImage4PopUpTitle" xml:space="preserve">
+    <value>Arabic eb title 4</value>
+  </data>
+  <data name="EImage5PopUpText" xml:space="preserve">
+    <value>Arabic eb pop up text 5</value>
+  </data>
+  <data name="EImage5PopUpTitle" xml:space="preserve">
+    <value>Arabic eb title 5</value>
+  </data>
+  <data name="EImage6PopUpText" xml:space="preserve">
+    <value>Arabic eb pop up text 6</value>
+  </data>
+  <data name="EImage6PopUpTitle" xml:space="preserve">
+    <value>Arabic eb title 6</value>
+  </data>
+  <data name="EImage7PopUpText" xml:space="preserve">
+    <value>Arabic eb pop up text 7</value>
+  </data>
+  <data name="EImage7PopUpTitle" xml:space="preserve">
+    <value>Arabic eb title 7</value>
+  </data>
+  <data name="ElectricityBillTitle" xml:space="preserve">
+    <value>Elelctricity Arabic Bill</value>
+  </data>
+  <data name="WaterBillTitle" xml:space="preserve">
+    <value>Water Arabic Bill</value>
+  </data>
+  <data name="WImage1" xml:space="preserve">
+    <value>water_top_left_arb_new.png</value>
+  </data>
+  <data name="WImage1PopUpText" xml:space="preserve">
+    <value>Arabic wb pop up text 1</value>
+  </data>
+  <data name="WImage1PopUpTitle" xml:space="preserve">
+    <value>Arabic wb title 1</value>
+  </data>
+  <data name="WImage2" xml:space="preserve">
+    <value>water_top_right_arb_new.png</value>
+  </data>
+  <data name="WImage2PopUpText" xml:space="preserve">
+    <value>Arabic wb pop up text 2</value>
+  </data>
+  <data name="WImage2PopUpTitle" xml:space="preserve">
+    <value>Arabic wb title 2</value>
+  </data>
+  <data name="WImage3" xml:space="preserve">
+    <value>water_left_arb_new.png</value>
+  </data>
+  <data name="WImage3PopUpText" xml:space="preserve">
+    <value>Arabic wb pop up text 3</value>
+  </data>
+  <data name="WImage3PopUpTitle" xml:space="preserve">
+    <value>Arabic wb title 3</value>
+  </data>
+  <data name="WImage4" xml:space="preserve">
+    <value>water_middle_top_arb_new.png</value>
+  </data>
+  <data name="WImage4PopUpText" xml:space="preserve">
+    <value>Arabic wb pop up text 4</value>
+  </data>
+  <data name="WImage4PopUpTitle" xml:space="preserve">
+    <value>Arabic wb title 4</value>
+  </data>
+  <data name="WImage5" xml:space="preserve">
+    <value>water_middle_bottom_arb_new.png</value>
+  </data>
+  <data name="WImage5PopUpText" xml:space="preserve">
+    <value>Arabic wb pop up text 5</value>
+  </data>
+  <data name="WImage5PopUpTitle" xml:space="preserve">
+    <value>Arabic wb title 5</value>
+  </data>
+  <data name="WImage6" xml:space="preserve">
+    <value>right_arb_new.png</value>
+  </data>
+  <data name="WImage6PopUpText" xml:space="preserve">
+    <value>Arabic wb pop up text 6</value>
+  </data>
+  <data name="WImage6PopUpTitle" xml:space="preserve">
+    <value>Arabic wb title 6</value>
+  </data>
+  <data name="WImage7" xml:space="preserve">
+    <value>water_bottom_arb_new.png</value>
+  </data>
+  <data name="WImage7PopUpText" xml:space="preserve">
+    <value>Arabic wb pop up text 7</value>
+  </data>
+  <data name="WImage7PopUpTitle" xml:space="preserve">
+    <value>Arabic wb title 7</value>
+  </data>
+  <data name="gridid0" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="gridid1" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="gridratio0" xml:space="preserve">
+    <value>1*</value>
+  </data>
+  <data name="gridratio1" xml:space="preserve">
+    <value>9*</value>
+  </data>
+  <data name="hor_icon" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="hor_Label" xml:space="preserve">
+    <value>End</value>
+  </data>
+  <data name="str_elec_bill" xml:space="preserve">
+    <value>فاتورة الكهرباء</value>
+  </data>
+  <data name="str_understanding_bill" xml:space="preserve">
+    <value>شرح مكونات الفاتورة</value>
+  </data>
+  <data name="str_under_bill_desc" xml:space="preserve">
+    <value>نحن نرغب في التأكد من الوضوح التام لكل ما تدفعه وسبب دفعه، لهذا صممنا فواتيرنا لتكون بسيطة بقدر الإمكان. وهذه الصفحة تشرح المعلومات المختلفة التي نوضحها في فاتورتك وكيف قمنا بحساب ما يجب عليك دفعه</value>
+  </data>
+  <data name="str_under_bill_desc_title" xml:space="preserve">
+    <value>شرح مكونات فاتورتك</value>
+  </data>
+  <data name="str_water_bill" xml:space="preserve">
+    <value>فاتورة المياه</value>
+  </data>
+  <data name="backword_button" xml:space="preserve">
+    <value>forword_button.png</value>
+  </data>
+  <data name="Tab1" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Tab2" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Tab3" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="str_bill_history" xml:space="preserve">
+    <value>سجل الفواتير</value>
+  </data>
+  <data name="str_payment_history" xml:space="preserve">
+    <value>سجل السداد</value>
+  </data>
+  <data name="str_choose_property" xml:space="preserve">
+    <value>اختر الحساب</value>
+  </data>
+  <data name="str_bill_number_bil" xml:space="preserve">
+    <value>رقم الفاتورة</value>
+  </data>
+  <data name="str_date_bill" xml:space="preserve">
+    <value>تاريخ الفاتورة</value>
+  </data>
+  <data name="str_pay_by_date_bill" xml:space="preserve">
+    <value>يرجى السداد قبل</value>
+  </data>
+  <data name="str_payment_date" xml:space="preserve">
+    <value>تاريخ السداد</value>
+  </data>
+  <data name="str_paid_amt" xml:space="preserve">
+    <value>المبلغ المدفوع</value>
+  </data>
+  <data name="str_transaction" xml:space="preserve">
+    <value> رقم المرجع البنكي</value>
+  </data>
+  <data name="action_save" xml:space="preserve">
+    <value>حفظ</value>
+  </data>
+  <data name="str_problem_sign_in" xml:space="preserve">
+    <value>استعادة كلمة السر</value>
+  </data>
+  <data name="str_send_forgot_pass" xml:space="preserve">
+    <value> اسم المستخدم الخاص بك في الحقل التالي والنقر على "إرسال" لاستلام رسالة بريد إلكتروني بكلمة المرور الجديدة اسم المستخدم</value>
+  </data>
+  <data name="str_customer_enquiry_title" xml:space="preserve">
+    <value>استفسارات</value>
+  </data>
+  <data name="str_send_enquiry" xml:space="preserve">
+    <value>أرسل إستفسار</value>
+  </data>
+  <data name="str_send_suggestions" xml:space="preserve">
+    <value> اقتراحات</value>
+  </data>
+  <data name="str_last_bill_sum" xml:space="preserve">
+    <value>ملخص آخر فاتورة</value>
+  </data>
+  <data name="str_last_pay_sum" xml:space="preserve">
+    <value>ملخص آخر عملية سداد</value>
+  </data>
+  <data name="str_bill_cycle" xml:space="preserve">
+    <value>دورة الفاتورة</value>
+  </data>
+  <data name="str_premise_id" xml:space="preserve">
+    <value>معرف العقار</value>
+  </data>
+  <data name="str_premise_type" xml:space="preserve">
+    <value>نوع العقار</value>
+  </data>
+  <data name="str_bill_pref" xml:space="preserve">
+    <value>الطريقة المفضلة لإستلام الفاتورة</value>
+  </data>
+  <data name="str_tariff_type" xml:space="preserve">
+    <value>نوع التعرفة</value>
+  </data>
+  <data name="str_previous_charges" xml:space="preserve">
+    <value>إجمالي الرصيد السابق</value>
+  </data>
+  <data name="str_curr_cycle_chrgs" xml:space="preserve">
+    <value>قيمة الفاتورة الحالية</value>
+  </data>
+  <data name="str_payment_rcv" xml:space="preserve">
+    <value>Payment received</value>
+  </data>
+  <data name="str_total_amt_due" xml:space="preserve">
+    <value>Total amount due</value>
+  </data>
+  <data name="str_water_consumption" xml:space="preserve">
+    <value> إستهلاك المياه </value>
+  </data>
+  <data name="str_amount" xml:space="preserve">
+    <value>المبلغ :</value>
+  </data>
+  <data name="str_tariff" xml:space="preserve">
+    <value>التعرفة :</value>
+  </data>
+  <data name="str_electricity_consumption" xml:space="preserve">
+    <value>إستهلاك الكهرباء</value>
+  </data>
+  <data name="str_bill_address" xml:space="preserve">
+    <value>عنوان الفواتير</value>
+  </data>
+  <data name="str_post_box" xml:space="preserve">
+    <value>صندوق البريد</value>
+  </data>
+  <data name="next_icon" xml:space="preserve">
+    <value>next_icon_ar</value>
+  </data>
+  <data name="landing_header" xml:space="preserve">
+    <value>landing_header_ar</value>
+  </data>
+  <data name="landing" xml:space="preserve">
+    <value>landing_ar</value>
+  </data>
+  <data name="str_all_mandatory" xml:space="preserve">
+    <value>يُرجى إدخال جميع الحقول المطلوبة</value>
+  </data>
+  <data name="str_enter_user" xml:space="preserve">
+    <value>يُرجى إدخال اسم المستخدم</value>
+  </data>
+  <data name="str_enter_pass" xml:space="preserve">
+    <value>يُرجى إدخال كلمة المرور</value>
+  </data>
+  <data name="str_pass_not_match" xml:space="preserve">
+    <value>كلمة المرور غير مطابقة</value>
+  </data>
+  <data name="str_energy_save" xml:space="preserve">
+    <value>استكشف حملتنا لتوفير الطاقة</value>
+  </data>
+  <data name="account_bg" xml:space="preserve">
+    <value>account_bg_ar</value>
+  </data>
+  <data name="menu_bg" xml:space="preserve">
+    <value>menu_bg_ar</value>
+  </data>
+  <data name="enter_eid" xml:space="preserve">
+    <value>يُرجى إدخال رقم بطاقة الهوية الإماراتية</value>
+  </data>
+  <data name="img_yes_bg" xml:space="preserve">
+    <value>yes_i_do_dialog_box_ar.png</value>
+  </data>
+  <data name="str_actv_heading" xml:space="preserve">
+    <value>فعل حسابك لدى شركة أبوظبي للتوزيع</value>
+  </data>
+  <data name="str_actv_message" xml:space="preserve">
+    <value>إذا كنت قد فعلت حسابك بموقع الخدمات الإلكترونية الخاص بشركة أبوظبي للتوزيع فيمكنك استخدام نفس التفاصيل لتسجيل الدخول  أو، لتفعيل حسابك الخاص، عليك ببساطة إدخال رقم بطاقة الهوية الإماراتية الخاص بك هنا. ومن ثم سنرسل رمز التعريف الشخصي إلى رقم المحمول وعنوان البريد الإلكتروني.</value>
+  </data>
+  <data name="str_answer" xml:space="preserve">
+    <value>الإجابة</value>
+  </data>
+  <data name="str_customer_care" xml:space="preserve">
+    <value>إذا كانت لديك استفسارات أخرى، فالرجاء الاتصال بمركز الاتصال على الرقم 2332-800. وتسعدنا مساعدتك</value>
+  </data>
+  <data name="str_eid" xml:space="preserve">
+    <value>أدخل رقم الهوية الإماراتية</value>
+  </data>
+  <data name="str_enter_mobile" xml:space="preserve">
+    <value>أدخل رقم المحمول:</value>
+  </data>
+  <data name="str_enter_pin" xml:space="preserve">
+    <value>يُرجى إدخال رمز التعريف الشخصي.</value>
+  </data>
+  <data name="str_next" xml:space="preserve">
+    <value>التالي</value>
+  </data>
+  <data name="str_not_received_pin" xml:space="preserve">
+    <value>في حالة عدم تلقيك لرمز التعريف الشخصي، انقر على "إعادة الإرسال</value>
+  </data>
+  <data name="str_receive_pin" xml:space="preserve">
+    <value>في حالة عدم تلقيك لرمز التعريف الشخصي، انقر على "إعادة الإرسال</value>
+  </data>
+  <data name="str_resend_pin" xml:space="preserve">
+    <value>إعادة إرسال رمز التعريف الشخصي</value>
+  </data>
+  <data name="str_retypepasswd" xml:space="preserve">
+    <value>أعد كتابة كلمة المرور:</value>
+  </data>
+  <data name="str_select_secret" xml:space="preserve">
+    <value>حدد سؤالاً سريًا لإعادة تعيين كلمة المرور</value>
+  </data>
+  <data name="str_typepasswd" xml:space="preserve">
+    <value>اكتب كلمة المرور</value>
+  </data>
+  <data name="str_update_acc_username_lbl" xml:space="preserve">
+    <value>أدخل اسم المستخدم</value>
+  </data>
+  <data name="str_validate_pin_text1" xml:space="preserve">
+    <value>لقد قمنا بإرسال رمز التعريف الشخصي الى رقم الهاتف المتحرك المسجل لدينا</value>
+  </data>
+  <data name="str_validate_pin_text2" xml:space="preserve">
+    <value>و الى عنوان البريد الالكتروني</value>
+  </data>
+  <data name="str_wrong_emirates_id" xml:space="preserve">
+    <value>رقم بطاقة الهوية الإماراتية غير صحيح</value>
+  </data>
+  <data name="str_contact_number" xml:space="preserve">
+    <value>800-2332</value>
+  </data>
+  <data name="str_support" xml:space="preserve">
+    <value>اتصل بالدعم</value>
+  </data>
+  <data name="str_pay_friend" xml:space="preserve">
+    <value>الدفع لصديق</value>
+  </data>
+  <data name="str_continue" xml:space="preserve">
+    <value>المتابعة</value>
+  </data>
+  <data name="str_friend_heading" xml:space="preserve">
+    <value>أدخل رقم الحساب.</value>
+  </data>
+  <data name="str_payfrnd_note" xml:space="preserve">
+    <value>عزيزي العميل,</value>
+  </data>
+  <data name="str_payfrnd_note_desc" xml:space="preserve">
+    <value>يمكنك الآن الدفع بواسطة البطاقة الائتمانية وبطاقة الخصم المباشر لجميع أنواع حساباتك، مع العلم بأنه سوف تطبق رسوم إدارية بواقع ٢,٢٥٪‏ درهم بالإضافة الى ١,٥٠ درهم لكل معاملة على أي مبلغ مدفوع للحسابات التجارية</value>
+  </data>
+  <data name="str_aed" xml:space="preserve">
+    <value>AED </value>
+  </data>
+  <data name="str_select_account_details" xml:space="preserve">
+    <value>لمزيد من التفاصيل الرجاء الضغط على رقم الحساب</value>
+  </data>
+  <data name="str_conservation_tips" xml:space="preserve">
+    <value>نصائح لترشيد الإستهلاك</value>
+  </data>
+  <data name="str_water_saving" xml:space="preserve">
+    <value>ترشيد إستهلاك المياه</value>
+  </data>
+  <data name="str_elec_saving" xml:space="preserve">
+    <value>ترشيد إستهلاك الكهرباء</value>
+  </data>
+  <data name="str_water_tips" xml:space="preserve">
+    <value>ترشيد إستهلاك المياه</value>
+  </data>
+  <data name="str_elec_tips" xml:space="preserve">
+    <value>ترشيد إستهلاك الكهرباء</value>
+  </data>
+  <data name="str_water_tips_desc" xml:space="preserve">
+    <value>"المياه هي واحدة من أهم العناصر الأساسية التي نحتاجها في حياتنا اليومية. تعاني الإمارات العربية المتحدة من موسم الأمطار النادرة. وبالتالي من المهم جدا بالنسبة لنا لمراقبة الإستهلاك الكلي للمياه سواء كان ذلك  داخل أو خارج منازلنا أو بالمدارس أو في أماكن عملنا.</value>
+  </data>
+  <data name="str_elec_tips_desc" xml:space="preserve">
+    <value>تعد الكهرباء واحدة من أكثر المصادر أهمية ومن أعظم الاكتشافات التي قامت عليها الحضارة الحديثة التي لا يمكن الاستغناء عنها. وأسوة بالمصادر الأخرى الضرورية في حياتنا التي يجب علينا أن نتعلم كيفية ترشيد استخدامها.</value>
+  </data>
+  <data name="str_insd_house" xml:space="preserve">
+    <value>داخل المنزل</value>
+  </data>
+  <data name="str_osd_house" xml:space="preserve">
+    <value>خارج المنزل</value>
+  </data>
+  <data name="str_at_school" xml:space="preserve">
+    <value>في المدرسة</value>
+  </data>
+  <data name="str_water_saver" xml:space="preserve">
+    <value>جهاز توفير المياه</value>
+  </data>
+  <data name="str_air_cond" xml:space="preserve">
+    <value>أجهزة تكييف الهواء</value>
+  </data>
+  <data name="str_save_light" xml:space="preserve">
+    <value>كيفية التوفير بالإنارة؟</value>
+  </data>
+  <data name="str_home_appliance" xml:space="preserve">
+    <value>الأجهزة المنزلية</value>
+  </data>
+  <data name="str_reduce_water" xml:space="preserve">
+    <value>كيف يتسنى لنا تخفيض إستهلاك المياه بالمنزل؟</value>
+  </data>
+  <data name="str_wash" xml:space="preserve">
+    <value>اثناء الغسيل</value>
+  </data>
+  <data name="str_shower" xml:space="preserve">
+    <value>اثناء الاستحمام</value>
+  </data>
+  <data name="str_kitchen" xml:space="preserve">
+    <value>في المطبخ</value>
+  </data>
+  <data name="str_garden" xml:space="preserve">
+    <value>في الحديقة</value>
+  </data>
+  <data name="str_washing_car" xml:space="preserve">
+    <value>عند غسيل السيارة</value>
+  </data>
+  <data name="str_swimming_pool" xml:space="preserve">
+    <value>احواض السباحة</value>
+  </data>
+  <data name="str_wash_tip1" xml:space="preserve">
+    <value>إقفل صنبور الماء أثناء غسيل الأسنان واستخدم كوباً كبيراً من الماء بدلاً من فتح الصنبور.</value>
+  </data>
+  <data name="str_wash_tip2" xml:space="preserve">
+    <value>إقفل صنبور الماء أثناء غسيل الوجه أو أثناء الحلاقة.</value>
+  </data>
+  <data name="str_wash_tip3" xml:space="preserve">
+    <value>إستخدام منظم تدفق المياه لتخفيض كمية الماء المستهلكة.</value>
+  </data>
+  <data name="str_shower_tip1" xml:space="preserve">
+    <value>إستخدم الدش بدلاً من تعبئة حوض الاستحمام بالماء،فإن كان لا بد من ذلك ،ً ينبغي عدم تعبئته حتى لا يفيض.</value>
+  </data>
+  <data name="str_shower_tip2" xml:space="preserve">
+    <value>استخدم الرذاذ منخفض التدفق.</value>
+  </data>
+  <data name="str_shower_tip3" xml:space="preserve">
+    <value>استخدم منظم رشاش أو برغي  لحبس الماء أثناء الاستحمام.</value>
+  </data>
+  <data name="str_kitchen_tip1" xml:space="preserve">
+    <value>إغسل الفاكهة والخضروات في حوض أو وعاء مملوء بالماء لتقليل الكميات المستهلكة.</value>
+  </data>
+  <data name="str_kitchen_tip2" xml:space="preserve">
+    <value>اترك الأطعمة المجمدة في مكان مكشوف لمدة تكفي لإذابتها بدلاً من صب الماء عليها.</value>
+  </data>
+  <data name="str_kitchen_tip3" xml:space="preserve">
+    <value>إستخدم الكمية المناسبة من المياه لأغراض الشرب أو إعداد القهوة أو الشاي.</value>
+  </data>
+  <data name="str_kitchen_tip4" xml:space="preserve">
+    <value>عند غسيل الأطباق يفضل بأن يتم غسلها في حوض مملوء بالماء. أما الأطباق التي تحتاج إلى تنظيف أكثر فينصح بغمرها في الماء لمدة قصيرة قبل غسيلها.</value>
+  </data>
+  <data name="str_kitchen_tip5" xml:space="preserve">
+    <value>تأكد من امتلاء ماكينة غسيل الأطباق بشكل تام قبل تشغيلها إذ أنه من العبث تشغيلها لمجرد غسيل طبق أو طبقين.</value>
+  </data>
+  <data name="str_kitchen_tip6" xml:space="preserve">
+    <value>يجب فحص الصنابير وأنابيب المياه بانتظام لاكتشاف أية تسرب محتمل للمياه.</value>
+  </data>
+  <data name="str_garden_tip" xml:space="preserve">
+    <value>"استخدام نظام الرذاذ أو الري بالتنقيط في أعمال الري لخفض إستهلاك المياه وهما نظامان حديثان يستخدمان أقل كميات ممكنة من المياه .</value>
+  </data>
+  <data name="str_wash_car_tip" xml:space="preserve">
+    <value>يمكنك استخدام نحو سطلين من الماء لغسيل سيارتك بدلاْ من استخدام خرطوم المياه.</value>
+  </data>
+  <data name="str_swimming_pool_tips" xml:space="preserve">
+    <value>تستهلك أحواض السباحة كمية كبيرة من الماء خاصة عندما تكون كبيرة الحجم. بناء عليه يوصى باتباع الإرشادات المفيدة التالية:</value>
+  </data>
+  <data name="str_swimming_pool_tip1" xml:space="preserve">
+    <value>تأكد دائماً من بقاء مستوى الماء منخفضاً في حوض السباحة.</value>
+  </data>
+  <data name="str_swimming_pool_tip2" xml:space="preserve">
+    <value>تغطية حوض السباحة بمظلة مناسبة للحد من معدلات التبخر.</value>
+  </data>
+  <data name="str_swimming_pool_tip3" xml:space="preserve">
+    <value>فحص جدران حوض السباحة ونظام تصريف المياه على الدوام لكشف أي تسرب.</value>
+  </data>
+  <data name="str_school_tip1" xml:space="preserve">
+    <value>الإمتناع نهائياً عن استخدام المياه كوسيلة للتسلية واللهو</value>
+  </data>
+  <data name="str_school_tip2" xml:space="preserve">
+    <value>تبليغ المدرس في حالة وجود تسرب.</value>
+  </data>
+  <data name="str_school_tip3" xml:space="preserve">
+    <value>توجيه البستاني لاستخدام تقنيات الري بالرذاذ.</value>
+  </data>
+  <data name="str_ac_tip1" xml:space="preserve">
+    <value>القيام بأعمال التفتيش والصيانة بشكل دوري للتأكد من فاعلية وكفاءة عمل جهاز تكييف الهواء.</value>
+  </data>
+  <data name="str_ac_tip2" xml:space="preserve">
+    <value>تنظيف المرشح (الفلتر) مرة كل إسبوعين الأمر الذي يساعد في تدفق هواء أنظف وأبرد ويخفض إستهلاك الكهرباء.</value>
+  </data>
+  <data name="str_ac_tip3" xml:space="preserve">
+    <value>أغلق أي فتحات/ فجوات حول وحدة تكييف الهواء لمنع أي تسرب للهواء مما يخفض بالتالي من معدل الإستهلاك.</value>
+  </data>
+  <data name="str_ac_tip4" xml:space="preserve">
+    <value>تركيب ستائر على النوافذ للتخفيف من دخول الحرارة الخارجية وتخفيض إستهلاك الانارة إلى أقصى قدر ممكن.</value>
+  </data>
+  <data name="str_ac_tip5" xml:space="preserve">
+    <value>ثبت مفتاح التحكم في درجة حرارة وحدة التكييف على درجة لا تقل عن 25 مئوية.</value>
+  </data>
+  <data name="str_water_saver1" xml:space="preserve">
+    <value>يساعد جهاز توفير المياه على خفض كمية المياه التي يستهلكها الفرد ، إذ يعمل جهاز توفير المياه على مزج الماء المتدفق من الصنبور بالهواء ويخفض بالتالي وتلقائياً كمية المياه المتدفقة من الصنبور ولكن مع منحك الإحساس بأنك ما زلت تستخدم الكمية المعتادة من الماء.</value>
+  </data>
+  <data name="str_water_saver2" xml:space="preserve">
+    <value>يمكن تركيب جهاز توفير المياه خلف فوهة الدش. كذلك يمكن تركيب برغي يستخدم للتحكم بتدفق المياه ويمكن فتحه وأغلاقه عند الاستحمام.</value>
+  </data>
+  <data name="str_water_saver3" xml:space="preserve">
+    <value>طريقة احتساب الإستهلاك</value>
+  </data>
+  <data name="str_water_saver4" xml:space="preserve">
+    <value>يتكون عداد المياه من قسمين:</value>
+  </data>
+  <data name="str_water_saver_tip1" xml:space="preserve">
+    <value>قسم أبيض اللون يحتوي أرقاما باللون الأسود</value>
+  </data>
+  <data name="str_water_saver_tip2" xml:space="preserve">
+    <value>وقسم أحمر اللون ويحتوي أرقاما باللون الأبيض.</value>
+  </data>
+  <data name="str_water_saver5" xml:space="preserve">
+    <value>يبين أي رقم في القسم الأبيض عدد الأمتار أو الوحدات المكعبة. بينما تبين الوحدات الرقمية في القسم الأحمر عدد الليترات.</value>
+  </data>
+  <data name="str_water_saver6" xml:space="preserve">
+    <value>كيفية حساب الإستهلاك</value>
+  </data>
+  <data name="str_water_saver_tip3" xml:space="preserve">
+    <value>خذ قراءة العداد ليومين متتالين</value>
+  </data>
+  <data name="str_water_saver_tip4" xml:space="preserve">
+    <value>إطرح القراءة الأولى من القراءة الثانية</value>
+  </data>
+  <data name="str_water_saver_tip5" xml:space="preserve">
+    <value>يدل الفرق بين القرائتين على كمية الإستهلاك خلال يوم واحد.</value>
+  </data>
+  <data name="str_water_saver_tip6" xml:space="preserve">
+    <value>أما إذا تم اخذ القراءة الثانية بعد أكثر من يوم من أخذ القراء الأولى ، عندئذ يتم تقسيم الفرق على عدد الأيام لمعرفة الإستهلاك اليومي ، كما يمكن تقسيم الفرق بين القراءتين على عدد الأشخاص لمعرفة إستهلاك الفرد الواحد في اليوم.</value>
+  </data>
+  <data name="str_water_saver7" xml:space="preserve">
+    <value>كيفية حساب الإستهلاك اليومي</value>
+  </data>
+  <data name="str_water_saver8" xml:space="preserve">
+    <value>مثلاً : المدة من أول مارس إلى 31 مارس</value>
+  </data>
+  <data name="str_water_saver9" xml:space="preserve">
+    <value>فرق الأيام بين القراءتين      =  30 يوم</value>
+  </data>
+  <data name="str_water_saver10" xml:space="preserve">
+    <value>عدد أعضاء الأسرة = 5 </value>
+  </data>
+  <data name="str_water_saver11" xml:space="preserve">
+    <value>الإستهلاك : الفرق بين القراءتين الأولى والثانية 45 متراً مكعباً.</value>
+  </data>
+  <data name="str_water_saver12" xml:space="preserve">
+    <value>الإستهلاك اليومي =  45 ÷ 30 = 1.5 متراً مكعباً/ يومياً </value>
+  </data>
+  <data name="str_water_saver13" xml:space="preserve">
+    <value>الإستهلاك للشخص الواحد =  1.5 ÷ 5 =  0.3 متراً مكعباً للشخص الواحد/ يومياً.</value>
+  </data>
+  <data name="str_home_app1" xml:space="preserve">
+    <value>ينبغي إستخدام الأجهزة المنزلية مثل مكائن غسيل الملابس والتجفيف وكي الملابس وغيرها في غير أوقات الذروة كلما أمكن ذلك.</value>
+  </data>
+  <data name="str_home_app2" xml:space="preserve">
+    <value>الثلاجــة</value>
+  </data>
+  <data name="str_home_app_tip1" xml:space="preserve">
+    <value>اغلق باب الثلاجة بأحكام.</value>
+  </data>
+  <data name="str_home_app_tip2" xml:space="preserve">
+    <value>لا تفتح أبواب الثلاجة بشكل متكرر كثيراً خاصة أثناء فصل الصيف. إحتفظ بالماء البارد في ثيرموس معزول خارج الثلاجة الأمر الذي يمنع الأطفال بشكل خاص من أحد اسباب الفتح المتكرر للثلاجة.</value>
+  </data>
+  <data name="str_home_app_tip3" xml:space="preserve">
+    <value>ضع الثلاجة في أبرد مكان في المطبخ وتجنب المواقع الساخنة خاصة تلك المعرضة لضوء الشمس أو بالقرب من الفرن.</value>
+  </data>
+  <data name="str_home_app_tip4" xml:space="preserve">
+    <value>عدم تشغيل الثلاجة بكل طاقتها بل على المستوى المتوسط الذي يمكن بفضله المحافظة على المأكولات وهي طازجة.</value>
+  </data>
+  <data name="str_home_app3" xml:space="preserve">
+    <value>الغسالـة</value>
+  </data>
+  <data name="str_home_wash" xml:space="preserve">
+    <value>اثناء الغسيل</value>
+  </data>
+  <data name="str_home_app_tip5" xml:space="preserve">
+    <value>تجنب تشغيل الغسالة يومياً كلما أمكن ذلك بل إستخدمها حين يتراوح حجم الغسيل بين المتوسط إلى الثقيل مما يساعد على توفير إستهلاك الكهرباء والماء معاً.</value>
+  </data>
+  <data name="str_home_app_tip6" xml:space="preserve">
+    <value>الغسالات التي تسخين الماء تستهلك ستة أضعاف الطاقة الكهربائية التي تستهلكها الغسالات العادية الأخرى.</value>
+  </data>
+  <data name="str_home_app4" xml:space="preserve">
+    <value>الأجهزة الأخرى ( التلفزيون والفيديو والمسجل والراديو)</value>
+  </data>
+  <data name="str_home_app5" xml:space="preserve">
+    <value>تجنب تشغيل جميع الأجهزة معاً خاصة في ساعات الذروة بين (الساعة 1:00 – 4:00 بعد الظهر ومن الساعة 10:00 ليلاً – 1:00 صباحاً) الأمر الذي يساعد على موازنة الأحمال / الإستهلاك ويمنع أي تلف محتمل للأجهزة.</value>
+  </data>
+  <data name="str_home_app6" xml:space="preserve">
+    <value>يوضح الجدول التالي كمية الطاقة المستهلكة للأجهزة المنزلية الأخرى:</value>
+  </data>
+  <data name="str_save_light_tip1" xml:space="preserve">
+    <value>اطفىء كافة الانوار عند مغادرة الغرفة.</value>
+  </data>
+  <data name="str_save_light_tip2" xml:space="preserve">
+    <value>اطفىء كافة الأنوار في الغرف غير المستخدمة.</value>
+  </data>
+  <data name="str_save_light_tip3" xml:space="preserve">
+    <value>اطفىء كافة الأنوار اثناء ساعات النهار والاعتماد على ضوء الشمس للفائدة .</value>
+  </data>
+  <data name="str_save_light_tip4" xml:space="preserve">
+    <value>إدهن (اصبغ) الجدران بالوان فاتحة لأن الالوان الفاتحة تعكس الإنارة/الإضاءة وبالتالي تضاعف كمية الضوء الموجودة بالغرفة.</value>
+  </data>
+  <data name="str_save_light_tip5" xml:space="preserve">
+    <value>إستخدم مصابيح خاصة تستهلك طاقة كهربائية في عملها، بما في ذلك مصابيح الفلورسنت ومصابيح الترشيد .</value>
+  </data>
+  <data name="str_save_light_tip6" xml:space="preserve">
+    <value>إستخدام زجاج عازل على النوافذ الأمر الذي يسمح بدخول أكبر كمية من الانارة الطبيعية ويخفض بالتالي كمية الكهرباء المطلوبة.</value>
+  </data>
+  <data name="str_save_light1" xml:space="preserve">
+    <value>مزايا مصابيح الترشيد:</value>
+  </data>
+  <data name="str_save_light_tip7" xml:space="preserve">
+    <value>تستخدم مصابيح الترشيد (الموفرة للطاقة )  نسبة أٌقل تصل إلى 80% من الإستهلاك عند مقارنتهابالمصابيح العادية، كما أنها تبعث حرارة أقل وعليه فان معدل إستهلاكها من للطاقة يعد أقٌل مقارنة بإستهلاكوحدات الهواء.</value>
+  </data>
+  <data name="str_save_light_tip8" xml:space="preserve">
+    <value>إن العمر الافتراضي للمصابيح الاقتصادية يبلغ ثمانية أضعاف عمر المصابيح الاعتيادية. فعلى سبيل المثال إذا كان العمر الافتراضي للمصباح العادي هو 1000 ساعة فان العمر الافتراضي لمصباح إقتصادي هو 8000 ساعة.</value>
+  </data>
+  <data name="str_save_light2" xml:space="preserve">
+    <value>يوضح الجدول التالي الفرق بالوات بين إستهلاك المصابيح العادية وإستهلاك مصابيح الترشيد . مما يعني استخدام وات أٌقل ومن ثم إستهلاك أقل للكهرباء وبالتالي تقل قيمة الفاتورة.</value>
+  </data>
+  <data name="str_appliances" xml:space="preserve">
+    <value>الجهـاز</value>
+  </data>
+  <data name="str_consumption" xml:space="preserve">
+    <value>الإستهلاك(كيلوات/ ساعة)</value>
+  </data>
+  <data name="str_split_ac" xml:space="preserve">
+    <value>جهاز تكييف هواء </value>
+  </data>
+  <data name="str_split_ac_unit" xml:space="preserve">
+    <value>2.5</value>
+  </data>
+  <data name="str_elec_oven" xml:space="preserve">
+    <value>فرن كهربائي</value>
+  </data>
+  <data name="str_elec_oven_unit" xml:space="preserve">
+    <value>6.0</value>
+  </data>
+  <data name="str_elec_burner" xml:space="preserve">
+    <value>موقد كهربائي</value>
+  </data>
+  <data name="str_elec_burner_unit" xml:space="preserve">
+    <value>7.5</value>
+  </data>
+  <data name="str_grill" xml:space="preserve">
+    <value>شواية</value>
+  </data>
+  <data name="str_grill_unit" xml:space="preserve">
+    <value>1.3</value>
+  </data>
+  <data name="str_kettle" xml:space="preserve">
+    <value>ابريق</value>
+  </data>
+  <data name="str_kettle_unit" xml:space="preserve">
+    <value>2.0</value>
+  </data>
+  <data name="str_toaster" xml:space="preserve">
+    <value>جهاز تحميص الخبز</value>
+  </data>
+  <data name="str_toaster_unit" xml:space="preserve">
+    <value>1.0</value>
+  </data>
+  <data name="str_light_bulb" xml:space="preserve">
+    <value>غسالة أطباق</value>
+  </data>
+  <data name="str_light_bulb_unit" xml:space="preserve">
+    <value>0.1</value>
+  </data>
+  <data name="str_washing_machine" xml:space="preserve">
+    <value>غسالة ملابس صغيرة</value>
+  </data>
+  <data name="str_wash_machine_unit" xml:space="preserve">
+    <value>0.25</value>
+  </data>
+  <data name="str_dish_washer" xml:space="preserve">
+    <value>غسالة أطباق</value>
+  </data>
+  <data name="str_dish_washer_unit" xml:space="preserve">
+    <value>4.0</value>
+  </data>
+  <data name="str_elec_vac_cleaner" xml:space="preserve">
+    <value>مكنسة كهربائية</value>
+  </data>
+  <data name="str_elec_vac_clean_unit" xml:space="preserve">
+    <value>0.75</value>
+  </data>
+  <data name="str_refigerator" xml:space="preserve">
+    <value>ثلاجة / فريزر</value>
+  </data>
+  <data name="str_refrigerator_unit" xml:space="preserve">
+    <value>7.5</value>
+  </data>
+  <data name="str_water_heater" xml:space="preserve">
+    <value>سخان ماء</value>
+  </data>
+  <data name="str_water_heater_unit" xml:space="preserve">
+    <value>1.5</value>
+  </data>
+  <data name="str_water_cooler" xml:space="preserve">
+    <value>مبرد ماء</value>
+  </data>
+  <data name="str_water_cooler_unit" xml:space="preserve">
+    <value>0.3</value>
+  </data>
+  <data name="str_television" xml:space="preserve">
+    <value>تلفزيون</value>
+  </data>
+  <data name="str_television_units" xml:space="preserve">
+    <value>0.25</value>
+  </data>
+  <data name="str_iron" xml:space="preserve">
+    <value>مكواة</value>
+  </data>
+  <data name="str_iron_unit" xml:space="preserve">
+    <value>2.0</value>
+  </data>
+  <data name="str_elec_fan" xml:space="preserve">
+    <value>مروحة كهربائية</value>
+  </data>
+  <data name="str_elec_fan_unit" xml:space="preserve">
+    <value>0.1</value>
+  </data>
+  <data name="str_hair_dryer" xml:space="preserve">
+    <value>مجفف شعر</value>
+  </data>
+  <data name="str_hair_dryer_unit" xml:space="preserve">
+    <value>0.5</value>
+  </data>
+  <data name="str_ord_lamp" xml:space="preserve">
+    <value>المصابيح العادية (وات)</value>
+  </data>
+  <data name="str_power_save_lamp" xml:space="preserve">
+    <value>مصابيح الترشيد (وات)</value>
+  </data>
+  <data name="str_ord_unit1" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="str_power_unit1" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="str_ord_unit2" xml:space="preserve">
+    <value>60</value>
+  </data>
+  <data name="str_power_unit2" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="str_ord_unit3" xml:space="preserve">
+    <value>100</value>
+  </data>
+  <data name="str_power_unit3" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="str_ord_unit4" xml:space="preserve">
+    <value>120</value>
+  </data>
+  <data name="str_power_unit4" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="bullet_point" xml:space="preserve">
+    <value>bullet_point_ar</value>
+  </data>
+  <data name="bullet_int0" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="bullet_int1" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="back_button" xml:space="preserve">
+    <value>back_button_ar</value>
+  </data>
+  <data name="str_about_value_content" xml:space="preserve">
+    <value>إن تحقيق وتجسيد رؤية شركة أبوظبي للتوزيع يحتم علينا النفاذ إلى قيمنا الاساسية في كل جوانب التنظيم ليتسنى الحصول على نتائج عملية دائمة  ، وتشتمل قيمنا الأساسية:</value>
+  </data>
+  <data name="str_about_value_heading1" xml:space="preserve">
+    <value >التزامنا تجاه العملاء.</value>
+  </data>
+  <data name="str_about_value_point1" xml:space="preserve">
+    <value>ضمان تقديم مياه وكهرباء ضمن أفضل معايير الجودة والسلامة والتميز</value>
+  </data>
+  <data name="str_about_value_point2" xml:space="preserve">
+    <value>التعامل بمهنية عالية في كافة معاملاتنا مع العملاء</value>
+  </data>
+  <data name="str_about_value_point3" xml:space="preserve">
+    <value>التأكد من أن جميع إجراءات العمل تصب في مصلحة العملاء</value>
+  </data>
+  <data name="str_about_value_point4" xml:space="preserve">
+    <value>إدارة الأعمال بإتباعنا لأعلى المعايير الأخلاقية</value>
+  </data>
+  <data name="str_about_value_point5" xml:space="preserve">
+    <value>استيفاء الالتزامات، ومعاملة كل شخص بنزاهة واحترام</value>
+  </data>
+  <data name="str_about_value_point6" xml:space="preserve">
+    <value>معاملة الموظفين بالقدر اللازم من الاحترام</value>
+  </data>
+  <data name="str_about_value_point7" xml:space="preserve">
+    <value>توفير بيئة عمل صحية وآمنة.</value>
+  </data>
+  <data name="str_about_value_point8" xml:space="preserve">
+    <value>التركيز على إستقطاب وتطوير والاحتفاظ بالموظفين ذوي المهارات .</value>
+  </data>
+  <data name="str_about_value_point9" xml:space="preserve">
+    <value>تقدير ومكافأة الانجازات.</value>
+  </data>
+  <data name="str_about_value_point10" xml:space="preserve">
+    <value>حث العاملين لمضاعفة قدراتهم ومشاركاتهم</value>
+  </data>
+  <data name="str_about_value_point11" xml:space="preserve">
+    <value>تشجيع التواصل بشفافية وأمانة</value>
+  </data>
+  <data name="str_about_value_heading2" xml:space="preserve">
+    <value>السلوك الأخلاقي والنزاهة</value>
+  </data>
+  <data name="str_about_value_heading3" xml:space="preserve">
+    <value>الالتزام تجاه الموظفين</value>
+  </data>
+  <data name="str_about_value_heading4" xml:space="preserve">
+    <value>التميز</value>
+  </data>
+  <data name="str_about_value_heading5" xml:space="preserve">
+    <value>العمل الجماعي والثقة</value>
+  </data>
+  <data name="str_about_value_heading6" xml:space="preserve">
+    <value >المسؤولية الاجتماعية</value>
+  </data>
+  <data name="str_about_value_point12" xml:space="preserve">
+    <value>السعي لتحقيق أعلى المعايير الممكنة في العمل اليومي وجودة النتائج المحصلة.</value>
+  </data>
+  <data name="str_about_value_point13" xml:space="preserve">
+    <value>تقييم المهارات ونقاط القوة و وجهات النظر لفريق عمل متنوع الأفراد والمهارات وترويج العمل الجماعي عبر الأقسام</value>
+  </data>
+  <data name="str_about_value_point14" xml:space="preserve">
+    <value>تشجيع العمل الجماعي المشترك الذي يمكن الآخرين من المشاركة في اتخاذ القرارات حيال أعمالهم والتي تساهم بدورها بأهداف الأعمال المشتركة</value>
+  </data>
+  <data name="str_about_value_point15" xml:space="preserve">
+    <value>إثبات المسؤولية الاجتماعية للشركة من خلال دمج القيم المجتمعية والاجتماعية في تطوير خطط الأعمال</value>
+  </data>
+  <data name="str_about_value_point16" xml:space="preserve">
+    <value>التعاون مع منظمات أخرى وجماعات المصالح لصالح مجتمعنا</value>
+  </data>
+  <data name="str_about_value_point17" xml:space="preserve">
+    <value>المشاركة في البرامج والحملات الاجتماعية والتوعية المجتمعية</value>
+  </data>
+  <data name="tariff_calculator_title" xml:space="preserve">
+    <value>حاسبة التعرفة</value>
+  </data>
+  <data name="tariff_consumption_limit" xml:space="preserve">
+    <value>حدود الإستهلاك</value>
+  </data>
+  <data name="tariff_consumption_msg" xml:space="preserve">
+    <value>وتُطبق قيمة "التعرفة الحمراء" على جميع أنواع الإستهلاك الأعلى من الحد اليومي المحدد.</value>
+  </data>
+  <data name="tariff_cubic_per_day_com" xml:space="preserve">
+    <value>7 متر مكعب (م3) في اليومs</value>
+  </data>
+  <data name="tariff_cubic_per_day_res" xml:space="preserve">
+    <value>0.7متر مكعب (م3) في اليوم</value>
+  </data>
+  <data name="tariff_expats_com_elec_units" xml:space="preserve">
+    <value>200 كيلو وات ساعة (ك.و.س) في اليوم</value>
+  </data>
+  <data name="tariff_expats_com_elec_units_17" xml:space="preserve">
+    <value>200 كيلو وات ساعة (ك.و.س) في اليوم</value>
+  </data>
+  <data name="tariff_expats_com_water_units" xml:space="preserve">
+    <value>5 متر مكعب (م3) في اليوم</value>
+  </data>
+  <data name="tariff_expats_com_water_units_17" xml:space="preserve">
+    <value>5 متر مكعب (م3) في اليوم</value>
+  </data>
+  <data name="tariff_expats_green_elec_units" xml:space="preserve">
+    <value>فلس  21.00</value>
+  </data>
+  <data name="tariff_expats_green_elec_units_17" xml:space="preserve">
+    <value>فلس  26.80</value>
+  </data>
+  <data name="tariff_expats_green_water_units" xml:space="preserve">
+    <value>درهم إماراتي 5.95</value>
+  </data>
+  <data name="tariff_expats_green_water_units_17" xml:space="preserve">
+    <value>درهم إماراتي 7.84</value>
+  </data>
+  <data name="tariff_expats_home_elec_units" xml:space="preserve">
+    <value>20 كيلو وات ساعة (ك.و.س) في اليوم</value>
+  </data>
+  <data name="tariff_expats_home_elec_units_17" xml:space="preserve">
+    <value>20 كيلو وات ساعة (ك.و.س) في اليوم</value>
+  </data>
+  <data name="tariff_expats_home_water_units" xml:space="preserve">
+    <value>0.7 متر مكعب (م3) في اليوم</value>
+  </data>
+  <data name="tariff_expats_home_water_units_17" xml:space="preserve">
+    <value>0.7 متر مكعب (م3) في اليوم</value>
+  </data>
+  <data name="tariff_expats_red_elec_units" xml:space="preserve">
+    <value>فلس  31.80</value>
+  </data>
+  <data name="tariff_expats_red_elec_units_17" xml:space="preserve">
+    <value>فلس  30.5</value>
+  </data>
+  <data name="tariff_expats_red_wter_units" xml:space="preserve">
+    <value>درهم إماراتي 10.55</value>
+  </data>
+  <data name="tariff_expats_red_wter_units_17" xml:space="preserve">
+    <value>درهم إماراتي 10.41</value>
+  </data>
+  <data name="tariff_information" xml:space="preserve">
+    <value>معلومات حول التعرفة</value>
+  </data>
+  <data name="tariff_info_body1" xml:space="preserve">
+    <value>يمكنك هنا أن تجد جميع الاسعار و التعرفات السكنية لخدمات شركة أبوظبي للتوزيعز يتم تقسيم هذه التعرفات بشكل مختلف للمغتربين و لمواطنين دولة الإمارات العربية المتحدة. .</value>
+  </data>
+  <data name="tariff_one_cubic_meter" xml:space="preserve">
+    <value>مقابل 1 متر مكعب (م3)</value>
+  </data>
+  <data name="tariff_one_kilo_wats" xml:space="preserve">
+    <value>مقابل 1 كيلو وات ساعة (ك.و.س)</value>
+  </data>
+  <data name="tariff_slab_title" xml:space="preserve">
+    <value>شريحة التعرفة</value>
+  </data>
+  <data name="tariff_uae_com_elec_units" xml:space="preserve">
+    <value>400 ك.و.س في اليوم</value>
+  </data>
+  <data name="tariff_uae_com_elec_units_17" xml:space="preserve">
+    <value>400 ك.و.س في اليوم</value>
+  </data>
+  <data name="tariff_uae_com_water_units" xml:space="preserve">
+    <value>7 متر مكعب (م3) في اليوم</value>
+  </data>
+  <data name="tariff_uae_com_water_units_17" xml:space="preserve">
+    <value>7 متر مكعب (م3) في اليوم</value>
+  </data>
+  <data name="tariff_uae_expats" xml:space="preserve">
+    <value>الوافدون</value>
+  </data>
+  <data name="tariff_uae_green_elec_units" xml:space="preserve">
+    <value>فلس 5.00</value>
+  </data>
+  <data name="tariff_uae_green_elec_units_17" xml:space="preserve">
+    <value>فلس 6.70</value>
+  </data>
+  <data name="tariff_uae_green_water_units" xml:space="preserve">
+    <value>درهم إماراتي 1.70</value>
+  </data>
+  <data name="tariff_uae_green_water_units_17" xml:space="preserve">
+    <value>درهم إماراتي 2.09</value>
+  </data>
+  <data name="tariff_uae_home_elec_units" xml:space="preserve">
+    <value>30 ك.و.س في اليوم</value>
+  </data>
+  <data name="tariff_uae_home_elec_units_17" xml:space="preserve">
+    <value>30 ك.و.س في اليوم</value>
+  </data>
+  <data name="tariff_uae_home_water_units" xml:space="preserve">
+    <value>0.7 متر مكعب (م3) في اليوم</value>
+  </data>
+  <data name="tariff_uae_home_water_units_17" xml:space="preserve">
+    <value>0.7 متر مكعب (م3) في اليوم</value>
+  </data>
+  <data name="tariff_uae_nationals" xml:space="preserve">
+    <value>المواطنون الإماراتيون</value>
+  </data>
+  <data name="tariff_uae_red_elec_units" xml:space="preserve">
+    <value>فلس 5.50</value>
+  </data>
+  <data name="tariff_uae_red_elec_units_17" xml:space="preserve">
+    <value>فلس 7.50</value>
+  </data>
+  <data name="tariff_uae_red_wter_units" xml:space="preserve">
+    <value>درهم إماراتي 1.89</value>
+  </data>
+  <data name="tariff_uae_red_wter_units_17" xml:space="preserve">
+    <value>درهم إماراتي 2.6</value>
+  </data>
+  <data name="tariff_wats_per_day_comm" xml:space="preserve">
+    <value>400 ك.و.س في اليوم</value>
+  </data>
+  <data name="tariff_wats_per_day_res" xml:space="preserve">
+    <value>30 ك.و.س في اليوم</value>
+  </data>
+  <data name="tariff_info_body2" xml:space="preserve">
+    <value>المعدلات الحمراء والخضراء:</value>
+  </data>
+  <data name="tariff_info_body3" xml:space="preserve">
+    <value>تُطبق المعدلات الحمراء والخضراء وفقًا لحدود إستهلاك موضوعة على كل نوع من أنواع العقارات. ومن المهم ملاحظة أن الحدود اليومية الموضوعة تختلف في الفيلات عن الشقق وتختلف كذلك بالنسبة للمواطنين الإماراتيين عن الوافدين.
+وللحصول على معلومات حول تعرفات أخرى، اتبع هذا الرابط:</value>
+  </data>
+  <data name="tariff_chart" xml:space="preserve">
+    <value>جدول التعرفة</value>
+  </data>
+  <data name="tariff_slab_choose_year" xml:space="preserve">
+    <value>اختر السنة</value>
+  </data>
+  <data name="str_electricity" xml:space="preserve">
+    <value>كهرباء</value>
+  </data>
+  <data name="str_water" xml:space="preserve">
+    <value>ماء</value>
+  </data>
+  <data name="ariff_consumption_msg_green" xml:space="preserve">
+    <value>تُطبق قيمة "التعرفة الخضراء" على جميع أنواع الإستهلاك الأقل من الحد اليومي المحدد</value>
+  </data>
+  <data name="str_cal_desc" xml:space="preserve">
+    <value>يمكنك معرفة مقدار الطاقة المستهلكة بشكل تقديري ومبلغ الفاتورة باستخدام حاسبة التعرفة.</value>
+  </data>
+  <data name="tariff_calc_calculate" xml:space="preserve">
+    <value>حساب</value>
+  </data>
+  <data name="tariff_calc_category_type" xml:space="preserve">
+    <value>نوع الفئة</value>
+  </data>
+  <data name="tariff_calc_consum_amout" xml:space="preserve">
+    <value>وحدات الاستخدام</value>
+  </data>
+  <data name="tariff_calc_num_days" xml:space="preserve">
+    <value>عدد الأيام</value>
+  </data>
+  <data name="tariff_calc_serv_type" xml:space="preserve">
+    <value>نوع الخدمة</value>
+  </data>
+  <data name="tariff_calc_social_card" xml:space="preserve">
+    <value>هل أنت من حاملي بطاقة الشؤون الاجتماعية؟</value>
+  </data>
+  <data name="tariff_calc_unmetered" xml:space="preserve">
+    <value>هل لديك خدمة المياه بدون عداد؟</value>
+  </data>
+  <data name="tariff_total_title" xml:space="preserve">
+    <value>الإجمالي</value>
+  </data>
+  <data name="traiff_cate_type_0" xml:space="preserve">
+    <value>السكني - المواطنون</value>
+  </data>
+  <data name="traiff_cate_type_1" xml:space="preserve">
+    <value>السكني - الوافدون</value>
+  </data>
+  <data name="traiff_cate_type_2" xml:space="preserve">
+    <value>Select Category</value>
+  </data>
+  <data name="traiff_electric_units" xml:space="preserve">
+    <value>ك.و.س</value>
+  </data>
+  <data name="traiff_premise_type_0" xml:space="preserve">
+    <value>شقة</value>
+  </data>
+  <data name="traiff_premise_type_1" xml:space="preserve">
+    <value>فيلا</value>
+  </data>
+  <data name="traiff_premise_type_2" xml:space="preserve">
+    <value>Select Premise</value>
+  </data>
+  <data name="traiff_water_units" xml:space="preserve">
+    <value>م3</value>
+  </data>
+  <data name="calc_1" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="calc_2" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="calc_3" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="str_locate_us_heading" xml:space="preserve">
+    <value>حدد موقعنا</value>
+  </data>
+  <data name="str_open_gmap" xml:space="preserve">
+    <value>Are you sure you want to open inbuilt map application?</value>
+  </data>
+  <data name="str_locate_green" xml:space="preserve">
+    <value>لفروع</value>
+  </data>
+  <data name="str_locate_grey" xml:space="preserve">
+    <value>أجهزة السداد الآلي</value>
+  </data>
+  <data name="str_partner" xml:space="preserve">
+    <value>الشركاء</value>
+  </data>
+  <data name="str_locate_branch" xml:space="preserve">
+    <value>فرع</value>
+  </data>
+  <data name="str_locate_kiosk" xml:space="preserve">
+    <value>كشك</value>
+  </data>
+  <data name="str_locate_partner" xml:space="preserve">
+    <value>شريك</value>
+  </data>
+  <data name="str_all_services" xml:space="preserve">
+    <value>كل</value>
+  </data>
+  <data name="str_locate_us_header" xml:space="preserve">
+    <value>يمكنك العثور على قائمة بجميع فروع شركة أبوظبي للتوزيع، وأجهزة الدفع الألي وشركائها. قم باستخدام القوائم التاليه واستفد من مجموعة خدماتنا بسهولة.</value>
+  </data>
+  <data name="str_select_service" xml:space="preserve">
+    <value>تحديد خدمة</value>
+  </data>
+  <data name="str_share" xml:space="preserve">
+    <value>مشاركة مع صديق</value>
+  </data>
+  <data name="str_enter_username" xml:space="preserve">
+    <value>أدخل اسم المستخدم</value>
+  </data>
+  <data name="str_username" xml:space="preserve">
+    <value>اسم المستخدم</value>
+  </data>
+  <data name="tremsconditions" xml:space="preserve">
+    <value>ستظهر الشروط  والأحكام بعد قليل</value>
+  </data>
+  <data name="LocateUSEng" xml:space="preserve">
+    <value>LocateUs_Ara</value>
+  </data>
+  <data name="enquery_want_intouch" xml:space="preserve">
+    <value>هل ترغب في التواصل معنا ؟</value>
+  </data>
+  <data name="enquiry_assistance" xml:space="preserve">
+    <value>تحتاج إلى مساعدة؟</value>
+  </data>
+  <data name="enquiry_assistance_desc" xml:space="preserve">
+    <value>.كل ما تحتاج معرفته للتعامل مع شركة أبوظبي للتوزيع متوفر في صفحة الأسئلة و الأجوبة. الرجاء إختيار أحد الخيارات التالية للتواصل معنا</value>
+  </data>
+  <data name="str_branch_locator" xml:space="preserve">
+    <value>حدد الأفرع</value>
+  </data>
+  <data name="str_call_us" xml:space="preserve">
+    <value>اتصل بنا</value>
+  </data>
+  <data name="str_email_us" xml:space="preserve">
+    <value>أرسل بريد إلكتروني</value>
+  </data>
+  <data name="str_freq_ask_qustns" xml:space="preserve">
+    <value>أسئلة مكررة</value>
+  </data>
+  <data name="str_getintouch_title" xml:space="preserve">
+    <value>تواصل مع شركة أبوظبي للتوزيع</value>
+  </data>
+  <data name="str_suggestions" xml:space="preserve">
+    <value>إقتراحات</value>
+  </data>
+	<data name="str_share" xml:space="preserve">
+    <value>مشاركة مع صديق</value>
+  </data>
+  <data name="str_other_serv" xml:space="preserve">
+    <value>Services</value>
+  </data>
+ <data name="str_All" xml:space="preserve">
+    <value>التصنيف وفقاً للخدمة</value>
+  </data>
+	<data name="str_network" xml:space="preserve">
+    <value>اتصال الشبكة غير متاح. يُرجى إعادة المحاولة بعد قليل</value>
+  </data>
+  <data name="clmn0" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="clmn1" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="clmn2" xml:space="preserve">
+    <value>0</value>
+  </data>
+
+	    <!-- My Accounts Screen Items -->
+    <data name="str_select_property" xml:space="preserve">
+    <value>حدد الحسابات التي تريد سداد فواتيرها</value>
+  </data>
+    <data name="str_select_account_details" xml:space="preserve">
+    <value>لمزيد من التفاصيل الرجاء الضغط على رقم الحساب</value>
+  </data>
+    <data name="str_ost_bal" xml:space="preserve">
+    <value>رصيد الحساب</value>
+  </data>
+    <data name="str_balance" xml:space="preserve">
+    <value>الرصيد المُستحقّ</value>
+  </data>
+    <data name="str_acc_number" xml:space="preserve">
+    <value>رقم الحساب</value>
+  </data> 
+    <data name="str_currency" xml:space="preserve">
+    <value>AED</value>
+  </data>
+    <data name="str_currency_zero" xml:space="preserve">
+    <value>0.00</value>
+  </data>
+    <data name="str_water" xml:space="preserve">
+    <value>ماء</value>
+  </data>
+    <data name="str_electricity" xml:space="preserve">
+    <value>كهرباء</value>
+  </data>
+    <data name="str_previous_due" xml:space="preserve">
+    <value>إجمالي الرصيد السابق</value>
+  </data>
+    <data name="str_total_due" xml:space="preserve">
+    <value>الإجمالي المُستحقّ</value>
+  </data>
+    <data name="str_payment_text" xml:space="preserve">
+    <value>الرجاء تحديد المبلغ</value>
+  </data>
+    <data name="str_total_text" xml:space="preserve">
+    <value>الإجمالي الواجب دفعه:</value>
+  </data>
+    <data name="str_amount_to_be_paid" xml:space="preserve">
+    <value>الرصيد المُستحقّ</value>
+  </data>
+    <data name="str_amount_paid" xml:space="preserve">
+    <value>المبلغ المدفوع</value>
+  </data>
+    <data name="str_thanks_text" xml:space="preserve">
+    <value>شكرًا لك!!</value>
+  </data>
+    <data name="str_paid_on" xml:space="preserve">
+    <value> اخر سداد بتاريخ</value>
+  </data>
+    <data name="str_total_paid" xml:space="preserve">
+    <value>Total Paid</value>
+  </data>
+    <data name="str_email_text" xml:space="preserve">
+    <value>إرسال الإيصال عبر البريد الإلكتروني</value>
+  </data>
+    <data name="str_transaction" xml:space="preserve">
+    <value> رقم المرجع البنكي</value>
+  </data>
+    <data name="str_payment_received" xml:space="preserve">
+    <value>لقد استلمنا دفعة السداد</value>
+  </data>
+    <data name="str_choose_property" xml:space="preserve">
+    <value>اختر الحساب</value>
+  </data>
+    <data name="str_property_name" xml:space="preserve">
+    <value>اسم العقار </value>
+  </data>
+    <data name="str_acc_number_bill" xml:space="preserve">
+    <value>رقم الحساب</value>
+  </data>
+    <data name="str_bill_number_bil" xml:space="preserve">
+    <value>رقم الفاتورة</value>
+  </data>
+    <data name="str_date_bill" xml:space="preserve">
+    <value>تاريخ الفاتورة</value>
+  </data>
+    <data name="str_pay_by_date_bill" xml:space="preserve">
+    <value>يرجى السداد قبل</value>
+  </data>
+    <data name="str_bill_history" xml:space="preserve">
+    <value>سجل الفواتير</value>
+  </data>
+    <data name="str_payment_history" xml:space="preserve">
+    <value>سجل السداد</value>
+  </data>
+    <data name="str_payment_date" xml:space="preserve">
+    <value>تاريخ السداد</value>
+  </data>
+    <data name="str_trans_id" xml:space="preserve">
+    <value>رقم المرجع البنكي</value>
+  </data>
+    <data name="str_paid_amt" xml:space="preserve">
+    <value>المبلغ المدفوع</value>
+  </data>
+    <data name="str_previous_charges" xml:space="preserve">
+    <value>إجمالي الرصيد السابق</value>
+  </data>
+    <data name="str_curr_cycle_chrgs" xml:space="preserve">
+    <value>قيمة الفاتورة الحالية</value>
+  </data>
+    <data name="str_total_amt_due" xml:space="preserve">
+    <value>الإجمالي المُستحقّ</value>
+  </data>
+    <data name="str_units" xml:space="preserve">
+    <value>الوحدات :</value>
+  </data>
+    <data name="str_amount" xml:space="preserve">
+    <value>المبلغ :</value>
+  </data>
+    <data name="str_tariff" xml:space="preserve">
+    <value>التعرفة :</value>
+  </data>
+    <data name="str_water_tariff_units" xml:space="preserve">
+    <value>درهم إماراتي/م3</value>
+  </data>
+    <data name="str_elec_tariff_units" xml:space="preserve">
+    <value>فلس/ك.و.س</value>
+  </data>
+    <data name="str_water_consumption" xml:space="preserve">
+    <value> إستهلاك المياه </value>
+  </data>
+    <data name="str_electricity_consumption" xml:space="preserve">
+    <value>إستهلاك الكهرباء</value>
+  </data>
+
+    <!-- View Bill Screen Items -->
+    <data name="str_acount_nick_name" xml:space="preserve">
+    <value>Account Nick Name</value>
+  </data>
+    <data name="str_account_num" xml:space="preserve">
+    <value>رقم الحساب</value>
+  </data>
+    <data name="str_bill_cycle" xml:space="preserve">
+    <value>دورة الفاتورة</value>
+  </data>
+    <data name="str_premise_id" xml:space="preserve">
+    <value>معرف العقار</value>
+  </data>
+    <data name="str_premise_type" xml:space="preserve">
+    <value>نوع العقار</value>
+  </data>
+    <data name="str_bill_pref" xml:space="preserve">
+    <value>الطريقة المفضلة لإستلام الفاتورة</value>
+  </data>
+    <data name="str_bill_address" xml:space="preserve">
+    <value>عنوان الفواتير</value>
+  </data>
+    <data name="str_select_city" xml:space="preserve">
+    <value>Select City</value>
+  </data>
+    <data name="str_post_box" xml:space="preserve">
+    <value>صندوق البريد</value>
+  </data>
+    <data name="str_tariff_type" xml:space="preserve">
+    <value>نوع التعرفة</value>
+  </data>
+    <data name="str_life_sup" xml:space="preserve">
+    <value>دعم المعيشة</value>
+  </data>
+    <data name="str_payment_date_text" xml:space="preserve">
+    <value>تاريخ السداد</value>
+  </data>
+    <data name="str_acc_details" xml:space="preserve">
+    <value>تفاصيل الحساب</value>
+  </data>
+    <data name="str_last_bill_sum" xml:space="preserve">
+    <value>ملخص آخر فاتورة</value>
+  </data>
+    <data name="str_last_pay_sum" xml:space="preserve">
+    <value>ملخص آخر عملية سداد</value>
+  </data>
+    <data name="str_city_amp" xml:space="preserve">
+    <value>Through Email &amp; SMS</value>
+  </data>
+    <data name="str_acc_num_bold" xml:space="preserve">
+    <value>رقم الحساب</value>
+  </data>
+    <data name="str_payment_rcv" xml:space="preserve">
+    <value>المبلغ المدفوع</value>
+  </data>
+    <data name="str_bill_custdetails" xml:space="preserve">
+    <value>معلومات العميل</value>
+  </data>
+    <!-- My Profile and Update Accont Info -->
+    <data name="str_cus_id_header" xml:space="preserve">
+    <value>حدث بياناتك بإستمرار</value>
+  </data>
+    <data name="str_personal_detls" xml:space="preserve">
+    <value>بياناتك الشخصية:</value>
+  </data>
+    <data name="str_contctnum_desc" xml:space="preserve">
+    <value>إذا أدخلت أكثر من رقم واحد، فسنستخدم الرقم الأول لنرسل إليه رسائل نصية قصيرة بالتنبيهات وتحديثات الخدمة؛ فيُرجى التأكد من أنه هاتف محمول محلي.</value>
+  </data>
+    <data name="str_bill_language_myprofile" xml:space="preserve">
+    <value>ما اللغة التي تفضل استخدامها؟</value>
+  </data>
+    <data name="my_profile" xml:space="preserve">
+    <value>الملف الشخصي</value>
+  </data>
+    <data name="str_update_acc_title" xml:space="preserve">
+    <value>تحديث ملفي الشخصي</value>
+  </data>
+    <data name="str_edit" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
+    <data name="str_hello" xml:space="preserve">
+    <value>Hello</value>
+  </data>
+    <data name="str_customer_id" xml:space="preserve">
+    <value>معرف العميل</value>
+  </data>
+    <data name="str_phone" xml:space="preserve">
+    <value>رقم الإتصال</value>
+  </data>
+    <data name="str_fav" xml:space="preserve">
+    <value>Favourite</value>
+  </data>
+    <data name="str_see_all" xml:space="preserve">
+    <value>عرض المزيد</value>
+  </data>
+    <data name="str_see_less" xml:space="preserve">
+    <value>عرض أقل</value>
+  </data>
+    <data name="str_home" xml:space="preserve">
+    <value>رقم الهاتف المنزلي</value>
+  </data>
+    <data name="str_work" xml:space="preserve">
+    <value>رقم هاتف العمل</value>
+  </data>
+    <data name="str_mobile" xml:space="preserve">
+    <value>رقم الإتصال</value>
+  </data>
+    <data name="str_others" xml:space="preserve">
+    <value>تنشيط حساب على الإنترنت</value>
+  </data>
+    <data name="str_elec_save_steps" xml:space="preserve">
+    <value>نعرض في ما يلي بعض الخطوات البسيطة التي يمكن لكل واحد منا إتباعها للمساعدة في توفير إستهلاكها.</value>
+  </data>
+    <data name="str_mandatory_feilds" xml:space="preserve">
+    <value>All the feilds below are required.So that you can access your account online.</value>
+  </data>
+    <data name="str_email_info" xml:space="preserve">
+    <value>للدخول إلى حسابك على شبكة الإنترنت قم بتعبئة البيانات التالية:</value>
+  </data>
+    <data name="str_add_new_number" xml:space="preserve">
+    <value>Add New Number</value>
+  </data>
+    <data name="str_type_password" xml:space="preserve">
+    <value>اكتب كلمة المرور</value>
+  </data>
+    <data name="str_re_typr_password" xml:space="preserve">
+    <value>أعد كتابة كلمة المرور:</value>
+  </data>
+    <data name="str_lang_sel" xml:space="preserve">
+    <value>Select the language for receiving bills and future correspondence from ADDC.</value>
+  </data>
+    <data name="str_update_post" xml:space="preserve">
+    <value>Select an option below to receive the bill</value>
+  </data>
+    <data name="str_premise_name" xml:space="preserve">
+    <value>منزل الاجازة</value>
+  </data>
+    <data name="str_fav_color" xml:space="preserve">
+    <value>ما هو لونك المفضّل؟</value>
+  </data>
+    <data name="str_fav_color_ans" xml:space="preserve">
+    <value>Green</value>
+  </data>
+    <data name="str_update_acc_lang_query_ans" xml:space="preserve">
+    <value>الإنجليزية</value>
+  </data>
+    <data name="str_update_acc_fullname" xml:space="preserve">
+    <value>الاسم بالكامل</value>
+  </data>
+    <data name="str_requred_head" xml:space="preserve">
+    <value>إنشاء بيانات  تسجيل الدخول</value>
+  </data>
+    <data name="str_update_acc_username_lbl" xml:space="preserve">
+    <value>أدخل اسم المستخدم</value>
+  </data>
+    <data name="str_update_acc_desc" xml:space="preserve">
+    <value>سنستخدم ذلك كوسيلة للاتصال بك.</value>
+  </data>
+    <data name="str_update_acc_add" xml:space="preserve">
+    <value>أضف رقم هاتف جديد</value>
+  </data>
+    <data name="str_update_primary" xml:space="preserve">
+    <value>رقم الهاتف الرئيسي</value>
+  </data>
+    <data name="str_myprof_data" xml:space="preserve">
+    <value>من الضروري حصولنا على البيانات الصحيحة للاستمرار في تقديم أفضل خدمة ممكنة. يُرجى استخدام هذا الخيار لإبقاء بياناتك محدثة .</value>
+  </data>
+    <data name="str_typepasswd" xml:space="preserve">
+    <value>اكتب كلمة المرور</value>
+  </data>
+    <data name="str_retypepasswd" xml:space="preserve">
+    <value>أعد كتابة كلمة المرور:</value>
+  </data>
+    <data name="str_oldpasswd" xml:space="preserve">
+    <value>كلمة المرور القديمة</value>
+  </data>
+    <data name="str_bill_pref_accoptions" xml:space="preserve">
+    <value>الطريقة المفضلة لإستلام الفاتورة</value>
+  </data>
+
+		  <data name="adjustments" xml:space="preserve">
+    <value>التسويات/التصحيحات</value>
+  </data>
+
+	  <data name="other_changes" xml:space="preserve">
+    <value>رسوم أخرى</value>
+  </data>
+
+	  <data name="municipality_fees" xml:space="preserve">
+    <value>رسوم البلدية</value>
+  </data>
+	 <data name="str_make_payment" xml:space="preserve">
+    <value>سداد</value>
+  </data>
+    <data name="str_bank_trans_id" xml:space="preserve">
+    <value>رقم المعاملة</value>
+  </data>
+  <data name="str_payment_update" xml:space="preserve">
+    <value>سيتم تحديث رصيدك المستحق على شاشة السداد في أقل من 15 دقيقة.</value>
+  </data>
+</root>

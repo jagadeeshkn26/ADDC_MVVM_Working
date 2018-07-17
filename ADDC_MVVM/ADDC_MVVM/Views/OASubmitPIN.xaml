@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ADDC_MVVM.Views.OASubmitPIN"
+             xmlns:Common="clr-namespace:ADDC_MVVM;assembly=ADDC_MVVM"
+             xmlns:vm="clr-namespace:ADDC_MVVM.ViewModels;assembly=ADDC_MVVM"
+             xmlns:i18n="clr-namespace:ADDC_MVVM;assembly=ADDC_MVVM">
+  
+ <ContentPage.BindingContext>
+    <vm:OASubmitPINViewModel/>
+  </ContentPage.BindingContext>
+
+  <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
+    <RelativeLayout VerticalOptions="Start" >
+
+      <Image Source="{i18n:Translate HeaderContent}"
+        VerticalOptions = "Center" Aspect ="Fill"
+        HorizontalOptions="FillAndExpand" />
+      <StackLayout HorizontalOptions = "FillAndExpand">
+        <Grid>
+          <!--    <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+          <ColumnDefinition Width="1*" />
+          </Grid.ColumnDefinitions>-->
+
+          <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+          </Grid.RowDefinitions>
+          <StackLayout x:Name="Header1" Grid.Row="0"
+                       Grid.Column="{i18n:Translate a8}"
+                        Grid.ColumnSpan="1"
+                       HorizontalOptions="Start"
+                       VerticalOptions="CenterAndExpand"
+                       Padding="10,20,0,0">
+            <Label Text="X" TextColor="#155308">
+              <Label.GestureRecognizers>
+                <TapGestureRecognizer
+                        Command="{Binding CancelCommand}"
+                        NumberOfTapsRequired="1" />
+              </Label.GestureRecognizers>
+              <!-- Font changes ... -->
+              <Label.FontSize>
+                <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+              </Label.FontSize>
+              <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                  <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                  <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                </OnPlatform>
+              </Label.FontFamily>
+              <!-- Font changes ... -->
+            </Label>
+          </StackLayout>
+          <StackLayout x:Name="Header2" Grid.Row="0"
+                                Grid.Column="{i18n:Translate b8}"
+                       Grid.ColumnSpan="4"
+                                HorizontalOptions="CenterAndExpand"
+                                VerticalOptions="CenterAndExpand"
+                                Padding="10,20,0,0">
+            <Label  Text="{i18n:Translate str_actv_heading}"
+                        LineBreakMode="NoWrap"
+                TextColor="#155308">
+              <!-- Font changes ... -->
+               <Label.FontSize>
+               <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+             </Label.FontSize>
+             <Label.FontFamily>
+               <OnPlatform x:TypeArguments="x:String">
+                 <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                 <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+               </OnPlatform>
+             </Label.FontFamily>
+             <!-- Font changes ... -->
+            </Label>
+          </StackLayout>
+          <StackLayout x:Name="Header3" Grid.Row="0"
+                                Grid.Column="{i18n:Translate c8}"
+                                HorizontalOptions="End"
+                       VerticalOptions="CenterAndExpand"
+                       Grid.ColumnSpan="2"
+                                Padding="0,20,10,0">
+            <Label  Text="{i18n:Translate TxtSubmit}"
+                       LineBreakMode="NoWrap"
+               TextColor="#155308">
+              <!-- Font changes ... -->
+               <Label.FontSize>
+               <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+             </Label.FontSize>
+             <Label.FontFamily>
+               <OnPlatform x:TypeArguments="x:String">
+                 <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                 <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+               </OnPlatform>
+             </Label.FontFamily>
+             <!-- Font changes ... -->
+              <Label.GestureRecognizers>
+                <TapGestureRecognizer
+                        Command="{Binding validatesPIN}"
+                        NumberOfTapsRequired="1" />
+              </Label.GestureRecognizers>
+            </Label>
+          </StackLayout>
+
+        </Grid>
+      </StackLayout>
+    </RelativeLayout>
+    <StackLayout HorizontalOptions="StartAndExpand" Orientation="Vertical" Padding="20,5,20,20">
+
+      <Label  Text="{Binding heading}"  TextColor="Black">
+        <!-- Font changes ... -->
+        <Label.FontSize>
+          <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+        <Label.FontFamily>
+          <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+        </Label.FontFamily>
+        <!-- Font changes ... -->
+      </Label>
+
+      <Label Text="{Binding personIDFromEid}" TextColor="Black" HorizontalOptions="Start" IsVisible="False">
+        <!-- Font changes ... -->
+        <Label.FontSize>
+          <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+        <Label.FontFamily>
+          <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+        </Label.FontFamily>
+        <!-- Font changes ... -->
+      </Label>
+      <Label Text="{Binding emailIDFromEid}" TextColor="Black"  HorizontalOptions="Start" IsVisible="False">
+        <!-- Font changes ... -->
+        <Label.FontSize>
+          <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+        <Label.FontFamily>
+          <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+        </Label.FontFamily>
+        <!-- Font changes ... -->
+      </Label>
+      <Label Text="{Binding phoneNumberFromEid}" TextColor="Black"  HorizontalOptions="Start" IsVisible="False">
+        <!-- Font changes ... -->
+        <Label.FontSize>
+          <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+        <Label.FontFamily>
+          <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+        </Label.FontFamily>
+        <!-- Font changes ... -->
+      </Label>
+
+      <Label Text="{i18n:Translate str_receive_pin}" HorizontalOptions="StartAndExpand" TextColor="Black">
+        <!-- Font changes ... -->
+        <Label.FontSize>
+          <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+        <Label.FontFamily>
+          <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+        </Label.FontFamily>
+        <!-- Font changes ... -->
+      </Label>
+
+      <Entry Keyboard="Numeric"  BackgroundColor="#dcdde1"  WidthRequest="100" Text="{Binding pinEntered} " TextColor="Black" FontSize="14">
+
+        <Entry.Behaviors>
+          <Common:MaxLengthValidator  MaxLength="4"/>
+        </Entry.Behaviors>
+
+
+      </Entry>
+
+      <Label Text="{i18n:Translate str_not_received_pin}" HorizontalOptions="StartAndExpand" TextColor="Black">
+        <!-- Font changes ... -->
+        <Label.FontSize>
+          <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+        <Label.FontFamily>
+          <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+        </Label.FontFamily>
+        <!-- Font changes ... -->
+      </Label>
+
+      <StackLayout Orientation="Horizontal">
+
+        <Button x:Name="resendPIN"
+                Text="{i18n:Translate str_resend_pin}"
+                BorderColor="Transparent"
+                TextColor="#155308" FontSize="14"
+                HorizontalOptions="End"
+                Command="{Binding resendPIN}" />
+
+      </StackLayout>
+      <Label Text="{i18n:Translate str_customer_care}" HorizontalOptions="StartAndExpand" TextColor="Black">
+        <!-- Font changes ... -->
+        <Label.FontSize>
+          <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+        <Label.FontFamily>
+          <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+        </Label.FontFamily>
+        <!-- Font changes ... -->
+      </Label>
+      <ActivityIndicator IsRunning="{Binding IsBusy}"/>
+
+    </StackLayout>
+
+  </StackLayout>
+
+
+
+</ContentPage>

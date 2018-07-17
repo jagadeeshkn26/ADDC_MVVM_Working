@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+
+	<string name="str_copy">جميع الحقوق محفوظة 2017 شركة أبوظبي للتوزيع</string>
+
+	<!-- Splash Screen -->
+
+    <string name="str_loading">جارٍ التحميل...</string>
+</resources>

@@ -1,0 +1,947 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A126C70F-0205-4CF1-9717-24FE5D748CE9}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ADDC_MVVM.Droid</RootNamespace>
+    <AssemblyName>ADDC_MVVM.Droid</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <AndroidSupportedAbis>armeabi,armeabi-v7a,x86</AndroidSupportedAbis>
+    <AndroidStoreUncompressedFileExtensions />
+    <MandroidI18n />
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
+    <JavaOptions />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <AndroidTlsProvider>
+    </AndroidTlsProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
+    <Debugger>Xamarin</Debugger>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExifLib, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ExifLib.PCL.1.0.1\lib\portable-net45+sl50+win+WindowsPhoneApp81+wp80+Xamarin.iOS10+MonoAndroid10+MonoTouch10\ExifLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ModernHttpClient, Version=2.4.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\modernhttpclient.2.4.2\lib\MonoAndroid\ModernHttpClient.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Android.Export" />
+    <Reference Include="mscorlib" />
+    <Reference Include="OkHttp, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\modernhttpclient.2.4.2\lib\MonoAndroid\OkHttp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\..\packages\Xamarin.Android.Support.v4.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.CardView">
+      <HintPath>..\..\packages\Xamarin.Android.Support.v7.CardView.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.CardView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.RecyclerView">
+      <HintPath>..\..\packages\Xamarin.Android.Support.v7.RecyclerView.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Vector.Drawable">
+      <HintPath>..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.Vector.Drawable.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Animated.Vector.Drawable">
+      <HintPath>..\..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.Animated.Vector.Drawable.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat">
+      <HintPath>..\..\packages\Xamarin.Android.Support.v7.AppCompat.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Design">
+      <HintPath>..\..\packages\Xamarin.Android.Support.Design.23.3.0\lib\MonoAndroid43\Xamarin.Android.Support.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.MediaRouter">
+      <HintPath>..\..\packages\Xamarin.Android.Support.v7.MediaRouter.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.MediaRouter.dll</HintPath>
+    </Reference>
+    <Reference Include="FormsViewGroup">
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.3.193\lib\MonoAndroid10\FormsViewGroup.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.3.193\lib\MonoAndroid10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.Android">
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.3.193\lib\MonoAndroid10\Xamarin.Forms.Platform.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform">
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.3.193\lib\MonoAndroid10\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.3.193\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Rg.Plugins.Popup">
+      <HintPath>..\..\packages\Rg.Plugins.Popup.1.0.4\lib\MonoAndroid\Rg.Plugins.Popup.dll</HintPath>
+    </Reference>
+    <Reference Include="Rg.Plugins.Popup.Droid">
+      <HintPath>..\..\packages\Rg.Plugins.Popup.1.0.4\lib\MonoAndroid\Rg.Plugins.Popup.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Rg.Plugins.Popup.Platform">
+      <HintPath>..\..\packages\Rg.Plugins.Popup.1.0.4\lib\MonoAndroid\Rg.Plugins.Popup.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Basement">
+      <HintPath>..\..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.1\lib\MonoAndroid41\Xamarin.GooglePlayServices.Basement.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Base">
+      <HintPath>..\..\packages\Xamarin.GooglePlayServices.Base.29.0.0.1\lib\MonoAndroid41\Xamarin.GooglePlayServices.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Maps">
+      <HintPath>..\..\packages\Xamarin.GooglePlayServices.Maps.29.0.0.1\lib\MonoAndroid41\Xamarin.GooglePlayServices.Maps.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Maps.Android">
+      <HintPath>..\..\packages\Xamarin.Forms.Maps.2.3.3.193\lib\MonoAndroid10\Xamarin.Forms.Maps.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Maps">
+      <HintPath>..\..\packages\Xamarin.Forms.Maps.2.3.3.193\lib\MonoAndroid10\Xamarin.Forms.Maps.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite.Net">
+      <HintPath>..\..\packages\SQLite.Net.Core-PCL.3.1.1\lib\portable-win8+net45+wp8+wpa81+MonoAndroid1+MonoTouch1\SQLite.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite.Net.Platform.XamarinAndroid">
+      <HintPath>..\..\packages\SQLite.Net-PCL.3.1.1\lib\MonoAndroid\SQLite.Net.Platform.XamarinAndroid.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity.Abstractions">
+      <HintPath>..\..\packages\Xam.Plugin.Connectivity.2.3.0\lib\MonoAndroid10\Plugin.Connectivity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity">
+      <HintPath>..\..\packages\Xam.Plugin.Connectivity.2.3.0\lib\MonoAndroid10\Plugin.Connectivity.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HybridWebViewRenderer.cs" />
+    <Compile Include="IntClass\WebCallBack.cs" />
+    <Compile Include="JSBridge.cs" />
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Localize.cs" />
+    <Compile Include="SplashScreen.cs" />
+    <Compile Include="SqliteService.cs" />
+    <Compile Include="CustomMapRenderer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="LocateUsNew.sqlite" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\english.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\english_de_selected.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\fb.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\header.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\insta.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\landing_active_menu_icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\landing_content_bg.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\landing_footer.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\landing_header.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\lock_icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\logo.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\menu_about_us.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\menu_bg.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\menu_conservation.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\menu_cus_enquiry.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\menu_locate_us.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\menu_tariff.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\menu_understanding_bill.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\splash_bg.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tweet.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\user_icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\fb.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\header.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\insta.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\landing_content_bg.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\lock_icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\map_icon_deselect.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\map_icon_select.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\menu_about_us.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\menu_bg.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\menu_conservation.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\menu_cus_enquiry.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\menu_locate_us.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\menu_tariff.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\menu_understanding_bill.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\mission_deselect.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\mission_select.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\overview_deselect.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\overview_select.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\splash_bg.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\tweet.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\user_icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\value_deselect.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\value_select.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\vission_select.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\vission_deselect.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\english_de_selected.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\fb.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\header.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\insta.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\landing_content_bg.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\landing_footer.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\landing_header.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\landing_pic.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\lock_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\menu_about_us.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\menu_bg.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\menu_conservation.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\menu_cus_enquiry.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\menu_locate_us.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\menu_tariff.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\menu_understanding_bill.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\mission_deselect.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\mission_select.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\overview_deselect.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\overview_select.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\splash_bg.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\tweet.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\user_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\value_de_select.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\value_select.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\vission_select.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\vission_deselect.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\english.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\english_de_selected.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\fb.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\header.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\insta.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\landing_content_bg.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\landing_logo.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\lock_icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\map_icon_deselect.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\map_icon_select.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\menu_about_us.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\menu_bg.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\menu_conservation.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\menu_cus_enquiry.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\menu_locate_us.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\menu_settings.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\menu_tariff.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\menu_understanding_bill.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\mission_deselect.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\mission_select.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\overview_deselect.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\overview_select.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\splash_bg.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tweet.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\user_icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\value_de_select.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\value_select.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\vission_select.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\vission_deselect.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\english_de_selected.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\fb.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\header.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\insta.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\landing_content_bg.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\landing_footer.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\landing_header.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\landing_logo.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\lock_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\menu_about_us.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\menu_bg.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\menu_conservation.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\menu_cus_enquiry.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\menu_locate_us.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\menu_tariff.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\menu_understanding_bill.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\mission_deselect.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\mission_select.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\overview_deselect.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\overview_select.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\splash_bg.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tweet.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\user_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\value_de_select.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\value_select.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\vission_select.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\vission_deselect.png" />
+    <AndroidResource Include="Resources\layout\SplashLayout.axml" />
+    <AndroidResource Include="Resources\values\theme.xml" />
+    <AndroidResource Include="Resources\layout\SplashLyt.axml" />
+    <AndroidResource Include="Resources\drawable\backgroundmain.jpg" />
+    <AndroidResource Include="Resources\drawable\backgroundtop.png" />
+    <AndroidResource Include="Resources\drawable\selecticon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\electricity_bottom_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\electricity_bottom_en_new.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\electricity_left_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\electricity_left_en_new.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\electricity_middle_bottom_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\electricity_middle_bottom_en_new.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\electricity_middle_top_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\electricity_middle_top_en_new.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\right_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\right_en_new.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\top_en_new.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\electricity_top_left_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\electricity_top_right_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\electricity_top_right_en_new.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\water_bottom_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\water_bottom_en_new.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\water_left_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\water_left_en_new.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\water_middle_bottom_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\water_middle_bottom_en_new.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\water_middle_top_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\water_middle_top_en_new.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\water_right_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\water_right_en_new.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\water_top_left_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\water_top_right_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\water_top_right_en_new.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\electricity_bottom_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\electricity_bottom_en_new.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\electricity_left_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\electricity_left_en_new.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\electricity_middle_bottom_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\electricity_middle_bottom_en_new.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\electricity_middle_top_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\electricity_middle_top_en_new.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\electricity_right_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\electricity_right_en_new.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\electricity_top_en_new.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\electricity_top_left_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\electricity_top_right_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\electricity_top_right_en_new.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\water_bottom_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\water_bottom_en_new.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\water_left_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\water_left_en_new.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\water_middle_bottom_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\water_middle_bottom_en_new.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\water_middle_top_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\water_middle_top_en_new.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\water_right_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\water_right_en_new.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\water_top_left_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\water_top_right_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\water_top_right_en_new.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\electricity_bottom_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\electricity_bottom_en_new.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\electricity_left_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\electricity_left_en_new.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\electricity_middle_bottom_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\electricity_middle_bottom_en_new.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\electricity_middle_top_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\electricity_middle_top_en_new.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\right_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\right_en_new.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\top_en_new.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\electricity_top_left_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\electricity_top_right_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\electricity_top_right_en_new.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\water_bottom_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\water_bottom_en_new.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\water_left_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\water_left_en_new.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\water_middle_bottom_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\water_middle_bottom_en_new.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\water_middle_top_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\water_middle_top_en_new.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\water_right_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\water_right_en_new.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\water_top_left_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\water_top_left_en_new.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\water_top_right_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\water_top_right_en_new.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\electricity_bottom_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\electricity_bottom_en_new.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\electricity_left_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\electricity_left_en_new.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\electricity_middle_bottom_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\electricity_middle_bottom_en_new.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\electricity_middle_top_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\electricity_middle_top_en_new.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\electricity_right_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\electricity_right_en_new.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\electricity_top_en_new.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\electricity_top_left_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\electricity_top_right_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\electricity_top_right_en_new.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\water_bottom_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\water_bottom_en_new.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\water_left_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\water_left_en_new.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\water_middle_bottom_arb.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\water_middle_bottom_en_new.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\water_middle_top_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\water_middle_top_en_new.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\water_right_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\water_right_en_new.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\water_top_left_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\water_top_left_en_new.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\water_top_right_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\water_top_right_en_new.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\landing_active_menu_icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\landing_active_menu_icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\landing_footer.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\landing_footer.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\header_ar.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\header_ar.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\header_ar.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\edit.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_electricity_consumption.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_water_consumption_icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\acc_details_deselect.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\acc_details_select.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\last_bill_sum_deselect.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\last_bill_sum_select.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\last_pay_sum_deselect.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\last_pay_sum_select.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\acc_details_deselect.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\acc_details_select.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\last_bill_sum_deselect.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\last_bill_sum_select.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\last_pay_sum_deselect.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\last_pay_sum_select.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\acc_details_deselect.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\acc_details_select.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\last_bill_sum_deselect.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\last_bill_sum_select.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\last_pay_sum_deselect.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\last_pay_sum_select.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\acc_details_deselect.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\acc_details_select.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\last_bill_sum_deselect.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\last_bill_sum_select.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\last_pay_sum_deselect.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\last_pay_sum_select.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\acc_details_deselect.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\acc_details_select.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\last_bill_sum_deselect.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\last_bill_sum_select.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\last_pay_sum_deselect.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\last_pay_sum_select.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\confirm_pay_deselect.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\electricity_icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tick.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\water_icon.png" />
+    <AndroidResource Include="Resources\drawable\confirm_pay_deselect.png" />
+    <AndroidResource Include="Resources\drawable\electricity_icon.png" />
+    <AndroidResource Include="Resources\drawable\tick.png" />
+    <AndroidResource Include="Resources\drawable\water_icon.png" />
+    <AndroidResource Include="Resources\drawable\next_icon.png" />
+    <AndroidResource Include="Resources\drawable\next_icon_ar.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\next_icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\next_icon_ar.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\landing_header_ar.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\landing_header_ar.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\landing_header.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\landing.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\landing_ar.png" />
+    <AndroidResource Include="Resources\values-ar\strings.xml" />
+    <AndroidResource Include="Resources\values\strings.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\account_bg_ar.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\account_bg.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\menu_bg_ar.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\yes_i_do_dialog_box_ar.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\yes_i_do_dialog_box.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\yes_i_do_dialog_box_ar.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\yes_i_do_dialog_box.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\yes_i_do_dialog_box_ar.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\yes_i_do_dialog_box.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\yes_i_do_dialog_box_ar.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\yes_i_do_dialog_box.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\yes_i_do_dialog_box_ar.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\yes_i_do_dialog_box.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\conserve_elec_deselect.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\conserve_elec_select.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\water_deselect.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\water_select.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\bullet_point.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\bullet_point_ar.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\back_button.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\back_button_ar.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\acc_details_deselect.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\acc_details_select.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\electricity_bottom_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\electricity_bottom_en_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\electricity_left_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\electricity_left_en_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\electricity_middle_bottom_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\electricity_middle_bottom_en_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\electricity_middle_top_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\electricity_middle_top_en_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\electricity_right_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\electricity_right_en_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\electricity_top_en_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\electricity_top_left_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\electricity_top_right_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\electricity_top_right_en_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\english.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\english_de_selected.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\fb.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\header.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\header_ar.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\Icon.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\insta.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\landing_active_menu_icon.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\landing_content_bg.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\landing_footer.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\landing_header.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\landing_header_ar.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\landing_logo.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\landing_pic.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\last_bill_sum_deselect.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\last_bill_sum_select.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\last_pay_sum_deselect.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\last_pay_sum_select.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\lock_icon.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\map_icon_deselect.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\map_icon_select.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\menu_about_us.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\menu_bg.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\menu_conservation.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\menu_cus_enquiry.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\menu_locate_us.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\menu_settings.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\menu_tariff.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\menu_understanding_bill.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\mission_deselect.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\mission_select.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\overview_deselect.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\overview_select.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\splash_bg.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\tweet.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\user_icon.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\value_de_select.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\value_select.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\vission_deselect.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\vission_select.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\water_bottom_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\water_bottom_en_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\water_left_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\water_left_en_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\water_middle_bottom_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\water_middle_bottom_en_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\water_middle_top_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\water_middle_top_en_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\water_right_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\water_right_en_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\water_top_left_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\water_top_left_en_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\water_top_right_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\water_top_right_en_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\yes_i_do_dialog_box.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\yes_i_do_dialog_box_ar.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\acc_details_deselect.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\acc_details_select.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\electricity_bottom_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\electricity_bottom_en_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\electricity_left_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\electricity_left_en_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\electricity_middle_bottom_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\electricity_middle_bottom_en_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\electricity_middle_top_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\electricity_middle_top_en_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\electricity_right_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\electricity_right_en_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\electricity_top_en_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\electricity_top_left_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\electricity_top_right_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\electricity_top_right_en_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\english.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\english_de_selected.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\fb.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\header.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\header_ar.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\Icon.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\insta.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\landing_active_menu_icon.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\landing_content_bg.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\landing_footer.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\landing_header.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\landing_header_ar.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\landing_logo.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\landing_pic.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\last_bill_sum_deselect.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\last_bill_sum_select.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\last_pay_sum_deselect.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\last_pay_sum_select.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\lock_icon.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\map_icon_deselect.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\map_icon_select.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\menu_about_us.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\menu_bg.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\menu_conservation.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\menu_cus_enquiry.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\menu_locate_us.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\menu_settings.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\menu_tariff.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\menu_understanding_bill.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\mission_deselect.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\mission_select.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\overview_deselect.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\overview_select.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\splash_bg.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\tweet.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\user_icon.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\value_de_select.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\value_select.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\vission_deselect.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\vission_select.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\water_bottom_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\water_bottom_en_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\water_left_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\water_left_en_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\water_middle_bottom_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\water_middle_bottom_en_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\water_middle_top_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\water_middle_top_en_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\water_right_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\water_right_en_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\water_top_left_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\water_top_left_en_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\water_top_right_arb_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\water_top_right_en_new.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\yes_i_do_dialog_box.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\yes_i_do_dialog_box_ar.png" />
+    <AndroidResource Include="Resources\layout\MapInfoWindow.axml" />
+    <AndroidResource Include="Resources\layout\XamarinMapInfoWindow.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\direction.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_branches.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_kiosks.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_partner.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\accept_deselect.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\accept_select.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\info.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\pin.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\xamarin.png" />
+    <AndroidResource Include="raw\LocateUsNew.sqlite" />
+    <AndroidResource Include="Resources\drawable-hdpi\list_map_deselect.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\list_map_select.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\map_icon_deselect.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\map_icon_select.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\list_map_deselect.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\list_map_select.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_branches.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_kiosks.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_partner.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\ic_branches.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\ic_kiosks.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\ic_partner.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\ic_branches.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\ic_kiosks.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\ic_partner.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_branches.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_kiosks.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_partner.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_branches.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_kiosks.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_partner.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_branches.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_kiosks.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_partner.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\list_map_deselect.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\list_map_select.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\list_map_deselect.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\list_map_select.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\list_map_deselect.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\list_map_select.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\list_map_deselect.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\list_map_select.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\map_icon_deselect.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\map_icon_select.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\list_map_deselect.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\list_map_select.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\map_icon_deselect.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\map_icon_select.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\direction.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\direction.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\tab.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\tab.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\conserve_elec_deselect.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\conserve_elec_select.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\ic_action_deselect.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\ic_action_deselected_tariff.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\ic_action_select.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\ic_action_selected_tariff.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\vission.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\water_deselect.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\water_select.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\conserve_elec_deselect.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\conserve_elec_select.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\ic_action_deselect.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\ic_action_deselected_tariff.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\ic_action_select.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\ic_action_selected_tariff.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\vission.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\water_deselect.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\water_select.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\bullet_point.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\bullet_point_ar.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\bullet_point.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\bullet_point_ar.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\bullet_point.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\bullet_point_ar.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\bullet_point.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\bullet_point_ar.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\bullet_point.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\bullet_point_ar.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\bullet_point.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\bullet_point_ar.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\landing_header_ar.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\landing_header_ar.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\landing_header_ar.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\menu_friend.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\menu_history.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\menu_logout.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\menu_my_account.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\menu_my_profile.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\menu_settings.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\menu_friend.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\menu_history.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\menu_logout.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\menu_my_account.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\menu_my_profile.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\menu_settings.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\menu_friend.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\menu_history.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\menu_logout.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\menu_my_account.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\menu_my_profile.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\menu_friend.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\menu_history.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\menu_logout.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\menu_my_account.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\menu_my_profile.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\menu_friend.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\menu_history.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\menu_logout.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\menu_my_account.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\menu_my_profile.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\menu_friend.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\menu_history.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\menu_logout.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\menu_my_account.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\menu_my_profile.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\menu_settings.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\menu_friend.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\menu_history.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\menu_logout.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\menu_my_account.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\menu_my_profile.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\menu_settings.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_bill_history_deselect.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_bill_history.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_payment_history_deselect.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_payment_history.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_bill_history_deselect.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_bill_history.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\ic_action_bill_history_deselect.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\ic_action_bill_history.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\ic_action_payment_history_deselect.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp\ic_action_payment_history.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\ic_action_bill_history_deselect.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\ic_action_bill_history.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\ic_action_payment_history_deselect.png" />
+    <AndroidResource Include="Resources\drawable-sw720dp-land\ic_action_payment_history.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_bill_history_deselect.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_bill_history.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_payment_history_deselect.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_payment_history.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_bill_history_deselect.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_bill_history.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_payment_history_deselect.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_payment_history.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_action_bill_history_deselect.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_action_bill_history.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_action_payment_history_deselect.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_action_payment_history.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_payment_history.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_payment_history_deselect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Tabbar.axml" />
+    <AndroidResource Include="Resources\layout\Toolbar.axml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ADDC_MVVM\ADDC_MVVM.csproj">
+      <Project>{BBBB1A0D-CD2E-48DB-845A-805E454CE564}</Project>
+      <Name>ADDC_MVVM</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\landing_pic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\landing_pic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\landing_pic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\landing_pic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\landing_active_menu_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\landing_header.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\header_ar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\header_ar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\SplashScreen.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\landing_active_menu_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\bliss_regular.ttf" />
+    <AndroidAsset Include="Assets\bliss_bold.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\building_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\house_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_action_deselect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_action_deselected_tariff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_action_select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_action_selected_tariff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\building_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\house_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_deselect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_deselected_tariff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_selected_tariff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_selected_tariff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\building_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\house_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_deselect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_deselected_tariff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_selected_tariff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\building_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\house_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_deselect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_deselected_tariff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_selected_tariff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\building_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\house_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_deselected_tariff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\tab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\tab.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Import Project="..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />
+  <Import Project="..\..\packages\Xamarin.Forms.2.3.3.193\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.3.193\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
+</Project>

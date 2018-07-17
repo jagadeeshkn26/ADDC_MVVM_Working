@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:i18n="clr-namespace:ADDC_MVVM;assembly=ADDC_MVVM" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ADDC_MVVM.Views.editProfile">
+	<ContentPage.Padding>
+		<OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
+	</ContentPage.Padding>
+	<ContentPage.Content>
+		<RelativeLayout>
+			<StackLayout RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}">
+				<RelativeLayout VerticalOptions="Start">
+					<Image x:Name="menuBg" Source="{i18n:Translate HeaderContent}" HeightRequest="60" Aspect="Fill" />
+					<StackLayout RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, Property=Height}" HorizontalOptions="FillAndExpand">
+						<Grid VerticalOptions="Center">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="auto" />
+								<ColumnDefinition Width="1*" />
+								<ColumnDefinition Width="1*" />
+								<ColumnDefinition Width="1*" />
+								<ColumnDefinition Width="1*" />
+								<ColumnDefinition Width="1*" />
+								<ColumnDefinition Width="auto" />
+							</Grid.ColumnDefinitions>
+							<Grid.RowDefinitions>
+								<RowDefinition Height="60" />
+							</Grid.RowDefinitions>
+							<StackLayout x:Name="Header1" Grid.Row="0" Padding="10, 0, 10, 0" Grid.Column="{i18n:Translate a8}" HorizontalOptions="End" VerticalOptions="Center">
+								<Image HorizontalOptions="Fill" Source="landing_active_menu_icon.png">
+									<Image.GestureRecognizers>
+										<TapGestureRecognizer Tapped="OnTapMenu" NumberOfTapsRequired="1" />
+									</Image.GestureRecognizers>
+								</Image>
+							</StackLayout>
+							<StackLayout x:Name="Header2" Grid.Row="0" Grid.Column="{i18n:Translate b8}" Grid.ColumnSpan="3" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+								<Label Text="{i18n:Translate str_update_acc_title}" LineBreakMode="NoWrap" TextColor="Gray" Font="Bold,14" HorizontalTextAlignment="{i18n:Translate HoriExp}">
+									<Label.FontSize>
+										<OnIdiom x:TypeArguments="x:Double" Phone="15" Tablet="25" />
+									</Label.FontSize>
+									<Label.FontFamily>
+										<OnPlatform x:TypeArguments="x:String">
+											<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+											<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+										</OnPlatform>
+									</Label.FontFamily>
+								</Label>
+							</StackLayout>
+							<StackLayout x:Name="Header3" Grid.Row="0" Grid.Column="{i18n:Translate c8}" HorizontalOptions="End" VerticalOptions="Start" Grid.ColumnSpan="2">
+								<Button Text="Save" Font="Bold,14" TextColor="Gray" Clicked="OnSaveButtonClicked" >
+									<Button.FontSize>
+										<OnIdiom x:TypeArguments="x:Double" Phone="15" Tablet="25" />
+									</Button.FontSize>
+									<Button.FontFamily>
+										<OnPlatform x:TypeArguments="x:String">
+											<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+											<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+										</OnPlatform>
+									</Button.FontFamily>
+								</Button>
+								<!--<Label  Text="{i18n:Translate str_edit}"
+									HorizontalTextAlignment = "{i18n:Translate HoriRevExp}"
+               TextColor="Gray" Font ="Bold,14" >
+              <Label.GestureRecognizers>
+                <TapGestureRecognizer
+                        Command="OnSaveButtonClicked"
+                        NumberOfTapsRequired="1" />
+              </Label.GestureRecognizers>
+            </Label>-->
+							</StackLayout>
+						</Grid>
+					</StackLayout>
+				</RelativeLayout>
+				<ScrollView>
+				<StackLayout>
+					<StackLayout Padding="10,10,10,10" BackgroundColor="#eff8e9">
+						<StackLayout HorizontalOptions="FillAndExpand">
+							<Grid RowSpacing="10">
+								<Grid.RowDefinitions>
+									<RowDefinition Height="auto" />
+									<RowDefinition Height="auto" />
+									<RowDefinition Height="auto" />
+								</Grid.RowDefinitions>
+								<StackLayout Grid.Row="0" Grid.Column="{i18n:Translate i1}">
+									<Label Text="{i18n:Translate str_cus_id}" HorizontalTextAlignment="{i18n:Translate HoriExp}" />
+									<Label x:Name="customerID" Text="" HorizontalTextAlignment="{i18n:Translate HoriExp}">
+										<Label.FontSize>
+											<OnIdiom x:TypeArguments="x:Double" Phone="15" Tablet="25" />
+										</Label.FontSize>
+										<Label.FontFamily>
+											<OnPlatform x:TypeArguments="x:String">
+												<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+												<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+											</OnPlatform>
+										</Label.FontFamily>
+									</Label>
+								</StackLayout>
+								<StackLayout Grid.Row="0" Grid.Column="{i18n:Translate j1}">
+									<Label Text="{i18n:Translate str_update_acc_fullname}" HorizontalTextAlignment="{i18n:Translate HoriExp}">
+										<Label.FontSize>
+											<OnIdiom x:TypeArguments="x:Double" Phone="15" Tablet="25" />
+										</Label.FontSize>
+										<Label.FontFamily>
+											<OnPlatform x:TypeArguments="x:String">
+												<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+												<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+											</OnPlatform>
+										</Label.FontFamily>
+									</Label>
+									<Label x:Name="customerName" Text="" HorizontalTextAlignment="{i18n:Translate HoriExp}">
+										<Label.FontSize>
+											<OnIdiom x:TypeArguments="x:Double" Phone="15" Tablet="25" />
+										</Label.FontSize>
+										<Label.FontFamily>
+											<OnPlatform x:TypeArguments="x:String">
+												<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+												<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+											</OnPlatform>
+										</Label.FontFamily>
+									</Label>
+								</StackLayout>
+								<StackLayout Grid.Row="1" Grid.Column="{i18n:Translate i1}">
+									<Label Text="{i18n:Translate str_username_prof}" TextColor="Black" HorizontalTextAlignment="{i18n:Translate HoriExp}">
+										<Label.FontSize>
+											<OnIdiom x:TypeArguments="x:Double" Phone="15" Tablet="25" />
+										</Label.FontSize>
+										<Label.FontFamily>
+											<OnPlatform x:TypeArguments="x:String">
+												<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+												<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+											</OnPlatform>
+										</Label.FontFamily>
+									</Label>
+									<Label x:Name="userName" Text="" TextColor="Black" HorizontalTextAlignment="{i18n:Translate HoriExp}">
+										<Label.FontSize>
+											<OnIdiom x:TypeArguments="x:Double" Phone="15" Tablet="25" />
+										</Label.FontSize>
+										<Label.FontFamily>
+											<OnPlatform x:TypeArguments="x:String">
+												<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+												<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+											</OnPlatform>
+										</Label.FontFamily>
+									</Label>
+								</StackLayout>
+							</Grid>
+						</StackLayout>
+					</StackLayout>
+					<StackLayout Padding="10,10,10,10" Orientation="Vertical" HorizontalOptions="{i18n:Translate HoriExp}">
+						<Label Text="{i18n:Translate str_cont_info}" Font="10" TextColor="Black" HorizontalTextAlignment="{i18n:Translate HoriExp}">
+							<Label.FontSize>
+								<OnIdiom x:TypeArguments="x:Double" Phone="15" Tablet="25" />
+							</Label.FontSize>
+							<Label.FontFamily>
+								<OnPlatform x:TypeArguments="x:String">
+									<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+									<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+								</OnPlatform>
+							</Label.FontFamily>
+						</Label>
+						<Label Text="{i18n:Translate str_bill_language}" Font="10" TextColor="Black" HorizontalTextAlignment="{i18n:Translate HoriExp}">
+							<Label.FontSize>
+								<OnIdiom x:TypeArguments="x:Double" Phone="15" Tablet="25" />
+							</Label.FontSize>
+							<Label.FontFamily>
+								<OnPlatform x:TypeArguments="x:String">
+									<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+									<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+								</OnPlatform>
+							</Label.FontFamily>
+						</Label>
+
+
+						<StackLayout Padding=" 1, 1, 1,1" BackgroundColor="Gray" Orientation="Horizontal" HorizontalOptions="{i18n:Translate HoriExp}">
+							<Grid HorizontalOptions="Center" ColumnSpacing="2" VerticalOptions="Center">
+								<Grid.RowDefinitions>
+									<RowDefinition Height="auto" />
+								</Grid.RowDefinitions>
+								<StackLayout Grid.Row="0" Grid.Column="{i18n:Translate i1}" BackgroundColor="Gray" Padding="1, 1, 0, 1">
+								<StackLayout BackgroundColor = "White">
+									<Button x:Name="EnglishBtn" BackgroundColor="Lime" Clicked="English_Clicked" WidthRequest="75" HeightRequest= "35"  Text="english" TextColor="#545C66">
+										<Button.FontSize>
+											<OnIdiom x:TypeArguments="x:Double" Phone="15" Tablet="25" />
+										</Button.FontSize>
+										<Button.FontFamily>
+											<OnPlatform x:TypeArguments="x:String">
+												<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+												<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+											</OnPlatform>
+										</Button.FontFamily>
+									</Button>
+									</StackLayout>
+								
+									</StackLayout>
+								<StackLayout Grid.Row="0" Grid.Column="{i18n:Translate j1}"  BackgroundColor="Gray" Padding="0, 1, 1, 1">
+								<StackLayout BackgroundColor = "White">
+									<Button x:Name="ArabicBtn" Text="العربية" Clicked="Arabic_Clicked"  WidthRequest="75" HeightRequest= "35" BackgroundColor="White" TextColor="#545C66">
+										<Button.FontSize>
+											<OnIdiom x:TypeArguments="x:Double" Phone="15" Tablet="25" />
+										</Button.FontSize>
+										<Button.FontFamily>
+											<OnPlatform x:TypeArguments="x:String">
+												<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+												<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+											</OnPlatform>
+										</Button.FontFamily>
+									</Button>
+									</StackLayout>
+									</StackLayout>
+							</Grid>
+						</StackLayout>
+					</StackLayout>
+					<!--<Picker x:Name="LangPicker" Title="Select Language" HorizontalOptions="{i18n:Translate HoriExp}" SelectedIndexChanged="OnSelectingPhoneNumberType">
+						<Picker.Items>
+							<x:String>English</x:String>
+							<x:String>Arabic</x:String>
+						</Picker.Items>
+					</Picker>
+-->					<StackLayout Padding="10,10,10,10" Orientation="Vertical">
+						<Label Text="{i18n:Translate str_enter_email}" HorizontalTextAlignment="{i18n:Translate HoriExp}">
+							<Label.FontSize>
+								<OnIdiom x:TypeArguments="x:Double" Phone="15" Tablet="25" />
+							</Label.FontSize>
+							<Label.FontFamily>
+								<OnPlatform x:TypeArguments="x:String">
+									<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+									<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+								</OnPlatform>
+							</Label.FontFamily>
+						</Label>
+						<!--	<Grid VerticalOptions = "Center">
+  
+          <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+          </Grid.RowDefinitions>
+           
+ <StackLayout  BackgroundColor = "#DCDDE0" x:Name="Header"
+									Grid.Row="0"
+                       Grid.Column="{i18n:Translate a1}"
+              Grid.ColumnSpan="7"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="CenterAndExpand">
+           <Entry x:Name = "eMailID1"  
+           HorizontalOptions = "FillAndExpand"	
+			HorizontalTextAlignment = "{i18n:Translate HoriExp}"
+										VerticalOptions = "CenterAndExpand" 
+			Text="" 
+                     
+               TextColor="Gray">           
+            </Entry>
+          </StackLayout>
+  <StackLayout  Grid.Row="0" Orientation ="Horizontal" BackgroundColor = "#545C66"
+									
+                       Grid.Column="{i18n:Translate b1}"
+                       HorizontalOptions="End" 
+                       VerticalOptions="CenterAndExpand">
+            <Button  Text = "{i18n:Translate questionMark}" Font= "15" Clicked="btnDeleteRowClicked"
+										VerticalOptions = "CenterAndExpand"
+										TextColor = "White"
+									HorizontalOptions="Center"/>
+
+
+          </StackLayout>
+        </Grid>-->
+					</StackLayout>
+					<StackLayout Padding="10, 10, 10, 10">
+						<StackLayout BackgroundColor="#DCDDE0" Padding="5, 0, 5, 0">
+							<Grid>
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="1*" />
+									<ColumnDefinition Width="1*" />
+									<ColumnDefinition Width="1*" />
+									<ColumnDefinition Width="1*" />
+									<ColumnDefinition Width="1*" />
+								</Grid.ColumnDefinitions>
+								<Grid.RowDefinitions>
+									<RowDefinition Height="auto" />
+								</Grid.RowDefinitions>
+								<StackLayout Grid.Row="0" VerticalOptions="Center" Grid.Column="{i18n:Translate L1}" Grid.ColumnSpan="4">
+									<Entry BackgroundColor="Transparent" x:Name="eMailID" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Text="" Keyboard="Email" HorizontalTextAlignment="{i18n:Translate HoriExp}">
+										<Entry.FontSize>
+											<OnIdiom x:TypeArguments="x:Double" Phone="15" Tablet="25" />
+										</Entry.FontSize>
+										<Entry.FontFamily>
+											<OnPlatform x:TypeArguments="x:String">
+												<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+												<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+											</OnPlatform>
+										</Entry.FontFamily>
+									</Entry>
+								</StackLayout>
+								<StackLayout Grid.Row="0" Grid.Column="{i18n:Translate L2}" Orientation="Horizontal" BackgroundColor="#545C66" HorizontalOptions="End" VerticalOptions="CenterAndExpand">
+
+									<Button Text="{i18n:Translate questionMark}" TextColor="White" Clicked="btnDeleteRowClicked" HorizontalOptions="End">
+										<Button.FontSize>
+											<OnIdiom x:TypeArguments="x:Double" Phone="15" Tablet="25" />
+										</Button.FontSize>
+										<Button.FontFamily>
+											<OnPlatform x:TypeArguments="x:String">
+												<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+												<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+											</OnPlatform>
+										</Button.FontFamily>
+									</Button>
+								</StackLayout>
+							</Grid>
+						</StackLayout>
+					</StackLayout>
+					<StackLayout Padding="10, 10, 10, 10">
+						<ListView x:Name="listView">
+							<ListView.ItemTemplate>
+								<DataTemplate>
+									<ViewCell>
+										<Grid>
+											<StackLayout BackgroundColor="#DCDDE0" Grid.Row="0" Grid.Column="{i18n:Translate i1}" Orientation="Horizontal" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+												<Picker BackgroundColor="Transparent" x:Name="numtypePicker" Title="Phone number type" SelectedIndex="{Binding Type}" SelectedIndexChanged="OnSelectingPhoneNumberType">
+													<Picker.Items>
+														<x:String>Home</x:String>
+														<x:String>Work</x:String>
+														<x:String>Mobile</x:String>
+													</Picker.Items>
+												</Picker>
+											</StackLayout>
+											<StackLayout BackgroundColor="#DCDDE0" Orientation="Horizontal" Grid.Row="0" Grid.Column="{i18n:Translate j1}">
+												<Grid>
+													<Entry BackgroundColor="Transparent" Grid.Row="0"
+															Grid.Column="{i18n:Translate L1}" 
+															Grid.ColumnSpan="4" 
+															x:Name="phoneNumberEntry" 
+															HorizontalOptions="FillAndExpand" 
+															Text="{Binding Number}"
+															Keyboard="Default"
+															TextChanged = "Handle_TextChanged"
+															Placeholder="Phonenumber" HorizontalTextAlignment="{i18n:Translate HoriExp}">
+														<Entry.FontSize>
+															<OnIdiom x:TypeArguments="x:Double" Phone="15" Tablet="25" />
+														</Entry.FontSize>
+														<Entry.FontFamily>
+															<OnPlatform x:TypeArguments="x:String">
+																<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+																<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+															</OnPlatform>
+														</Entry.FontFamily>
+													</Entry>
+													<StackLayout Grid.Row="0" Grid.Column="{i18n:Translate L2}" Orientation="Horizontal" BackgroundColor="#545C66" HorizontalOptions="End" VerticalOptions="CenterAndExpand">
+											<!--		<Image x:Name = "DeleteRow" HorizontalOptions="Fill" Source="landing_active_menu_icon.png">
+									<Image.GestureRecognizers>
+										<TapGestureRecognizer Tapped="OnTapMenu" NumberOfTapsRequired="1" />
+									</Image.GestureRecognizers>
+								</Image>-->
+														<Button Text="X" TextColor="White" Clicked="btnDeleteRowClicked" HorizontalOptions="End" CommandParameter="{Binding .}">
+															<Button.FontSize>
+																<OnIdiom x:TypeArguments="x:Double" Phone="15" Tablet="25" />
+															</Button.FontSize>
+															<Button.FontFamily>
+																<OnPlatform x:TypeArguments="x:String">
+																	<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+																	<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+																</OnPlatform>
+															</Button.FontFamily>
+														</Button>
+													</StackLayout>
+												</Grid>
+											</StackLayout>
+										</Grid>
+									</ViewCell>
+								</DataTemplate>
+							</ListView.ItemTemplate>
+							<ListView.Footer>
+								<StackLayout Padding="5, 5, 5, 5" HorizontalOptions="Center">
+									<Button Text="{i18n:Translate str_update_acc_add}" BackgroundColor="#545C66" TextColor="White" Clicked="OnAddCardButtonClicked">
+										<Button.FontSize>
+											<OnIdiom x:TypeArguments="x:Double" Phone="15" Tablet="25" />
+										</Button.FontSize>
+										<Button.FontFamily>
+											<OnPlatform x:TypeArguments="x:String">
+												<OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+												<OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+											</OnPlatform>
+										</Button.FontFamily>
+									</Button>
+								</StackLayout>
+							</ListView.Footer>
+						</ListView>
+					</StackLayout>
+					<!-- <Button Text = "Save Profile"  Clicked="OnSaveButtonClicked" />
+  <Button Text = "Change Password"  Clicked="OnPasswordButtonClicked" />-->
+				</StackLayout>
+				</ScrollView>
+			</StackLayout>
+		</RelativeLayout>
+	</ContentPage.Content>
+</ContentPage>

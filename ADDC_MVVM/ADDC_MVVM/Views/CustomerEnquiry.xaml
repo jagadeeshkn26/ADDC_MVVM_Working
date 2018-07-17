@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ADDC_MVVM.Views.CustomerEnquiry"
+             xmlns:i18n="clr-namespace:ADDC_MVVM;assembly=ADDC_MVVM"
+			 xmlns:Common="clr-namespace:ADDC_MVVM;assembly=ADDC_MVVM"
+             xmlns:vm="clr-namespace:ADDC_MVVM.ViewModels;assembly=ADDC_MVVM">
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Text="SubmitEnquiry" Command="{Binding LoginCommandd}" />
+  </ContentPage.ToolbarItems>
+  
+<ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
+  </ContentPage.Padding>
+	<ContentPage.Content>
+	    <StackLayout VerticalOptions = "FillAndExpand"    
+        AbsoluteLayout.LayoutFlags="All"
+        AbsoluteLayout.LayoutBounds="0,0,1,1">
+ <RelativeLayout VerticalOptions="Start" >
+ 
+        <Image Source="{i18n:Translate HeaderContent}" 
+					VerticalOptions = "Start"
+					HorizontalOptions="FillAndExpand" />
+        <StackLayout HorizontalOptions = "FillAndExpand"  Padding="5,0,5,0">
+				<Grid>
+  
+          <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+          </Grid.RowDefinitions>
+          <StackLayout x:Name="Header1" Grid.Row="0"
+                       Grid.Column="{i18n:Translate a8}"
+                       HorizontalOptions="End"
+                       VerticalOptions="Center">
+            <Image HorizontalOptions="Fill" Source="landing_active_menu_icon.png" >
+              <Image.GestureRecognizers>
+                <TapGestureRecognizer
+											Command = "{Binding OnTapMenu}"
+                 
+                        NumberOfTapsRequired="1" />
+              </Image.GestureRecognizers>
+            </Image>
+          </StackLayout>
+ <StackLayout x:Name="Header2" Grid.Row="0"
+                       Grid.Column="{i18n:Translate b8}"
+              Grid.ColumnSpan="3"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand">
+           <Label  Text="{i18n:Translate str_customer_enquiry_title}" 
+                       LineBreakMode="NoWrap"
+               TextColor="Gray" Font ="Bold,14">           
+            </Label>
+          </StackLayout>
+ <StackLayout x:Name="Header3" Grid.Row="0"
+                       Grid.Column="{i18n:Translate c8}"
+                       HorizontalOptions="End"
+							
+                       VerticalOptions="Start"
+							Grid.ColumnSpan="2">
+						<!--	<Button Text = "{i18n:Translate TxtSubmit}" 
+									Font ="Bold,14"
+								TextColor="Gray"
+								Command="{Binding SubmitCommand}" />-->
+            <Label  Text="{i18n:Translate TxtSubmit}"
+									HorizontalTextAlignment = "{i18n:Translate HoriRevExp}"
+               TextColor="Gray" Font ="Bold,14" >
+              <Label.GestureRecognizers>
+                <TapGestureRecognizer
+                        Command="{Binding SubmitCommand}"
+                        NumberOfTapsRequired="1" />
+              </Label.GestureRecognizers>
+            </Label>
+          </StackLayout>
+
+        </Grid>
+					</StackLayout>
+      </RelativeLayout>
+    <StackLayout Padding = "10, 10, 10, 10" Orientation = "Vertical">
+				<StackLayout>
+    <Label Text="How can we help you?" TextColor="Black" FontSize="16" HorizontalOptions="Start"></Label>
+    
+    <Common:BindablePicker
+            Title="Select"
+            DisplayMemberPath="SystemElementName"
+            SelectedValuePath="SystemElementID"
+                    ItemsSource="{Binding SystemElementList}"
+                    SelectedValue="{Binding Path=SESelectedValue, Mode=TwoWay}"/>
+    </StackLayout>
+				<StackLayout>
+    <Label Text="Whats your email?" TextColor="Black" FontSize="16" HorizontalOptions="Start"></Label>
+    <Entry Placeholder="Enter email id" Keyboard="Text" Text="{Binding emailForEnquiry}" />
+    </StackLayout>
+				<StackLayout Orientation = "Vertical">
+				<Label Text="Select Account" 
+						TextColor="Black"
+						FontSize="16"
+						HorizontalOptions="Start"></Label>
+
+					<StackLayout HorizontalOptions = "Center"
+							Orientation = "Horizontal">
+						<StackLayout x:Name="Yes" Orientation = "Vertical">
+							<Image x:Name="YesImg" HeightRequest ="100" Source = "circle_1.png"></Image>
+							<Label Text="Yes"
+								TextColor="Green"
+									HorizontalOptions = "Center" FontSize="16"></Label>
+							<StackLayout.GestureRecognizers>
+								<TapGestureRecognizer
+									Tapped="YesButtonClicked"
+									NumberOfTapsRequired="1" />
+							</StackLayout.GestureRecognizers>
+						</StackLayout>
+						<StackLayout x:Name="No" Orientation = "Vertical">
+							<Image x:Name="NoImg" HeightRequest ="100" Source = "circle_2.png"></Image>
+							<Label Text="No"
+								TextColor="Green"
+									HorizontalOptions = "Center" FontSize="16"></Label>
+							<StackLayout.GestureRecognizers>
+								<TapGestureRecognizer
+									Tapped="NoButtonClicked"
+									NumberOfTapsRequired="1" />
+							</StackLayout.GestureRecognizers>
+						</StackLayout>
+						<StackLayout x:Name="Dono" Orientation = "Vertical">
+							<Image x:Name="DonoImg" HeightRequest ="100" Source = "circle_2.png"></Image>
+							<Label Text="Dono"
+								TextColor="Green"
+									HorizontalOptions = "Center" FontSize="16"></Label>
+							<StackLayout.GestureRecognizers>
+								<TapGestureRecognizer
+									Tapped = "DonoButtonClicked"
+									NumberOfTapsRequired="1" />
+							</StackLayout.GestureRecognizers>
+						</StackLayout>
+					</StackLayout>
+				</StackLayout>
+
+				<StackLayout x:Name="SelAcc" IsVisible = "true">
+    				<Label Text="Select Account" TextColor="Black" FontSize="16" HorizontalOptions="Start"></Label>
+    				<Common:BindablePicker
+            		Title="Select"
+           			DisplayMemberPath="SystemElementName"
+            		SelectedValuePath="SystemElementID"
+                    ItemsSource="{Binding ACCElementList}"
+                    SelectedValue="{Binding Path=ACSelectedValue, Mode=TwoWay}"/>
+                    </StackLayout>
+				<StackLayout>
+    <Label Text="Please enter your message" TextColor="Black" FontSize="16" HorizontalOptions="Start"></Label>
+    <Entry Placeholder="Message" Keyboard="Text" Text="{Binding msgForEnquiry}" />
+    </StackLayout>
+					<Button x:Name="SubmitEnquiry" 
+                  Text="SubmitEnquiry"
+            
+                  Command="{Binding SubmitCommand}">
+    </Button>
+    <RelativeLayout>
+      <ActivityIndicator IsRunning="{Binding IsBusy}"/>
+    </RelativeLayout>
+  </StackLayout>
+</StackLayout>
+  </ContentPage.Content>
+  
+</ContentPage>

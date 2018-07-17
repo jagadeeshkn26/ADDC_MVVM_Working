@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:ADDC_MVVM.ViewModels;assembly=ADDC_MVVM"
+             x:Class="ADDC_MVVM.Views.accountDetails"
+             Title="Enter your account details">
+   <ContentPage.BindingContext>
+    <vm:AccountDetailsMainViewModel/>
+  </ContentPage.BindingContext>
+  <ContentPage.Content>
+  <ScrollView BackgroundColor="White">
+    <StackLayout>
+      <StackLayout Orientation="Horizontal" BackgroundColor="Green">
+        <StackLayout HorizontalOptions="StartAndExpand">
+          <Label Text="Customer ID" TextColor="Black"/>
+          <Label Text="{Binding Customer.cust_ID}" TextColor="Black"/>
+        </StackLayout>
+        <StackLayout HorizontalOptions="EndAndExpand">
+          <Label Text="Full Name" TextColor="Black"/>
+          <Label Text="{Binding Customer.cust_Name}" TextColor="Black"/>
+        </StackLayout>
+      </StackLayout>
+      <Label Text="Create log in information" HorizontalOptions="Center" TextColor="Black" FontAttributes="Bold"/>
+      <Label Text="All the fields are mandatory" HorizontalOptions="Center" TextColor="Black"/>
+      <Label Text="Enter your username" HorizontalTextAlignment="Start" TextColor="Black" FontAttributes="Bold"/>
+      <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+        <Entry Text="{Binding Customer.cust_Username}" HorizontalOptions="FillAndExpand"   Keyboard="Text" BackgroundColor="Gray"/>
+        <Button Text="?" HeightRequest="50" WidthRequest="50" HorizontalOptions="End"/>
+      </StackLayout>
+      <Label Text="*Please note: This username will be used for account log in " TextColor="Black"/>
+      <Label Text="Enter your Email-ID" HorizontalTextAlignment="Start" TextColor="Black" FontAttributes="Bold"/>
+      <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+        <Entry Text="{Binding Customer.cust_EmailID}" HorizontalOptions="FillAndExpand" Keyboard="Email" BackgroundColor="Gray"/>
+        <Button Text="?" HeightRequest="50" WidthRequest="50" HorizontalOptions="End"/>
+      </StackLayout>
+      <Label Text="Enter your Mobile Number" TextColor="Black" HorizontalTextAlignment="Start" FontAttributes="Bold"/>
+      <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+        <Entry Text="{Binding Customer.cust_mobileNumber}" HorizontalOptions="FillAndExpand" Keyboard="Telephone" BackgroundColor="Gray"/>
+        <Button Text="?" HeightRequest="50" WidthRequest="50" HorizontalOptions="End"/>
+      </StackLayout>
+      <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+        <StackLayout HorizontalOptions="FillAndExpand">
+          <Label Text="Type password" TextColor="Black" HorizontalOptions="Center"/>
+          <Entry Text="{Binding Customer.cust_passWord}" Keyboard="Default" IsPassword="True" BackgroundColor="Gray" HorizontalOptions="Fill"/>
+        </StackLayout>
+        <StackLayout HorizontalOptions="FillAndExpand">
+          <Label Text="Confirm password" TextColor="Black" HorizontalOptions="Center"/>
+          <Entry Text="{Binding Customer.cust_confirmPassWord}" Keyboard="Default" IsPassword="True" BackgroundColor="Gray" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+        <Button Text="?" HeightRequest="50" WidthRequest="50" HorizontalOptions="End"/>
+      </StackLayout>
+      <Label Text="Select a secret question" TextColor="Black" HorizontalTextAlignment="Start" FontAttributes="Bold" />
+      <Label Text="To make it easier to retrieve your password,select a personal question that only you'll know answer to"
+             TextColor="Black" HorizontalTextAlignment="Start" LineBreakMode="NoWrap"/>
+      <Picker BackgroundColor="Aqua">
+        <Picker.Items>
+        <x:String>Your favourite colour</x:String>
+        <x:String>Your first Car</x:String>
+        </Picker.Items>
+      </Picker>
+      <Label Text="Answer" TextColor="Black" HorizontalTextAlignment="Start" FontAttributes="Bold"/>
+      <Entry Text="{Binding cust_SecretQAns}" HorizontalOptions="FillAndExpand" BackgroundColor="Gray"/>
+      <Button Text="Create Json file"  HorizontalOptions="Center" Command="{Binding CreateJSON}"/>
+    </StackLayout>    
+  </ScrollView>
+  </ContentPage.Content>
+</ContentPage>

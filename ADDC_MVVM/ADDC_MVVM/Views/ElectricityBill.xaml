@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ADDC_MVVM.Views.ElectricityBill"
+             xmlns:i18n="clr-namespace:ADDC_MVVM;assembly=ADDC_MVVM"
+             Title="{i18n:Translate ElectricityBillTitle}"
+		xmlns:Common="clr-namespace:ADDC_MVVM;assembly=ADDC_MVVM"
+            x:Name="ElectricityBill" >
+            <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
+  </ContentPage.Padding>
+  <ContentPage.Content>
+   		  <RelativeLayout
+			>
+
+  <StackLayout BackgroundColor = "White" RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Height}" >  
+   
+
+			   <RelativeLayout VerticalOptions="Start" >
+ 
+        <Image x:Name = "menuBg" Source="{i18n:Translate HeaderContent}" 
+				 Aspect = "Fill"/>
+	        <StackLayout RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToView, Property=Height}" HorizontalOptions = "FillAndExpand">
+					<Grid VerticalOptions ="Center" >
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="auto" />
+          </Grid.ColumnDefinitions>
+
+          <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+          </Grid.RowDefinitions>
+           <StackLayout x:Name="Header1" Grid.Row="0" Padding = "10, 0, 10, 0"
+	                       Grid.Column="{i18n:Translate a8}"
+	                       VerticalOptions="Center">
+	            <Image  Source="{i18n:Translate back_button}" >
+	              <Image.GestureRecognizers>
+	                <TapGestureRecognizer
+	                        Tapped ="OnTapMenu"
+	                        NumberOfTapsRequired="1" />
+	              </Image.GestureRecognizers>
+	            </Image>
+	          </StackLayout>
+	          <StackLayout Grid.Row="0"
+                       Grid.Column="{i18n:Translate b8}"
+              Grid.ColumnSpan="3"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand">
+           <Label  Text="{i18n:Translate str_elec_bill}" 
+                       LineBreakMode="NoWrap"
+               TextColor="#545b66" Font = "1, bold" >   
+																	<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+					<Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Label.FontFamily>
+            </Label>
+          </StackLayout>
+          </Grid>
+        </StackLayout>
+      </RelativeLayout>
+
+      <ScrollView x:Name="Stack"
+              VerticalOptions="StartAndExpand"
+              HorizontalOptions="StartAndExpand">
+
+          <Grid x:Name="Stacklyt2" Padding = "10, 0, 10, 0" ColumnSpacing = "10" RowSpacing = "10" >
+
+            <Grid.RowDefinitions>
+              <RowDefinition Height="1*" />
+              <RowDefinition Height="2*" />
+              <RowDefinition Height="0.7*" />
+            </Grid.RowDefinitions>
+
+            <Grid x:Name = "rowHeight1" Grid.Row="0" ColumnSpacing = "10" RowSpacing = "10">
+
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+               <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+              </Grid.ColumnDefinitions>
+
+      <Frame HasShadow ="false" OutlineColor="Accent" Padding="2" BackgroundColor="Green"  Grid.Column="0" >
+                  
+                    
+                     <Image Source="{i18n:Translate EImage1}"
+                        
+                        Aspect="Fill"
+                        BackgroundColor="White">
+                      
+                        <Image.GestureRecognizers>
+                             <TapGestureRecognizer Tapped="OnTapImage1"
+                                        NumberOfTapsRequired="1"/>
+                         </Image.GestureRecognizers>
+                    </Image>
+
+                  
+      </Frame>        
+             
+
+              <BoxView BackgroundColor="Transparent"
+                       Grid.Column="1" Grid.ColumnSpan = "2" >
+                <BoxView.GestureRecognizers>
+                  <TapGestureRecognizer Tapped="OnEmptyGridTap"
+                                        NumberOfTapsRequired="1"/>
+                </BoxView.GestureRecognizers>
+                
+              </BoxView>
+
+              <Frame HasShadow ="false"  OutlineColor="Accent" Padding="2" BackgroundColor="Green" Grid.Column="3" >
+                <Image Source="{i18n:Translate EImage2}"
+                    
+                       BackgroundColor="White"
+                       Aspect="AspectFit">
+
+                  <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTapImage2"
+                                          NumberOfTapsRequired="1"/>
+                  </Image.GestureRecognizers>
+
+                </Image>
+
+              </Frame>
+            
+            </Grid>
+
+            <Grid x:Name = "rowHeight2" ColumnSpacing = "10" RowSpacing = "10" Grid.Row="1">
+
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="1*" />
+              </Grid.ColumnDefinitions>
+
+              <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+              </Grid.RowDefinitions>
+
+
+              <Frame HasShadow ="false"  OutlineColor="Accent" Padding="2" BackgroundColor="Green" Grid.Row="0"
+                       Grid.Column="0"
+                       Grid.RowSpan = "3">
+                <Image 
+                       Source="{i18n:Translate EImage3}"
+                       BackgroundColor="White"
+                       Aspect="Fill">
+
+                  <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTapImage3"
+                                          NumberOfTapsRequired="1"/>
+                  </Image.GestureRecognizers>
+                </Image>
+              </Frame>
+
+              <Frame HasShadow ="false"  OutlineColor="Accent" Padding="2" BackgroundColor="Green" Grid.Row="0"
+                       Grid.Column="1"
+                       Grid.RowSpan="2">
+
+                <Image
+                       Source="{i18n:Translate EImage4}"
+                       BackgroundColor="White"
+                       Aspect="Fill">
+
+                  <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTapImage4"
+                                          NumberOfTapsRequired="1"/>
+                  </Image.GestureRecognizers>
+
+                </Image>
+              </Frame>
+
+              <Frame HasShadow ="false"  OutlineColor="Accent" Padding="2" BackgroundColor="Green" Grid.Row="2"
+                       Grid.Column="1"
+                       Grid.RowSpan="1" >
+
+                <Image 
+                       Source="{i18n:Translate EImage5}"
+                       Aspect="Fill"
+                       BackgroundColor="White" >
+
+                  <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTapImage5"
+                                          NumberOfTapsRequired="1"/>
+                  </Image.GestureRecognizers>
+                </Image>
+              </Frame>
+
+
+              <Frame HasShadow ="false"  OutlineColor="Accent" Padding="2" BackgroundColor="Green" Grid.Row="0"
+                       Grid.Column="2"
+                       Grid.RowSpan="3" >
+                <Image 
+                       Source="{i18n:Translate EImage6}"
+                       Aspect="Fill"
+                       BackgroundColor="White" >
+                  <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTapImage6"
+                                         NumberOfTapsRequired="1"/>
+                  </Image.GestureRecognizers>
+
+                </Image>
+              </Frame>
+
+            </Grid>
+
+            <Grid x:Name = "rowHeight3" Grid.Row="2">
+
+              <Frame HasShadow ="false"  OutlineColor="Accent" Padding="2" BackgroundColor="Green" >
+                <Image Source="{i18n:Translate EImage7}"
+                       BackgroundColor="White"
+                        Aspect="Fill">
+
+                  <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTapImage7"
+                                          NumberOfTapsRequired="1"/>
+                  </Image.GestureRecognizers>
+
+                </Image>
+              </Frame>
+
+            </Grid>
+
+          </Grid>
+
+                             </ScrollView>
+                             </StackLayout>
+					</RelativeLayout>
+
+  </ContentPage.Content>
+  
+  
+  
+  
+</ContentPage>

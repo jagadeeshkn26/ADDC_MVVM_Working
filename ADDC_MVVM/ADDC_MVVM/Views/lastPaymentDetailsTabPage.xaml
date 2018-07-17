@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:i18n="clr-namespace:ADDC_MVVM;assembly=ADDC_MVVM"
+             x:Class="ADDC_MVVM.Views.lastPaymentDetailsTabPage"
+             xmlns:vm="clr-namespace:ADDC_MVVM.ViewModels;assembly=ADDC_MVVM"
+             Title="Last payment details">
+	<ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
+  </ContentPage.Padding>
+	<ContentPage.Content>
+	    <StackLayout VerticalOptions = "FillAndExpand"    
+        AbsoluteLayout.LayoutFlags="All"
+        AbsoluteLayout.LayoutBounds="0,0,1,1">
+ <RelativeLayout VerticalOptions="Start" >
+ 
+        <Image Source="{i18n:Translate BorderdesignTop}" VerticalOptions = "CenterAndExpand" HorizontalOptions="FillAndExpand" />
+        <StackLayout HorizontalOptions = "FillAndExpand">
+				<Grid>
+      <!--    <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+          <ColumnDefinition Width="1*" />
+          </Grid.ColumnDefinitions>-->
+
+          <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+          </Grid.RowDefinitions>
+          <StackLayout x:Name="Header1" Grid.Row="0"
+                       Grid.Column="{i18n:Translate a8}"
+                       HorizontalOptions="End"
+                       VerticalOptions="Center"
+                       Padding="5,12,5,12">
+            <Image HorizontalOptions="Fill" Source="landing_active_menu_icon.png" >
+              <Image.GestureRecognizers>
+                <TapGestureRecognizer
+                        Command="{Binding OnTapMenu}"
+                        NumberOfTapsRequired="1" />
+              </Image.GestureRecognizers>
+            </Image>
+          </StackLayout>
+ <StackLayout x:Name="Header2" Grid.Row="0"
+                       Grid.Column="{i18n:Translate b8}"
+              Grid.ColumnSpan="3"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       Padding="12,12,12,12">
+           <Label  Text="{i18n:Translate my_profile}" 
+                       LineBreakMode="NoWrap"
+               TextColor="Gray" Font="Bold,14">           
+            </Label>
+          </StackLayout>
+ <StackLayout x:Name="Header3" Grid.Row="0"
+                       Grid.Column="{i18n:Translate c8}"
+                       HorizontalOptions="End"
+							
+                       VerticalOptions="Center"
+							Grid.ColumnSpan="2"
+                       Padding="12,12,12,12">
+            <Label  Text=""
+               TextColor="Gray" Font="Bold,14" >
+              <Label.GestureRecognizers>
+                <TapGestureRecognizer
+                        Command="{Binding OneditClicked}"
+                        NumberOfTapsRequired="1" />
+              </Label.GestureRecognizers>
+            </Label>
+          </StackLayout>
+
+        </Grid>
+					</StackLayout>
+      </RelativeLayout>
+  <StackLayout x:Name="Last_Pay" BackgroundColor = "#eff8e9" >
+
+    <StackLayout Orientation="Horizontal" BackgroundColor="Green">
+    <StackLayout Padding ="5, 5, 5, 5" >
+      <StackLayout HorizontalOptions="StartAndExpand">
+        <Label Text="Payment Date"/>
+        <Label Text="{Binding date}"/>
+      </StackLayout>
+
+      <StackLayout HorizontalOptions="CenterAndExpand">
+        <Label Text="Transaction ID"/>
+        <Label Text="{Binding transactionID}"/>
+      </StackLayout>
+
+      <StackLayout HorizontalOptions="EndAndExpand">
+        <Label Text="Paid Amount"/>
+        <Label Text="{Binding paidAmount}"/>
+      </StackLayout>
+      </StackLayout>
+    </StackLayout>
+
+  </StackLayout>
+  </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

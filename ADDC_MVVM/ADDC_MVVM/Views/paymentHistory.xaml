@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ADDC_MVVM.Views.paymentHistory"
+             Title="Payment history">
+
+  <StackLayout>
+    <StackLayout>
+      <Label Text="Choose account"/>
+      <Picker x:Name ="Accountname" Title="Account number">
+       
+      </Picker>
+    </StackLayout>
+    <ListView ItemsSource="{Binding paymentHistoryItems}"
+              VerticalOptions="FillAndExpand"
+              HasUnevenRows="true"
+              IsPullToRefreshEnabled="true">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <Grid>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+              </Grid.ColumnDefinitions>
+              <StackLayout Grid.Column="0">
+                <Label Text="Account number"/>
+                <Label Text="{Binding AccountNumber }"/>
+                <Label Text="Payment date"/>
+                <Label Text="{Binding PaymentDate  }"/>
+              </StackLayout>
+              <StackLayout Grid.Column="1">
+                <Label Text="Paid Amount "/>
+                <Label Text="{Binding PaidAmount }"/>
+                <Label Text="Transaction ID"/>
+                <Label Text="{Binding TransactionID }"/>
+              </StackLayout>
+            </Grid>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+  
+</ContentPage>

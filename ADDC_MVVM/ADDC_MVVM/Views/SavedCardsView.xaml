@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:i18n="clr-namespace:ADDC_MVVM;assembly=ADDC_MVVM"
+              xmlns:vm="clr-namespace:ADDC_MVVM.ViewModels;assembly=ADDC_MVVM"
+             xmlns:Common="clr-namespace:ADDC_MVVM;assembly=ADDC_MVVM"
+             x:Class="ADDC_MVVM.Views.SavedCardsView">
+  <ContentPage.BindingContext>
+    <vm:SavedCardsViewModel/>
+  </ContentPage.BindingContext>
+	<ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
+  </ContentPage.Padding>
+  <ContentPage.Content>
+    <StackLayout>
+     <RelativeLayout VerticalOptions="Start" >
+ 
+        <Image Source="{i18n:Translate BorderdesignTop}" VerticalOptions = "CenterAndExpand" HorizontalOptions="FillAndExpand" />
+        <StackLayout HorizontalOptions = "FillAndExpand">
+				<Grid>
+      <!--    <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+          <ColumnDefinition Width="1*" />
+          </Grid.ColumnDefinitions>-->
+
+          <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+          </Grid.RowDefinitions>
+          <StackLayout x:Name="Header1" Grid.Row="0"
+                       Grid.Column="{i18n:Translate a8}"
+                       HorizontalOptions="End"
+                       VerticalOptions="Center"
+                       Padding="5,12,5,12">
+            <Image HorizontalOptions="Fill" Source="landing_active_menu_icon.png" >
+              <Image.GestureRecognizers>
+                <TapGestureRecognizer
+                        Command="{Binding OnTapMenu}"
+                        NumberOfTapsRequired="1" />
+              </Image.GestureRecognizers>
+            </Image>
+          </StackLayout>
+ <StackLayout x:Name="Header2" Grid.Row="0"
+                       Grid.Column="{i18n:Translate b8}"
+              Grid.ColumnSpan="3"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       Padding="12,12,12,12">
+           <Label  Text="{i18n:Translate str_select_pay_mode}" 
+                       LineBreakMode="NoWrap"
+               TextColor="Gray" Font="Bold,14">           
+            </Label>
+          </StackLayout>
+ <StackLayout x:Name="Header3" Grid.Row="0"
+                       Grid.Column="{i18n:Translate c8}"
+                       HorizontalOptions="End"
+							
+                       VerticalOptions="Center"
+							Grid.ColumnSpan="2"
+                       Padding="12,12,12,12">
+            <Label  Text=" "
+               TextColor="Gray" Font="Bold,14" >
+            </Label>
+          </StackLayout>
+
+        </Grid>
+					</StackLayout>
+      </RelativeLayout>
+			<StackLayout Padding="2,2,2,2" BackgroundColor = "Olive">
+      <ListView ItemsSource="{Binding getSavedCardRes}"
+         VerticalOptions="FillAndExpand"
+         HasUnevenRows="true"
+         ItemSelected="OnItemSelected"
+         IsPullToRefreshEnabled="true"
+          
+         x:Name="SessionsListView">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <StackLayout.Padding>
+                  <OnPlatform x:TypeArguments="Thickness"
+                              iOS="10"
+                              Android="10"
+                              WinPhone="0, 0, 0, 10" />
+                </StackLayout.Padding>
+                <Button x:Name="RadBtn"  Text = "" 
+										Clicked="btnSelClicked"
+										HeightRequest="30"
+										WidthRequest="30" 
+										HorizontalOptions="End" 
+										BackgroundColor="Silver" 
+										CommandParameter="{Binding .}"/>
+
+                <StackLayout Orientation="Vertical">
+                  <Label Text="AccountNumber"></Label>
+                  <Label Text="{Binding Brand}"
+                      LineBreakMode="NoWrap"
+                      FontSize="16"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                  <Label Text="Out standing bill"></Label>
+                  <Label Text="{Binding Number}"
+                         LineBreakMode="NoWrap"
+                         FontSize="13"/>
+                </StackLayout>
+                <Image x:Name="HeroImage" Aspect="AspectFill"
+                       Source="icon.png" HeightRequest="20"
+                          />
+              </StackLayout>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+				<ListView.Footer>
+					<StackLayout
+							Orientation="Vertical" 
+							HorizontalOptions = "Center" >
+        <Button  Text = "{i18n:Translate action_pay_now}"
+							
+								BackgroundColor = "Green"
+								HorizontalOptions = "Center"
+								TextColor = "White"
+                         Command="{Binding btnPayBill}"
+                         />
+      </StackLayout>
+				</ListView.Footer>
+      </ListView>
+      </StackLayout>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

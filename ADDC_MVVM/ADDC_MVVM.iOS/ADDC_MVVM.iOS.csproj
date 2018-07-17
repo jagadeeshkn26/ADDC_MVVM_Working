@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{126EB4E4-2495-47AE-8BA2-83642CAC4138}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ADDC_MVVM.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>ADDC_MVVMiOS</AssemblyName>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignProvision>49ac7daa-bf50-4c18-9295-84a3479c2b1b</CodesignProvision>
+    <CodesignKey>iPhone Distribution: Abu Dhabi Distribution Company (Y56FAESQVZ)</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignProvision></CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Distribution: Abu Dhabi Distribution Company (Y56FAESQVZ)</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignProvision>49ac7daa-bf50-4c18-9295-84a3479c2b1b</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <BuildIpa>True</BuildIpa>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="LocaleService.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <None Include="app.config" />
+    <None Include="Entitlements.plist" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <ITunesArtwork Include="iTunesArtwork" />
+    <ITunesArtwork Include="iTunesArtwork@2x" />
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+    <None Include="packages.config" />
+    <Compile Include="HybridWebViewRenderer.cs" />
+    <BundleResource Include="Resources\.DS_Store" />
+    <BundleResource Include="Resources\user_icon.png" />
+    <BundleResource Include="Resources\lock_icon.png" />
+    <BundleResource Include="Resources\dropdown.png" />
+    <BundleResource Include="Resources\forword_button.png" />
+    <BundleResource Include="Resources\forword_button_ar.png" />
+    <BundleResource Include="Resources\landing_footer.png" />
+    <BundleResource Include="Resources\electricity_bottom_arb_new.png" />
+    <BundleResource Include="Resources\electricity_bottom_en_new.png" />
+    <BundleResource Include="Resources\electricity_left_arb_new.png" />
+    <BundleResource Include="Resources\electricity_left_en_new.png" />
+    <BundleResource Include="Resources\electricity_middle_bottom_arb_new.png" />
+    <BundleResource Include="Resources\electricity_middle_bottom_en_new.png" />
+    <BundleResource Include="Resources\electricity_middle_top_arb_new.png" />
+    <BundleResource Include="Resources\electricity_middle_top_en_new.png" />
+    <BundleResource Include="Resources\electricity_right_arb_new.png" />
+    <BundleResource Include="Resources\electricity_right_en_new.png" />
+    <BundleResource Include="Resources\electricity_top_en_new.png" />
+    <BundleResource Include="Resources\electricity_top_left_arb_new.png" />
+    <BundleResource Include="Resources\electricity_top_right_arb_new.png" />
+    <BundleResource Include="Resources\electricity_top_right_en_new.png" />
+    <BundleResource Include="Resources\water_bottom_arb_new.png" />
+    <BundleResource Include="Resources\water_bottom_en_new.png" />
+    <BundleResource Include="Resources\water_left_arb_new.png" />
+    <BundleResource Include="Resources\water_left_en_new.png" />
+    <BundleResource Include="Resources\water_middle_bottom_arb.png" />
+    <BundleResource Include="Resources\water_middle_bottom_en_new.png" />
+    <BundleResource Include="Resources\water_middle_top_arb_new.png" />
+    <BundleResource Include="Resources\water_middle_top_en_new.png" />
+    <BundleResource Include="Resources\water_right_arb_new.png" />
+    <BundleResource Include="Resources\water_right_en_new.png" />
+    <BundleResource Include="Resources\water_top_left_arb_new.png" />
+    <BundleResource Include="Resources\water_top_left_en_new.png" />
+    <BundleResource Include="Resources\water_top_right_arb_new.png" />
+    <BundleResource Include="Resources\water_top_right_en_new.png" />
+    <BundleResource Include="Resources\backgroundmain.jpg" />
+    <BundleResource Include="Resources\backgroundtop.png" />
+    <BundleResource Include="Resources\selecticon.png" />
+    <BundleResource Include="Resources\water_middle_bottom_arb_new.png" />
+    <BundleResource Include="Resources\right_arb_new.png" />
+    <BundleResource Include="Resources\right_en_new.png" />
+    <BundleResource Include="Resources\top_en_new.png" />
+    <BundleResource Include="Resources\top_left_arb_new.png" />
+    <BundleResource Include="Resources\top_right_arb_new.png" />
+    <BundleResource Include="Resources\top_right_en_new.png" />
+    <BundleResource Include="Resources\water_top_en_new.png" />
+    <BundleResource Include="Resources\electricity_icon.png" />
+    <BundleResource Include="Resources\water_icon.png" />
+    <BundleResource Include="Resources\edit.png" />
+    <BundleResource Include="Resources\circle_2-1.png" />
+    <BundleResource Include="Resources\circle_2-2.png" />
+    <BundleResource Include="Resources\circle_2.png" />
+    <BundleResource Include="Resources\circle_1-1.png" />
+    <BundleResource Include="Resources\circle_1-2.png" />
+    <BundleResource Include="Resources\circle_1.png" />
+    <BundleResource Include="Resources\acc_details_deselect.png" />
+    <BundleResource Include="Resources\acc_details_select.png" />
+    <BundleResource Include="Resources\last_pay_sum_deselect.png" />
+    <BundleResource Include="Resources\last_pay_sum_select.png" />
+    <BundleResource Include="Resources\last_bill_sum_deselect.png" />
+    <BundleResource Include="Resources\last_bill_sum_select.png" />
+    <BundleResource Include="Resources\confirm_pay_deselect.png" />
+    <BundleResource Include="Resources\tick.png" />
+    <BundleResource Include="Resources\next_icon.png" />
+    <BundleResource Include="Resources\next_icon_ar.png" />
+    <BundleResource Include="Resources\landing_header_ar.png" />
+    <BundleResource Include="Resources\landing.png" />
+    <BundleResource Include="Resources\landing_ar.png" />
+    <BundleResource Include="Resources\landing%403x.png" />
+    <BundleResource Include="Resources\landing_ar%403x.png" />
+    <BundleResource Include="Resources\landing%402x.png" />
+    <BundleResource Include="Resources\landing_ar%402x.png" />
+    <BundleResource Include="Resources\landing_ar-Portrait.png" />
+    <BundleResource Include="Resources\landing-Portrait.png" />
+    <BundleResource Include="Resources\landing_content_bg2.png" />
+    <BundleResource Include="Resources\account_bg_ar.png" />
+    <BundleResource Include="Resources\account_bg.png" />
+    <BundleResource Include="Resources\menu_bg_ar.png" />
+    <BundleResource Include="Resources\yes_i_do_dialog_box_ar.png" />
+    <BundleResource Include="Resources\yes_i_do_dialog_box.png" />
+    <None Include="Info.plist" />
+    <BundleResource Include="Resources\bliss_regular.ttf" />
+    <BundleResource Include="Resources\water_deselect.png" />
+    <BundleResource Include="Resources\water_select.png" />
+    <BundleResource Include="Resources\conserve_elec_deselect.png" />
+    <BundleResource Include="Resources\conserve_elec_select.png" />
+    <BundleResource Include="Resources\bullet_point.png" />
+    <BundleResource Include="Resources\bullet_point_ar.png" />
+    <BundleResource Include="Resources\back_button.png" />
+    <BundleResource Include="Resources\back_button_ar.png" />
+    <BundleResource Include="Resources\bliss_bold.ttf" />
+    <Compile Include="CustomMapRenderer.cs" />
+    <Compile Include="SqliteService.cs" />
+    <BundleResource Include="Resources\LocateUsNew.sqlite" />
+    <BundleResource Include="Resources\pin.png" />
+    <BundleResource Include="Resources\xamarin.png" />
+    <Compile Include="CustomMKAnnotationView.cs" />
+    <BundleResource Include="Resources\branch.png" />
+    <BundleResource Include="Resources\kiosk.png" />
+    <BundleResource Include="Resources\patren.png" />
+    <BundleResource Include="Resources\ic_branches.png" />
+    <BundleResource Include="Resources\ic_kiosks.png" />
+    <BundleResource Include="Resources\ic_partner.png" />
+    <BundleResource Include="Resources\accept_deselect.png" />
+    <BundleResource Include="Resources\accept_select.png" />
+    <BundleResource Include="Resources\direction.png" />
+    <BundleResource Include="Resources\list_map_deselect.png" />
+    <BundleResource Include="Resources\list_map_select.png" />
+    <BundleResource Include="Resources\map_icon_deselect.png" />
+    <BundleResource Include="Resources\map_icon_select.png" />
+    <BundleResource Include="Resources\ic_action_deselect.png" />
+    <BundleResource Include="Resources\ic_action_deselected_tariff.png" />
+    <BundleResource Include="Resources\ic_action_select.png" />
+    <BundleResource Include="Resources\ic_action_selected_tariff.png" />
+    <BundleResource Include="Resources\building_icon.png" />
+    <BundleResource Include="Resources\house_icon.png" />
+    <BundleResource Include="Resources\ic_action_electricity_consumption.png" />
+    <BundleResource Include="Resources\ic_action_water_consumption_icon.png" />
+    <BundleResource Include="Resources\AppIcons\8ox8o.png" />
+    <BundleResource Include="Resources\AppIcons\29x29.png" />
+    <BundleResource Include="Resources\AppIcons\40x40.png" />
+    <BundleResource Include="Resources\AppIcons\58x58-1.png" />
+    <BundleResource Include="Resources\AppIcons\58x58.png" />
+    <BundleResource Include="Resources\AppIcons\76x76.png" />
+    <BundleResource Include="Resources\AppIcons\80x80.png" />
+    <BundleResource Include="Resources\AppIcons\87x87.png" />
+    <BundleResource Include="Resources\AppIcons\120x120-1.png" />
+    <BundleResource Include="Resources\AppIcons\120x120.png" />
+    <BundleResource Include="Resources\AppIcons\152x152.png" />
+    <BundleResource Include="Resources\AppIcons\180x180.png" />
+    <BundleResource Include="Resources\header_ar.png" />
+    <BundleResource Include="Resources\menu_logout.png" />
+    <BundleResource Include="Resources\menu_my_account.png" />
+    <BundleResource Include="Resources\menu_my_profile.png" />
+    <BundleResource Include="Resources\menu_settings.png" />
+    <BundleResource Include="Resources\menu_history.png" />
+    <BundleResource Include="Resources\menu_friend.png" />
+    <BundleResource Include="Resources\ic_action_bill_history_deselect.png" />
+    <BundleResource Include="Resources\ic_action_bill_history.png" />
+    <BundleResource Include="Resources\ic_action_payment_history_deselect.png" />
+    <BundleResource Include="Resources\ic_action_payment_history.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\landing_pic-60%402x.png" />
+    <BundleResource Include="Resources\landing_pic%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="ExifLib, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ExifLib.PCL.1.0.1\lib\portable-net45+sl50+win+WindowsPhoneApp81+wp80+Xamarin.iOS10+MonoAndroid10+MonoTouch10\ExifLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ModernHttpClient, Version=2.4.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\modernhttpclient.2.4.2\lib\Xamarin.iOS10\ModernHttpClient.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.3.193\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform">
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.3.193\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.iOS">
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.3.193\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.3.193\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Rg.Plugins.Popup">
+      <HintPath>..\..\packages\Rg.Plugins.Popup.1.0.4\lib\Xamarin.IOS\Rg.Plugins.Popup.dll</HintPath>
+    </Reference>
+    <Reference Include="Rg.Plugins.Popup.IOS">
+      <HintPath>..\..\packages\Rg.Plugins.Popup.1.0.4\lib\Xamarin.IOS\Rg.Plugins.Popup.IOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Rg.Plugins.Popup.Platform">
+      <HintPath>..\..\packages\Rg.Plugins.Popup.1.0.4\lib\Xamarin.IOS\Rg.Plugins.Popup.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite.Net">
+      <HintPath>..\..\packages\SQLite.Net.Core-PCL.3.1.1\lib\portable-win8+net45+wp8+wpa81+MonoAndroid1+MonoTouch1\SQLite.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite.Net.Platform.XamarinIOS.Unified">
+      <HintPath>..\..\packages\SQLite.Net-PCL.3.1.1\lib\Xamarin.iOS10\SQLite.Net.Platform.XamarinIOS.Unified.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Maps">
+      <HintPath>..\..\packages\Xamarin.Forms.Maps.2.3.3.193\lib\Xamarin.iOS10\Xamarin.Forms.Maps.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Maps.iOS">
+      <HintPath>..\..\packages\Xamarin.Forms.Maps.2.3.3.193\lib\Xamarin.iOS10\Xamarin.Forms.Maps.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity.Abstractions">
+      <HintPath>..\..\packages\Xam.Plugin.Connectivity.2.3.0\lib\Xamarin.iOS10\Plugin.Connectivity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity">
+      <HintPath>..\..\packages\Xam.Plugin.Connectivity.2.3.0\lib\Xamarin.iOS10\Plugin.Connectivity.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ADDC_MVVM\ADDC_MVVM.csproj">
+      <Project>{BBBB1A0D-CD2E-48DB-845A-805E454CE564}</Project>
+      <Name>ADDC_MVVM</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\back_ipad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\back_ipad%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\back_ipad%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\back-ipadd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\back-ipadd%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\back-ipadd%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\english.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\fb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\header.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\landing_pic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\insta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ipad_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\landing_active_menu_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\landing_active_menu_icon%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\landing_content_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\landing_footer1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\landing_header.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\landing_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\menu_about_us.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\menu_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\menu_bg%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\menu_bg%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\menu_conservation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\menu_cus_enquiry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\menu_locate_us.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\menu_tariff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\menu_understanding_bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\mission_deselect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\mission_select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\overview_deselect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\overview_select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\splash_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\splash_screen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\splash-screen_768x1024.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\splash-screen_768x1024-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\splash-screen-1024x768.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\splash-screen-2048x1538.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tweet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\value_select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\value_deselect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\vission_select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\vission_deselect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default%402x.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-568h%402x.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-Portrait.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-Portrait%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\80x80.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\29x29.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\58x58.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\87x87.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\120x120.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\40x40.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\8ox8o.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\AppIcons\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\..\packages\Xamarin.Forms.2.3.3.193\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.3.193\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
+</Project>

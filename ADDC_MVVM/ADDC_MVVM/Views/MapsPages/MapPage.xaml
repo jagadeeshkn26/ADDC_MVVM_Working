@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:ADDC_MVVM;assembly=ADDC_MVVM"
+	xmlns:i18n="clr-namespace:ADDC_MVVM;assembly=ADDC_MVVM"
+    xmlns:Common="clr-namespace:ADDC_MVVM;assembly=ADDC_MVVM"
+	x:Class="ADDC_MVVM.MapPage">
+	 <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
+  </ContentPage.Padding>
+		<ContentPage.Content>
+ <RelativeLayout>
+		 <Image RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Height}"
+				Source="{x:Static Common:ImagePathResources.BackgroundImagePath}" 
+				 Aspect = "Fill"/>
+  <StackLayout RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Height}" VerticalOptions = "FillAndExpand" >  
+  
+      <RelativeLayout VerticalOptions="Start" >
+ 
+        <Image x:Name = "menuBg" Source="{i18n:Translate HeaderContent}" 
+				HeightRequest= "{Binding menuHeight}" Aspect = "Fill"/>
+	        <StackLayout RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToView, Property=Height}" HorizontalOptions = "FillAndExpand">
+					<Grid VerticalOptions ="Center" >
+         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="auto" />
+          </Grid.ColumnDefinitions>
+
+          <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+          </Grid.RowDefinitions>
+           <StackLayout x:Name="Header1" Grid.Row="0" Padding = "10, 0, 10, 0"
+	                       Grid.Column="{i18n:Translate a8}"
+	                       VerticalOptions="Center">
+	            <Image Source="landing_active_menu_icon.png" >
+	              <Image.GestureRecognizers>
+	                <TapGestureRecognizer
+										Tapped = "OnTapMenu"
+	                        
+	                        NumberOfTapsRequired="1" />
+	              </Image.GestureRecognizers>
+	            </Image>
+	          </StackLayout>
+	           <StackLayout Grid.Row="0"
+                       Grid.Column="{i18n:Translate b8}"
+              Grid.ColumnSpan="3"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand">
+           <Label  Text="{i18n:Translate str_locate_us_heading}" 
+                       LineBreakMode="NoWrap"
+               TextColor="#545b66" Font = "1, bold" >   
+																	<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+					<Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Label.FontFamily>
+            </Label>
+          </StackLayout>
+        </Grid>
+        </StackLayout>
+		</RelativeLayout>
+
+				<StackLayout Padding="10,0,0,0">
+       <Label  Text="{i18n:Translate str_locate_us_header}"
+               HorizontalOptions="Start"  
+               VerticalOptions="Center"><Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+					<Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Label.FontFamily></Label>
+         </StackLayout>
+				<Grid VerticalOptions ="Start" Padding = "10" >
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="{i18n:Translate gridratio0}"/>
+                <ColumnDefinition Width="{i18n:Translate gridratio1}"/>
+              </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+          </Grid.RowDefinitions>
+            <Picker Grid.Column="{i18n:Translate gridid0}"
+						x:Name="Services" HorizontalOptions="FillAndExpand"
+						BackgroundColor="Silver" Title = "{i18n:Translate str_All}"
+						SelectedIndexChanged =  "OnServicesPickerChanged" SelectedIndex = "0" > <!--SelectedIndexChanged="OnSelectingServiceType"-->
+              
+              </Picker>
+              
+              <Button Grid.Column="{i18n:Translate gridid1}" 
+						Text="{i18n:Translate questionMark}"
+						Clicked = "help_Clicked"
+						TextColor = "White"
+						BackgroundColor = "#545c66"  >
+					<Button.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "20" Tablet = "30" />
+        </Button.FontSize>
+					<Button.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Button.FontFamily></Button>
+<!--
+              <Grid.GestureRecognizers>
+                <TapGestureRecognizer
+                  Tapped="OnTapGestureRecognizerElectricityBill"
+                  NumberOfTapsRequired="1" />
+              </Grid.GestureRecognizers>-->
+              
+            </Grid>
+      <StackLayout Orientation="Horizontal"  Margin="10,0,10,0">
+        <!--<Button x:Name="branch"    Text = "" HorizontalOptions="Start" BackgroundColor="{Binding bGColor}" Clicked="BranchClicked" HeightRequest="50" WidthRequest="50"/>-->
+        <Image HorizontalOptions="FillAndExpand" Source="accept_deselect.png" x:Name="branch" HeightRequest="30" WidthRequest="30"  >
+          <Image.GestureRecognizers>
+            <TapGestureRecognizer
+              Tapped="BranchClicked"                         
+                    NumberOfTapsRequired="1" />
+          </Image.GestureRecognizers>
+        </Image>
+        <Label x:Name="branchlbl" 
+					Text = "{i18n:Translate str_locate_green}"
+					HorizontalOptions="StartAndExpand" VerticalOptions = "Center" ><Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+					<Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Label.FontFamily></Label>
+
+        <Image HorizontalOptions="FillAndExpand" Source="accept_deselect.png" x:Name="Kiosk" HeightRequest="30" WidthRequest="30" >
+          <Image.GestureRecognizers>
+            <TapGestureRecognizer
+                    Tapped="KioskClicked"
+                    NumberOfTapsRequired="1" />
+          </Image.GestureRecognizers>
+        </Image>
+        <!--<Button x:Name="kiosk"     Text = "" HorizontalOptions="Center" BackgroundColor="{Binding bGColor}" Clicked="KioskClicked" HeightRequest="50" WidthRequest="50"/>-->
+        <Label x:Name="kiosklbl"  
+					Text = "{i18n:Translate str_locate_grey}"
+					HorizontalOptions="StartAndExpand" VerticalOptions = "Center" ><Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+					<Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Label.FontFamily></Label>
+
+        <!--<Button x:Name="partner"   Text = "" HorizontalOptions="End" BackgroundColor="{Binding bGColor}" Clicked="partnerClicked" HeightRequest="50" WidthRequest="50"/>-->
+        <Image HorizontalOptions="FillAndExpand" Source="accept_deselect.png" x:Name="Partner" HeightRequest="30" WidthRequest="30" >
+          <Image.GestureRecognizers>
+            <TapGestureRecognizer
+                    Tapped="partnerClicked"
+                    NumberOfTapsRequired="1" />
+          </Image.GestureRecognizers>
+        </Image>
+        <Label x:Name="partnerlbl" 
+					Text = "{i18n:Translate str_partner}"
+					HorizontalOptions="StartAndExpand" VerticalOptions = "Center" ><Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+					<Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Label.FontFamily></Label>
+      </StackLayout>
+      <!--  <StackLayout Orientation="Vertical">
+                 
+                  <StackLayout BackgroundColor="#e6f0c1" Orientation="Horizontal" Margin="10,0,10,0" >
+                  <Image x:Name="branches"
+                         Source="{Binding ic_branches}"
+                          />
+                   <Label Text="{Binding Title}" 
+											VerticalOptions="Center" ></Label>
+                  <Image x:Name="direction"
+                       Source="direction.png"
+                       HorizontalOptions="EndAndExpand"
+                          />
+                  </StackLayout>
+                  <StackLayout  Orientation="Vertical" Padding="10,0,0,5">
+                    <Label  Text="{Binding Address}"
+                       TextColor="Black"></Label>
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                    <Label Text="Link on face book" TextColor="Black"
+                                LineBreakMode="NoWrap" VerticalOptions="Center"
+                                />
+                     <Image x:Name="fb"
+                             Source="fb.png" 
+                          />
+                      <Image x:Name="twitter"
+                           Source="tweet.png"
+                           Margin="0,0,30,0"
+                          />
+                    </StackLayout>
+                  </StackLayout>
+                 
+               
+                </StackLayout>-->
+				
+        <StackLayout  x:Name ="mapVw" VerticalOptions="FillAndExpand"
+					HorizontalOptions="FillAndExpand">
+		<local:CustomMap x:Name="customMap" MapType="Street" />
+       </StackLayout>
+    
+      <StackLayout x:Name = "ListVw" VerticalOptions="StartAndExpand"
+					HorizontalOptions="FillAndExpand">
+        <Common:ListView x:Name = "mapLstVw" 
+                   HasUnevenRows="true" >
+          <Common:ListView.ItemTemplate>
+            <DataTemplate>
+              <ViewCell>
+                 <StackLayout Orientation="Vertical">
+                 <StackLayout BackgroundColor="#e6f0c1" Margin="0,0,0,0">
+                  <StackLayout BackgroundColor="#e6f0c1" Orientation="Horizontal" Margin="0,0,10,0" >
+
+						<Image x:Name="branches" 
+                         Source="{Binding Img}"
+                          />
+                   <Label Text="{Binding BKPLocation}" 
+											VerticalOptions="Center" >
+								<Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+					<Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Label.FontFamily>				</Label>
+                  <Image x:Name="direction"
+                       Source="direction.png"
+                       HorizontalOptions="EndAndExpand" >	     
+						<Image.GestureRecognizers>
+	                <TapGestureRecognizer
+							Tapped = "MapDirect_Tapped"
+	                        NumberOfTapsRequired="1" />
+	              </Image.GestureRecognizers>
+						</Image>
+
+                  </StackLayout>
+                  </StackLayout>
+						<StackLayout  Orientation="Vertical" Padding="10,0,0,5">
+                    <Label  Text="{Binding Address}"
+                       TextColor="Black"><Label.FontSize>
+             <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+					<Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+    </Label.FontFamily></Label>
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                    <Label Text="{i18n:Translate str_share}" TextColor="Black"
+                                LineBreakMode="NoWrap" VerticalOptions="Center"
+                                />
+                     <Image x:Name="fb"
+                             Source="fb.png">
+						<Image.GestureRecognizers>
+	                <TapGestureRecognizer
+							Tapped = "FbDirect_Tapped"
+	                        NumberOfTapsRequired="1" />
+	              </Image.GestureRecognizers></Image>
+                      <Image x:Name="twitter"
+                           Source="tweet.png"
+                           Margin="0,0,30,0">
+								<Image.GestureRecognizers>
+	                <TapGestureRecognizer
+							Tapped = "TwitterDirect_Tapped"
+	                        NumberOfTapsRequired="1" />
+	              </Image.GestureRecognizers></Image>
+                    </StackLayout>
+                  </StackLayout>
+                 
+               
+                </StackLayout>
+              </ViewCell>
+            </DataTemplate>
+          </Common:ListView.ItemTemplate>
+          <ListView.Footer>
+            <Label/>
+          </ListView.Footer>
+        </Common:ListView>
+      </StackLayout>
+
+				<StackLayout  HorizontalOptions = "Center" VerticalOptions = "End">
+								<Grid HorizontalOptions = "Center" RowSpacing = "2" ColumnSpacing = "0">
+								<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+									<RowDefinition Height = "auto" ></RowDefinition>
+									</Grid.RowDefinitions>
+									<StackLayout Padding ="1" Grid.Row = "0" 
+												Grid.Column = "{i18n:Translate i1}"
+											VerticalOptions = "FillAndExpand"
+											HorizontalOptions = "FillAndExpand"
+											BackgroundColor = "#5a626a">
+										<StackLayout Padding = "10" Orientation = "Horizontal"
+									BackgroundColor = "#e6f0c1" 
+											VerticalOptions = "FillAndExpand"
+											HorizontalOptions = "FillAndExpand" >
+										  <Image x:Name ="LstView"
+                             					Source="list_map_select.png">
+										 <Image.GestureRecognizers>
+	              				  			<TapGestureRecognizer
+												Tapped ="LstView_Tapd"
+	                        					NumberOfTapsRequired="1" />
+	              							</Image.GestureRecognizers>
+									</Image>
+                      				<Image x:Name="MapView"
+                           					Source="map_icon_deselect.png">
+										 <Image.GestureRecognizers>
+	              				  			<TapGestureRecognizer
+												Tapped ="MapView_Tapped"
+	                        					NumberOfTapsRequired="1" />
+	              							</Image.GestureRecognizers>
+									</Image>
+										</StackLayout>
+										</StackLayout>
+								
+								</Grid>
+						
+		</StackLayout>					
+					
+			</StackLayout>
+				
+				<RelativeLayout VerticalOptions ="EndAndExpand">
+
+		</RelativeLayout>
+		
+			</RelativeLayout>
+	</ContentPage.Content>
+</ContentPage> 
+
+
+
+
+

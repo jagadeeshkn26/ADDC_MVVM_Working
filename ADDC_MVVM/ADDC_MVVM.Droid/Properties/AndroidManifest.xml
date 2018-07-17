@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="com.addc.utilityapp" android:versionCode="1" android:versionName="test">
+	<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="24" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<application android:label="$safeprojectname$" android:icon="@drawable/icon">
+		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyCPbTBh3nlEvmtcwEQmcZI7_Dvv2W6IBR8" />
+	</application>
+</manifest>

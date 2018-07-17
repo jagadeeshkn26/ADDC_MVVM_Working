@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ADDC_MVVM.Views.FriendPayment"
+             xmlns:i18n="clr-namespace:ADDC_MVVM;assembly=ADDC_MVVM"
+             xmlns:Common="clr-namespace:ADDC_MVVM;assembly=ADDC_MVVM"
+             xmlns:vm="clr-namespace:ADDC_MVVM.ViewModels;assembly=ADDC_MVVM">
+  <ContentPage.BindingContext>
+    <vm:FriendPaymentViewModel/>
+  </ContentPage.BindingContext>
+  <StackLayout  Orientation="Vertical" BackgroundColor="White" >
+  <RelativeLayout VerticalOptions="Start" >
+
+    <Image Source="{i18n:Translate HeaderContent}"
+      VerticalOptions = "Start"
+      HorizontalOptions="FillAndExpand" />
+    <StackLayout HorizontalOptions = "FillAndExpand">
+      <Grid>
+
+        <Grid.RowDefinitions>
+          <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <StackLayout  Grid.Row="0"
+                     Grid.Column="{i18n:Translate a8}"
+                     HorizontalOptions = "{i18n:Translate hor_Label}"
+                     VerticalOptions="Center"
+                     Padding="10,0,0,0">
+          <Image HorizontalOptions="Fill" Source="landing_active_menu_icon.png" >
+            <Image.GestureRecognizers>
+              <TapGestureRecognizer
+                      Command="{Binding OnTapMenu}"
+                      NumberOfTapsRequired="1" />
+            </Image.GestureRecognizers>
+          </Image>
+        </StackLayout>
+        <StackLayout Grid.Row="0"
+                              Grid.Column="{i18n:Translate b8}"
+                     Grid.ColumnSpan="3"
+                              HorizontalOptions="CenterAndExpand"
+                              VerticalOptions="CenterAndExpand">
+          <Label  Text="{i18n:Translate str_pay_friend}"
+                      LineBreakMode="NoWrap"
+              TextColor="#545b66">
+            <!-- Font changes ... -->
+            <Label.FontSize>
+              <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+            </Label.FontSize>
+            <Label.FontFamily>
+              <OnPlatform x:TypeArguments="x:String">
+                <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+              </OnPlatform>
+            </Label.FontFamily>
+            <!-- Font changes ... -->
+          </Label>
+        </StackLayout>
+        <StackLayout Grid.Row="0"
+                              Grid.Column="{i18n:Translate c8}"
+                             HorizontalOptions = "{i18n:Translate HoriRevExp}"
+							
+                              VerticalOptions="Center"
+                     Grid.ColumnSpan="2" Padding="0,0,10,0">
+          <Label  Text="{i18n:Translate str_continue}"
+             TextColor="#5e9622">
+            <Label.GestureRecognizers>
+              <TapGestureRecognizer
+                      Command="{Binding GetFriendOutstanding}"
+                      NumberOfTapsRequired="1" />
+            </Label.GestureRecognizers>
+            <!-- Font changes ... -->
+            <Label.FontSize>
+              <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+            </Label.FontSize>
+            <Label.FontFamily>
+              <OnPlatform x:TypeArguments="x:String">
+                <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+              </OnPlatform>
+            </Label.FontFamily>
+            <!-- Font changes ... -->
+          </Label>
+        </StackLayout>
+
+      </Grid>
+    </StackLayout>
+  </RelativeLayout>
+   <StackLayout VerticalOptions ="Start" Orientation="Vertical" Padding = "10, 10, 10,10">
+     <Label Text="{i18n:Translate str_friend_heading}" HorizontalTextAlignment="{i18n:Translate hor_Label}" TextColor= "#545b66">
+       <!-- Font changes ... -->
+       <Label.FontSize>
+         <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+       </Label.FontSize>
+       <Label.FontFamily>
+         <OnPlatform x:TypeArguments="x:String">
+           <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+           <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+         </OnPlatform>
+       </Label.FontFamily>
+       <!-- Font changes ... -->
+     </Label>
+      <Entry  Text="{Binding frdAccountNumber}" Keyboard="Numeric" BackgroundColor="#dcdde1" HorizontalTextAlignment="{i18n:Translate hor_Label}" FontSize="15" TextColor= "#545b66" WidthRequest="250">
+       <Entry.Behaviors>
+         <Common:MaxLengthValidator  MaxLength="15"/>
+       </Entry.Behaviors>
+     </Entry>
+
+     <Label Text="{i18n:Translate str_payfrnd_note}" HorizontalTextAlignment="{i18n:Translate hor_Label}" TextColor= "#545b66">
+       <!-- Font changes ... -->
+       <Label.FontSize>
+         <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+       </Label.FontSize>
+       <Label.FontFamily>
+         <OnPlatform x:TypeArguments="x:String">
+           <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+           <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+         </OnPlatform>
+       </Label.FontFamily>
+       <!-- Font changes ... -->
+     </Label>
+     <Label Text="{i18n:Translate str_friend_payment_heading}" HorizontalTextAlignment="{i18n:Translate hor_Label}" TextColor= "#545b66">
+       <!-- Font changes ... -->
+       <Label.FontSize>
+         <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+       </Label.FontSize>
+       <Label.FontFamily>
+         <OnPlatform x:TypeArguments="x:String">
+           <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+           <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+         </OnPlatform>
+       </Label.FontFamily>
+       <!-- Font changes ... -->
+     </Label>
+
+    </StackLayout>
+  </StackLayout>
+
+  
+  
+</ContentPage>

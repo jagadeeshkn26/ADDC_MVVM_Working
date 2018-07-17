@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+
+	<string name="str_copy">All rights reserved 2017 Abu Dhabi Distribution Company</string>
+
+	<!-- Splash Screen -->
+
+    <string name="str_loading">Loading...</string>
+</resources>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ADDC_MVVM.Views.OAAccountDetailsOptions"
+             xmlns:i18n="clr-namespace:ADDC_MVVM;assembly=ADDC_MVVM"
+             xmlns:Common="clr-namespace:ADDC_MVVM;assembly=ADDC_MVVM"
+             xmlns:vm="clr-namespace:ADDC_MVVM.ViewModels;assembly=ADDC_MVVM">
+  <ContentPage.BindingContext>
+    <vm:OAAccountDetailsOptionsViewModel/>
+  </ContentPage.BindingContext>
+  
+  <StackLayout Orientation="Vertical">
+    <RelativeLayout VerticalOptions="Start" >
+
+     <Image Source="{i18n:Translate HeaderContent}"
+          VerticalOptions = "Center" Aspect = "AspectFit"
+          HorizontalOptions="FillAndExpand" />
+      <StackLayout HorizontalOptions = "FillAndExpand">
+        <Grid>
+          <!--    <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+          <ColumnDefinition Width="1*" />
+          </Grid.ColumnDefinitions>-->
+
+          <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+          </Grid.RowDefinitions>
+          <StackLayout x:Name="Header1" Grid.Row="0"
+                       Grid.Column="{i18n:Translate a8}"
+                        Grid.ColumnSpan="1"
+                       HorizontalOptions="Start"
+                       VerticalOptions="CenterAndExpand"
+                       Padding="10,20,0,0">
+            <Label Text="X" TextColor="#155308">
+              <Label.GestureRecognizers>
+                <TapGestureRecognizer
+                        Command="{Binding CancelCommand}"
+                        NumberOfTapsRequired="1" />
+              </Label.GestureRecognizers>
+              <!-- Font changes ... -->
+              <Label.FontSize>
+                <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+              </Label.FontSize>
+              <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                  <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                  <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                </OnPlatform>
+              </Label.FontFamily>
+              <!-- Font changes ... -->
+            </Label>
+          </StackLayout>
+          <StackLayout x:Name="Header2" Grid.Row="0"
+                                Grid.Column="{i18n:Translate b8}"
+                       Grid.ColumnSpan="4"
+                                HorizontalOptions="CenterAndExpand"
+                                VerticalOptions="CenterAndExpand"
+                                Padding="10,20,0,0">
+            <Label  Text="{i18n:Translate str_actv_heading}"
+                        LineBreakMode="NoWrap"
+                TextColor="#155308">
+              <!-- Font changes ... -->
+              <Label.FontSize>
+                <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+              </Label.FontSize>
+              <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                  <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                  <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                </OnPlatform>
+              </Label.FontFamily>
+              <!-- Font changes ... -->
+            </Label>
+          </StackLayout>
+          <StackLayout x:Name="Header3" Grid.Row="0"
+                                Grid.Column="{i18n:Translate c8}"
+                                HorizontalOptions="End"
+                       VerticalOptions="CenterAndExpand"
+                       Grid.ColumnSpan="2"
+                                Padding="0,20,10,0">
+            <Label  Text="{i18n:Translate action_save}"
+                       LineBreakMode="NoWrap"
+               TextColor="#155308">
+              <!-- Font changes ... -->
+              <Label.FontSize>
+                <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+              </Label.FontSize>
+              <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                  <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                  <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                </OnPlatform>
+              </Label.FontFamily>
+              <!-- Font changes ... -->
+              <Label.GestureRecognizers>
+                <TapGestureRecognizer
+                        Command="{Binding SaveCMD}"
+                        NumberOfTapsRequired="1" />
+              </Label.GestureRecognizers>
+            </Label>
+          </StackLayout>
+
+        </Grid>
+      </StackLayout>
+    </RelativeLayout>
+
+    <StackLayout Padding="10,10,10,10" Orientation ="Vertical"
+						HorizontalOptions = "{i18n:Translate HoriExp}" >
+      <Label Text = "{i18n:Translate str_cont_info}" Font = "Bold,14" TextColor = "Black" HorizontalTextAlignment = "{i18n:Translate HoriExp}">
+        <!-- Font changes ... -->
+        <Label.FontSize>
+          <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+        <Label.FontFamily>
+          <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+        </Label.FontFamily>
+        <!-- Font changes ... -->
+      </Label>
+      <Label Text = "{i18n:Translate str_bill_language}" Font = "10" TextColor = "Black" HorizontalTextAlignment = "{i18n:Translate HoriExp}">
+        <!-- Font changes ... -->
+        <Label.FontSize>
+          <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+        </Label.FontSize>
+        <Label.FontFamily>
+          <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+            <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+          </OnPlatform>
+        </Label.FontFamily>
+        <!-- Font changes ... -->
+      </Label>
+      <StackLayout BackgroundColor = "Gray" Padding="0.5"
+          Orientation = "Horizontal" HorizontalOptions = "{i18n:Translate HoriExp}">
+        <Grid HorizontalOptions = "Center" ColumnSpacing = "2" VerticalOptions = "Center">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+          </Grid.RowDefinitions>
+          <StackLayout Grid.Row ="0" Grid.Column = "{i18n:Translate i1}" BackgroundColor = "Gray" >
+            <Label x:Name = "EnglishBtn" BackgroundColor = "#5e9622"
+                Text = "  English  "
+                TextColor = "#545C66">
+              <!-- Font changes ... -->
+              <Label.FontSize>
+                <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+              </Label.FontSize>
+              <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                  <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                  <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                </OnPlatform>
+              </Label.FontFamily>
+              <!-- Font changes ... -->
+            </Label>
+          </StackLayout>
+          <StackLayout Grid.Row = "0" Grid.Column = "{i18n:Translate j1}" BackgroundColor = "Gray" >
+
+            <Label x:Name = "ArabicBtn" Text = " العربية "
+                      BackgroundColor ="White"
+                    TextColor = "#545C66">
+              <!-- Font changes ... -->
+              <Label.FontSize>
+                <OnIdiom x:TypeArguments ="x:Double" Phone = "15" Tablet = "25" />
+              </Label.FontSize>
+              <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                  <OnPlatform.iOS>BlissRegular</OnPlatform.iOS>
+                  <OnPlatform.Android>bliss_regular.ttf#bliss_regular</OnPlatform.Android>
+                </OnPlatform>
+              </Label.FontFamily>
+              <!-- Font changes ... -->
+            </Label>
+          </StackLayout>
+        </Grid>
+      </StackLayout>
+    </StackLayout>
+
+  </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ADDC_MVVM.Views.PassingData"
+             BackgroundColor="White">
+  
+  <StackLayout>
+    <Label Text="{Binding pkrPersonID}" TextColor="Black" FontSize="20" HorizontalOptions="Center"/>
+    <Label Text="{Binding pkrUserID}" TextColor="Black" FontSize="20" HorizontalOptions="Center"/>
+    <Label Text="{Binding pkrProfile}" TextColor="Black" FontSize="20" HorizontalOptions="Center"/>
+    <Label Text="{Binding pkrEmiratesId}" TextColor="Black" FontSize="20" HorizontalOptions="Center"/>
+    <Label Text="{Binding pkrPrimaryName}" TextColor="Black" FontSize="20" HorizontalOptions="Center"/>
+    <Label Text="{Binding pkrName1}" TextColor="Black" FontSize="20" HorizontalOptions="Center"/>
+    <Label Text="{Binding pkrEmailID}" TextColor="Black" FontSize="20" HorizontalOptions="Center"/>
+    <Label Text="{Binding pkrPHNumber}" TextColor="Black" FontSize="20" HorizontalOptions="Center"/>
+  </StackLayout>
+  
+</ContentPage>
